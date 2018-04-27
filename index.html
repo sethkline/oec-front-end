@@ -1,15 +1,929 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <title>OEC</title>
 </head>
 <body>
-  <h1>My JavaScript App</h1>
-  <p>This app was compiled using the Babel Webpack Starter Pack which can compile ES2015, ES2016 and ES2017 code including Async/Await</p>
-  
-  <script src="build/app.bundle.js"></script>
+
+    <!-- ==============NAV BAR UPDATE THIS ================= -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">OEC</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+
+
+
+    <!--================= basic-contract ============= -->
+    <div class="basic-contract col-12">
+            <h1>Basic Contract Information</h1>
+
+            <div class="form-group">
+                    <div class="col-10">
+                        <legend>Sold By</legend>
+                    <select class="form-control" id="sold-by">
+                        <option disabled selected value> -- select a person -- </option>
+                        <option>Joel Bechtel</option>
+                        <option>Mitzi Jones</option>
+                    </select>
+            </div>
+            </div>
+
+
+        <div class="form-group">
+                <div class="col-10">
+                    <legend>Type of Client</legend>
+            <p class="form-control-static">FUSION: Sat/Sun shows PARTNER: courthouses/boroughs/FOAA/mock trial UNDERWRITER: Sports/farm show/current production</p>
+                <select class="form-control" id="type-of-client">
+                    <option disabled selected value> -- select type of Client -- </option>
+                    <option>FUSION</option>
+                    <option>PARTNER</option>
+                    <option>UNDERWRITER</option>
+                </select>
+        </div>
+        </div>
+
+        <div class="form-inline">
+            <div class="form-group">
+                    <div class="col-10">
+                <label for="client">CLIENT</label>
+                <input type="text" class="form-control" id="client" placeholder="Company Name">
+            </div>
+            </div>
+            <div class="form-group">
+                    <div class="col-10">
+                <label for="contact-name">CONTACT NAME</label>
+                <input type="text" class="form-control" id="contact-name" placeholder="John Doe">
+            </div>
+        </div>
+
+            <div class="form-group">
+                    <div class="col-10">
+                    <label for="contact-title">TITLE</label>
+                    <input type="text" class="form-control" id="contact-title" placeholder="CEO">
+                </div>
+                </div>
+
+            <div class="form-group">
+                    <div class="col-10">
+                    <label for="contact-phone">PHONE</label>
+                    <input type="tel"  class="form-control" id="contact-phone" placeholder="1-(800)-123-4567">
+                </div>
+                </div>
+
+            <div class="form-group">
+                    <div class="col-10">
+                    <label for="contact-title">EMAIL</label>
+                    <input type="email" class="form-control" id="contact-email" placeholder="contact@example.com">
+            </div>
+            </div>
+
+        </div>
+
+        <div class="form-inline">
+                <div class="form-group">
+                        <div class="col-10">
+                    <label for="production-company">PRODUCTION CO.</label>
+                    <input type="text" class="form-control" id="production-company" placeholder="External Production">
+                </div>
+                </div>
+
+                <div class="form-group">
+                        <div class="col-10">
+                    <label for="production-contact-name">CONTACT NAME</label>
+                    <input type="text" class="form-control" id="production-contact-name" placeholder="John Doe">
+                </div>
+                </div>
+    
+                <div class="form-group">
+                        <div class="col-10">
+                        <label for="production-contact-title">TITLE</label>
+                        <input type="text" class="form-control" id="production-contact-title" placeholder="CEO">
+                    </div>
+                    </div>
+    
+                <div class="form-group">
+                        <div class="col-10">
+                        <label for="production-contact-phone">PHONE</label>
+                        <input type="tel"  class="form-control" id="production-contact-phone" placeholder="1-(800)-123-4567">
+                    </div>
+                    </div>
+    
+                <div class="form-group">
+                        <div class="col-10">
+                        <label for="production-contact-title">EMAIL</label>
+                        <input type="email" class="form-control" id="production-contact-title" placeholder="contact@example.com">
+                </div>
+                </div>
+    
+            </div>
+    <br>
+
+            <div class="col-10">
+            <div class="form-check form-check-inline">
+                    <label for="copyright-license"> Valid license to copyrighted material
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="copyright-license" value=true> YES
+                        </label>
+                </div>
+                <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="copyright-license" value=false> NO
+                        </label>
+                     </div>
+                    </div>
+                     
+                    
+                <div class="form-group">
+                    <label for="example-date-input" class="col-2 col-form-label">Date Contract Signed</label>
+                    <div class="col-10">
+                        <input class="form-control" type="date" placeholder="" id="contract-sign-date">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="example-date-input" class="col-2 col-form-label">Contract Start Date</label>
+                        <div class="col-10">
+                            <input class="form-control" type="date" placeholder="" id="contract-start">
+                        </div>
+                        </div>
+                    
+                    <div class="form-group">
+                        <label for="example-date-input" class="col-2 col-form-label">Contract End Date</label>
+                        <div class="col-10">
+                            <input class="form-control" type="date" placeholder="" id="contract-end">
+                        </div>
+                        </div>
+
+
+                        <div class="form-group col-10">
+                                <label for="air-dates-times">Air Dates and Times:</label>
+                                <input type="text" placeholder="First Thursday of each month, 7pm"class="form-control" id="air-dates-times">
+                              </div>
+
+
+                    <div class="form-group col-10">
+                            <label for="comment">Additional Information:</label>
+                            <textarea class="form-control" rows="5" id="additional-info"></textarea>
+                            </div>
+                            
+ <!-- ======================= PRODUCTION SHOW ========================= -->
+<div class="fusion partner col-12 bg-dark collapse">
+    <h1>Production/Show</h1>
+
+    <div class="form-group col-10">
+        <label for="production-location">Location</label>
+            <select class="form-control" id="production-location">
+                <option disabled selected value> -- select an option -- </option>
+                <option>PCN Studio</option>
+                <option>PCN Field</option>
+                <option>OUTSIDE of PCN</option>
+            </select>
+    </div>
+
+    
+                    <div class="form-group col-10">
+                            <label for="show-name">Name of Show</label>
+                        <input class="form-control" type="text" id="show-name" placeholder="Example Show">
+                    </div>
+
+                    <legend>Length of Finished Program</legend>
+                            <div class="col-10">
+                        <div class="form-check col-10">
+                                    <label class="form-check-label">
+                                      <input class="form-check-input" type="radio" name="RadioOptions" id="program-length" value="true">
+                                      30 Minutes
+                                    </label>
+                                  </div>
+
+                                  <div class="form-check col-10">
+                                        <label class="form-check-label">
+                                          <input class="form-check-input" type="radio" name="RadioOptions" id="program-length" value="false">
+                                          60 Minutes
+                                        </label>
+                                      </div>
+                                      </div>
+
+                    <div class="form-group col-10">
+                            <label for="show-name">PCN Producer</label>
+                        <input class="form-control" type="text" id="producer" placeholder="PCN Producer">
+                    </div>
+
+
+                    <div class="form-group col-10">
+                            <label for="receive">Method to recieve</label>
+                                <select class="form-control" id="production-receive">
+                                    <option disabled selected value> -- select an option -- </option>
+                                    <option>DISC</option>
+                                    <option>FTP</option>
+                                    <option>DROPBOX</option>
+                                    <option>HARD DRIVE</option>
+                                </select>
+                        </div>
+
+                        <div class="col-10">
+                            <div class="form-check form-check-inline">
+                                    <label for="copyright-license">Shoot highlight or testimonial:
+                                            <input class="form-check-input" type="radio" id="production-highlight" value=true> YES
+                                        </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                          <input class="form-check-input" type="radio" id="production-highlight" value=false> NO
+                                        </label>
+                                     </div>
+                                    </div>
+
+            
+                    <div class="form-group col-10">
+                            <label for="comment">Additional Information:</label>
+                            <textarea class="form-control" rows="5" id="additional-production-info"></textarea>
+                            </div>
+                    
+                        </div>  
+
+
+ <!-- =================== Disclaimer ================= -->
+
+                        <div class="fusion col-12 bg-danger collapse">
+                            <h1>Disclaimer</h1>
+                            
+                            <div class="form-check">
+                                    <p>Air before/after Fusion program, states does not reflect views of PCN<p>
+                                        <div class="col-10">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="new">
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      New
+                                    </label>
+                                </div>
+                                  </div>
+                                  <div class="col-10">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="existing">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      Existing
+                                    </label>
+                                  </div>
+                                </div>
+                                <br>
+
+                       
+
+                            <div class="form-group col-10">
+                                    <legend>Logo/Graphic Required</legend>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="graphic-required" id="exampleRadios1" value="yes">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                          Yes
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="graphic-required" id="exampleRadios2" value="no">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                          No
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="graphic-required" id="exampleRadios3" value="existing">
+                                        <label class="form-check-label" for="exampleRadios3">
+                                          Existing
+                                        </label>
+                                      </div>
+                                    </div>
+
+
+
+                                <div class="form-group col-10">
+                                <label for="graphic-name">Logo/Graphic File Name:</label>
+                                <input type="text" placeholder="graphic.png"class="form-control" id="graphic-name">
+                              </div>
+
+                              <div class="form-group col-10">
+                                    <label for="script">Script or Special Wording:</label>
+                                    <textarea class="form-control" rows="5" id="script"></textarea>
+                                    </div>
+
+                                    <div class="form-group col-10">
+                                        <legend>Length</legend>
+                                            <label class="control-label">in seconds: </label>
+                                                <input id="runTime" type="number" class="form-control">
+                                          </div>
+
+                                          <div class="form-group col-10">
+                                              <legend>Name saved in server</legend>
+                                                <label for="server-name">this is the EXACT name so it can be located easily</label>
+                                                <input type="text" placeholder="SPBB"class="form-control" id="server-name">
+                                              </div>
+
+                                              <div class="form-group col-10">
+                                                    <label for="disclaimer-due-date">Due Date</label>
+                                                    <input type="date" id="disclaimer-due-date" class="form-control">
+                                                  </div>
+
+                                </div>
+
+<!-- =================== Billboards ================= -->
+
+                                <div class="underwriter partner col-12 bg-success collapse">
+                                                <h1>Billboards</h1>
+                                                
+                                                <div class="form-check">
+                                                        <p>Air before/after sponsored program, states paid in part by "Company"<p>
+                                                            <div class="col-10">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="billboard-new-existing" value="new">
+                                                        <label class="form-check-label" for="billboard-new-existing">
+                                                          New
+                                                        </label>
+                                                    </div>
+                                                      </div>
+                                                      <div class="col-10">
+                                                      <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="billboard-new-existing" value="existing">
+                                                        <label class="form-check-label" for="billboard-new-existing">
+                                                          Existing
+                                                        </label>
+                                                      </div>
+                                                    </div>
+                                                    <br>
+                    
+                                           
+                    
+                                                <div class="form-group col-10">
+                                                        <legend>Logo/Graphic Required</legend>
+                                                    <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="graphic-required" id="billboard-graphics" value="yes">
+                                                            <label class="form-check-label" for="billboard-graphics">
+                                                              Yes
+                                                            </label>
+                                                          </div>
+                                                          <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="graphic-required" id="billboard-graphics" value="no">
+                                                            <label class="form-check-label" for="billboard-graphics">
+                                                              No
+                                                            </label>
+                                                          </div>
+                                                          <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="graphic-required" id="billboard-graphics" value="existing">
+                                                            <label class="form-check-label" for="billboard-graphics">
+                                                              Existing
+                                                            </label>
+                                                          </div>
+                                                        </div>
+                    
+                    
+                    
+                                    <div class="form-group col-10">
+                                    <label for="billboard-graphic-name">Logo/Graphic File Name:</label>
+                                    <input type="text" placeholder="graphic.png"class="form-control" id="billboard-graphic-name">
+                                  </div>
+    
+                                  <div class="form-group col-10">
+                                        <label for="billboard-script">Script or Special Wording:</label>
+                                        <textarea class="form-control" rows="5" id="billboard-script"></textarea>
+                                        </div>
+    
+                                        <div class="form-group col-3">
+                                            <legend>Length</legend>
+                                                <label class="control-label">in seconds: </label>
+                                                    <input id="billboard-runTime" type="number" class="form-control">
+                                              </div>
+    
+                                              <div class="form-group col-10">
+                                                  <legend>Name saved in server</legend>
+                                                    <label for="server-name">this is the EXACT name so it can be located easily</label>
+                                                    <input type="text" placeholder="SPBB"class="form-control" id="server-name">
+                                                  </div>
+
+                                                  <div class="form-group col-5">
+                                                        <label for="billboard-air-schedule-time">Air Schedule or Time:</label>
+                                                        <input type="time" class="input-group" id="billboard-air-schedule-time" >
+                                                      </div>
+
+                                                      <div class="form-group col-10">
+                                                            <label for="billboard-air-program">Air During Specific Program:</label>
+                                                            <input type="text" class="form-control" id="billboard-air-program">
+                                                          </div>
+
+
+                                                  <div class="form-group col-3">
+                                                        <label for="billboard-number-airings">Number of Airings:</label>
+                                                        <input type="number" class="form-control" id="billboard-number-airings">
+                                                      </div>
+
+                                                      <div class="form-group col-3">
+                                                            <label for="billboard-number-billboards">Number of Billboards:</label>
+                                                            <input type="number" class="form-control" id="billboard-number-billboards">
+                                                          </div>
+
+
+                                                  <div class="form-group col-10">
+                                                        <label for="billboard-due-date">Due Date</label>
+                                                        <input type="date" id="billboard-due-date" class="form-control">
+                                                      </div>
+                                                      <br>
+                                                    </div>
+                                              </div>
+
+                           <!-- ===================  PROMOTIONS ================== -->
+
+
+                            <div class="fusion partner col-12 collapse">
+                                    <h1>PROMOTIONS</h1>
+
+                                <div class="form-group col-10">
+                                        <label for="promo-origination">Origination:</label>
+                                        <input type="text" class="form-control" id="promo-origination" placeholder="provided by client/edited by PCN">
+                                        </div>
+
+
+                                        <div class="form-group col-10">
+                                                    <label for="promo-ROS">Air ROS: (Run of Schedule)</label>
+                                                    <div class="input-group"><input type="text" id="promo-ROS" class="form-control col-6">
+                                                    <div class="input-group-addon">
+                                                      <p class="col-12"> Times per Day</p>
+                                                    </div>
+                                                         <input type="number" id="number-ROS" class="form-control col-3">
+                                                        </div>
+                                                  </div>
+
+                                                  <div class="form-group col-10">
+                                                        <label for="run-during-specific-program">Air during specific programs:</label>
+                                                        <div class="input-group"><input type="text" id="run-during-specific-program" class="form-control col-6">
+                                                        <div class="input-group-addon">
+                                                          <p class="col-12"> Times per Program</p>
+                                                        </div>
+                                                             <input type="number" id="number-per-program" class="form-control col-3">
+                                                            </div>
+                                                      </div>
+    
+                
+
+                                            <div class="form-group col-10">
+                                                <legend>Air Dates</legend>
+                                                    <label for="air-start-date">Start  /  End  </label>
+                                                    <div class="input-group"><input type="date" id="air-start-date" class="form-control col-6">
+                                                    <div class="input-group-addon">
+                                                      <p class="col-1">to</p>
+                                                    </div>
+                                                         <input type="date" id="air-end-date" class="form-control col-6">
+                                                        </div>
+                                                  </div>
+
+
+                                <div class="form-group col-10">
+                                    <legend>Logo/Graphic Required</legend>
+                                <div class="form-check">
+                                        <input class="form-check-input" type="radio"  id="promo-graphic-required" value="yes">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Yes
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="radio"  id="promo-graphic-required" value="no">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            No
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="radio"  id="promo-graphic-required" value="existing">
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            Existing
+                                        </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-10">
+                                            <label for="receive">Method to recieve</label>
+                                                <select class="form-control" id="promo-receive">
+                                                    <option disabled selected value> -- select an option -- </option>
+                                                    <option>DISC</option>
+                                                    <option>FTP</option>
+                                                    <option>DROPBOX</option>
+                                                    <option>HARD DRIVE</option>
+                                                </select>
+                                        </div>
+
+                                        <div class="form-group col-10">
+                                            <legend>Permission to use for Social Media</legend>
+                                        <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="social-media-permission" value="Yes">
+                                                <label class="form-check-label" for="social-media-permission">YES</label>
+                                              </div>
+                                              <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="social-media-permission" value="No">
+                                                <label class="form-check-label" for="social-media-permission">NO</label>
+                                              </div>
+                                              </div>
+
+                                              <div class="form-group">
+                                              <div class="form-inline col-12">
+                                                    <label for="promo-ROS">Approved By:</label>
+                                                    <div class="input-group col-10"><input type="text" id="promo-approval" class="form-control col-10">
+                                                    <div class="input-group-addon">
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                    <label for="promo-ROS" class="col-2">DATE:</label>
+                                                         <input type="date" id="promo-approval-date" class="form-control col-6">
+                                                        </div>
+                                                  </div>
+                                                  </div>
+                                                  </div>
+                                                  </div>
+                                        
+            
+                                        
+
+                                        </div>
+
+    
+
+                           <!-- ================ PAID SPOTS ===================== -->
+                           
+          
+                                   <div class="underwriter col-12 collapse">
+                                       <h1>Paid Spots</h1>
+
+                                       <div class="form-check">
+                                            <p>Client provides<p>
+                                                <div class="col-10">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="paid-spot" value="yes">
+                                            <label class="form-check-label" for="exampleRadios1">
+                                              Yes
+                                            </label>
+                                        </div>
+                                          </div>
+                                          <div class="col-10">
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="paid-spot" value="no">
+                                            <label class="form-check-label" for="exampleRadios2">
+                                              No
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="form-group col-3">
+                                                <label for="number-airings">Number of Different Spots:</label>
+                                                <input type="number" class="form-control" id="number-spots">
+                                              </div>
+
+                                              <div class="form-group col-3">
+                                                    <label for="total-number-airings">Total Number of Airings:</label>
+                                                    <input type="number" class="form-control" id="total-number-airings">
+                                                  </div>
+
+                                        <div class="form-group col-12">
+                                                <legend>Name saved in server and Length</legend>
+                                                  <input type="text" placeholder="Exact Name"class="form-control-inline col-8" id="paid-spot-name">
+                                                  <input type="number" placeholder="30" class="form-control-inline cole-2" id="paid-spot-time">
+                                                </div>
+
+                                                <div class="form-group col-3">
+                                                        <label for="number-airings">Number of Airings:</label>
+                                                        <input type="number" class="form-control" id="number-airings">
+                                                      </div>
+
+                                                <div class="form-group col-10">
+                                                    <label for="graphic-name">Placement</label>
+                                                    <input type="text" placeholder="only during pony pulls, Girls 4A BB, Daily" class="form-control" id="paid-spots-placement">
+                                                    </div>
+
+
+                                                    <div class="form-group col-10">
+                                                            <legend>Ok to be used in duplication (SVOD/DD/Disc)</legend>
+                                                        <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="paid-spot-duplication-permission" value="Yes">
+                                                                <label class="form-check-label" for="paid-spot-duplication-permission">YES</label>
+                                                              </div>
+                                                              <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="paid-spot-duplication-permission" value="No">
+                                                                <label class="form-check-label" for="paid-spot-duplication-permission">NO</label>
+                                                              </div>
+                                                              </div>
+
+
+
+
+                                                <div class="form-group col-10">
+                                                        <label for="receive">Method to recieve</label>
+                                                            <select class="form-control" id="paid-spots-receive">
+                                                                <option disabled selected value> -- select an option -- </option>
+                                                                <option>DISC</option>
+                                                                <option>FTP</option>
+                                                                <option>DROPBOX</option>
+                                                                <option>HARD DRIVE</option>
+                                                            </select>
+                                                    </div>
+
+
+
+                                                      <div class="form-group">
+                                                <div class="form-inline col-12">
+                                                    <label for="promo-ROS">Approved By:</label>
+                                                    <div class="input-group col-10"><input type="text" id="paid-spots-approval" class="form-control col-10">
+                                                    <div class="input-group-addon">
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                    <label for="promo-ROS" class="col-2">DATE:</label>
+                                                            <input type="date" id="paid-spots-approval-date" class="form-control col-6">
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                
+
+</div></div>
+                           <!-- ================ WEB/OTT IDENTIFICATION ===================== -->
+
+                           <div class="store col-12 bg-dark">
+                                <h1>Web / OTT Identification:</h1>
+
+
+                                <div class="form-group col-10">
+                                        <legend>Paywall:</legend>
+                                    <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="paywall-permission" value="In Front">
+                                            <label class="form-check-label" for="paywall-permission">In Front</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="paywall-permission" value="Behind">
+                                            <label class="form-check-label" for="paywall-permission">Behind</label>
+                                          </div>
+                                          </div>
+                            
+
+                                <div class="form-group col-10">
+                                        <label for="receive">Category</label>
+                                            <select class="form-control" id="web-category">
+                                                <option disabled selected value> -- select an option -- </option>
+                                                <option>Politics and Policy</option>
+                                                <option>Sports</option>
+                                                <option>History and Culture</option>
+                                            </select>
+                                    </div>
+
+
+                                    <div class="form-group col-10">
+                                            <legend>SVOD Gallery:</legend>
+                                        <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="svod-gallery" value="Select">
+                                                <label class="form-check-label" for="paid-spot-duplication-permission">Select</label>
+                                              </div>
+                                              <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="svod-gallery" value="Other">
+                                                <label class="form-check-label" for="paid-spot-duplication-permission">Other</label>
+                                              </div>
+                                              </div>
+
+
+                                    <div class="form-group col-10">
+                                            <textarea class="form-control" rows="3" id="vod-other-description" placeholder="Describe Other"></textarea>
+                                            </div>
+
+
+
+                                    <div class="form-group col-10">
+                                            <legend>Logo/Graphic Required</legend>
+                                        <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="web-graphic-required" id="web-graphics" value="yes">
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                  Yes
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="web-graphic-required" id="web-graphics" value="no">
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                  No
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="web-graphic-required" id="web-graphics" value="existing">
+                                                <label class="form-check-label" for="exampleRadios3">
+                                                  Existing
+                                                </label>
+                                              </div>
+                                            </div>
+
+
+                                <div class="form-group col-10">
+                                        <label for="program-description">Program Description</label>
+                                        <textarea class="form-control" rows="5" id="program-description"></textarea>
+                                        </div>
+
+
+                                        <div class="form-group col-10">
+                                                <label for="web-buttons">Specific Buttons or another page?</label>
+                                                <textarea class="form-control" rows="3" id="web-buttons"></textarea>
+                                                </div>
+                            <hr>
+                            </div>
+
+                           <!-- ==================== STORE DUPLICATION FTP ====================== -->
+
+                           <div class="store col-12">
+                                <h1>Store / Duplication FTP</h1>
+
+                    <div class="form-group col-10">
+                            <legend>Permission to Sell:</legend>
+                        <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sell-permission" value="Yes">
+                                <label class="form-check-label" for="sell-permission">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sell-permission" value="No">
+                                <label class="form-check-label" for="sell-permission">No</label>
+                              </div>
+                              </div>
+
+
+                              <div class="form-group col-10">
+                                <legend>Place in PCN Store:</legend>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pcn-store-permission" value="Yes">
+                                    <label class="form-check-label" for="pcn-store-permission">Yes</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pcn-store-permission" value="No">
+                                    <label class="form-check-label" for="pcn-store-permission">No</label>
+                                  </div>
+                                  </div>
+
+
+
+                                  <div class="form-group col-10">
+                                    <legend>Complimentary Duplication</legend>
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="comps" value="Yes">
+                                        <label class="form-check-label" for="comps">Yes</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="comps" value="No">
+                                        <label class="form-check-label" for="comps">No</label>
+                                      </div>
+                                      </div>
+
+                                      <div class="comp-info">
+                                    
+                                        <div class="form-group col-5">
+                                          <label for="comp-format">comp format</label>
+                                              <select class="form-control" id="comp-format">
+                                                  <option disabled selected value> -- select an option -- </option>
+                                                  <option>FTP</option>
+                                                  <option>DVD</option>
+                                                </select>
+                                      </div>
+
+                                      <div class="form-group col-10">
+                                      <div class="form-check col-10">
+                                          <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" value="true" id="ftp-instructions">
+                                            FTP Instructions sent
+                                          </label>
+                                        </div>
+                                      </div>
+
+
+                                      <div class="form-group col-10">
+                                          <label for="promo-ROS">Due By</label>
+                                          <div class="input-group"><input type="date" id="comp-due-date" class="form-control col-6">
+                                          <div class="form-control-addon">
+                                            <p class="col-12">number per episode</p>
+                                          </div>
+                                               <input type="number" id="comp-per-episode" class="form-control col-3">
+                                              </div>
+                                        </div>
+
+
+                      <div class="form-group col-10">
+                          <legend>Graphic Design Required:</legend>
+                      <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="comp-design" value="Yes">
+                              <label class="form-check-label" for="sell-permission">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="comp-design" value="No">
+                              <label class="form-check-label" for="sell-permission">No</label>
+                            </div>
+                            </div>
+
+                      <div class="form-group col-10">
+                          <label for="additional-comp">Additional Information:</label>
+                          <textarea class="form-control" rows="5" id="additional-comp"></textarea>
+                          </div>
+
+                      </div>
+              </div>
+
+                           <!-- ================== SOCIAL MEDIA =============== -->
+<div class="social-media col-12 bg-dark">
+    <h1>Social Media</h1>
+
+    <div class="form-group col-10">
+        <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="social-media-permission" value="Yes">
+                <label class="form-check-label" for="social-media-permission">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="social-media-permission" value="No">
+                <label class="form-check-label" for="social-media-permission">No</label>
+              </div>
+              </div>
+
+
+              <div class="form-group col-10">
+                    <legend>Full Video on Facebook:</legend>
+                <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="facebook-video-permission" value="Yes">
+                        <label class="form-check-label" for="facebook-video-permission">Yes</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="facebook-video-permission" value="No">
+                        <label class="form-check-label" for="facebook-video-permission">No</label>
+                      </div>
+                      </div>
+
+                      <div class="form-group col-10">
+                            <legend>Promotion Dates</legend>
+                                <label for="social-media-start-date">Start  /  End  </label>
+                                <div class="input-group"><input type="date" id="social-media-start-date" class="form-control col-6">
+                                <div class="input-group-addon">
+                                  <p class="col-1">to</p>
+                                </div>
+                                     <input type="date" id="social-media-end-date" class="form-control col-6">
+                                    </div>
+                              </div>
+
+
+                              <div class="form-group col-10">
+                                    <label for="social-media-frequency">Frequency:</label>
+                                <input class="form-control" type="text" id="social-media-frequency" placeholder="number of times per week">
+                            </div>
+
+
+                      <div class="form-group col-10">
+                            <label for="additional-social-media-info">Additional Information:</label>
+                            <textarea class="form-control" rows="5" id="additional-social-media-info"></textarea>
+                            </div>
+
+                            <input type="hidden" id="id" value="">
+        
+                      
+                            <button class="post-submit btn btn-primary btn-lg btn-block">Save It</button>
+                        
+                          <br>
+                            <span class="form-end"></span>
+                          </div>
+                    
+
+
+
+
+
+</div>
+
+<footer class="mt-5 p-3 text-center bg-light">
+    OEC @copy;
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <script src="build/app.bundle.js"></script>
+    
+
+
+</script>   
 </body>
 </html>
