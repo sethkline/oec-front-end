@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <title>OEC</title>
 </head>
 <body>
 
-    <!-- ==============NAV BAR UPDATE THIS ================= -->
+
+
+    <!-- ==============NAV BAR UPDATE THIS =================
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">OEC</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,16 +48,163 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                   </form>
                 </div>
-              </nav>
+              </nav> -->
 
+    <!-- ============= Choice =============== -->
+
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row col-12">
+        <h1 class="display-3" ></i>OEC
+        </h1>
+
+        </div>
+        <hr class="my-4">
+        <p>Operational Elements of the Contract</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" id="new-contract-btn" href="#" role="button">
+            <i class="fas fa-paste"></i>
+            New OEC</a>
+          <a class="btn btn-info btn-lg" id="load-contract-btn" href="#" role="button">
+              <i class="fas fa-folder-open"></i>
+            Find OEC</a>
+          <a class="btn btn-warning btn-lg" id="weekend-schedule-btn" href="#" role="button">
+              <i class="far fa-calendar-alt"></i>
+            Weekend Schedule</a>
+        </p>
+      </div>
+      </div>
+
+<!-- ============Load Schedule Example========= -->
+      
+      <div class="load-contracts collapse">
+        <div class="container">
+            <div class="row" id="contract"></div>
+                    
+      </div>
+    </div>
+
+
+      <div class="weekend-schedule collapse">
+          <div class="row">
+              <div class="container postsContainer">
+                  <div class="card card-body card-form">
+                    <h1>Saturday</h1>
+                    <p class="lead">Add New</p>
+                        <div class="form-group">
+                            <input type="text" id="programName" class="form-control" placeholder="Program Name">
+                          </div>
+                    
+                          <div class="form-group">
+                            <input type="text" id="episodeName" class="form-control" placeholder="Episode Name">
+                          </div>
+                    
+                          <div class="form-group">
+                            <textarea id="description" class="form-control" placeholder="Long Description"></textarea>
+                          </div>
+              
+                          <div class="form-group">
+                              <input type="text" id="typeOfClient" class="form-control" placeholder="fusion">
+                            </div>
+                      
+                            <div class="form-group">
+                              <label for="time">Start Time /  End Time </label>
+                              <div class="input-group"><input type="time" id="startTime" class="form-control">
+                              <div class="input-group-addon">
+                                to
+                              </div>
+                                   <input type="time" id="endTime" class="form-control">
+                                  </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Run Time: </label>
+                                    <input id="runTime" type="text" class="form-control" placeholder="00:00:00">
+                                          <span class="help-block">hours : minutes : seconds</span>
+                              </div>
+                
+                
+                
+                <!-- Marketing -->
+                <form class="form-inline col-12">
+                              <div class="form-group">
+                                  <label for="date">PCN Marketing Assign</label>
+                                  <input type="text" id="marketingAssign" class="form-control col-2" placeholder="WF">
+                                </div>
+                          
+                                <div class="form-group">
+                                  <label for="date">Social Approval Date</label>
+                                  <input type="date" id="socialApprovalDate" class="form-control" placeholder="Social Approval Date">
+                                </div>
+                                </form>
+                          
+                                <input type="hidden" id="id" value="">
+                              </div>
+                
+                                <div class="form-group">
+                                <button class="post-submit btn btn-primary btn-block">Post It</button>
+                              </div>
+                              <span class="form-end"></span>
+                              
+                            </div>
+                
+                      </div>
+
+                      <br>
+                      <div id="posts"></div>
+                    </div>
+                
+
+
+              <!-- <div class="bs-component">
+                  <div class="card mb-3">
+                    <h3 class="card-header">Weekend</h3>
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                      2 days ago
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Card title</h4>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a>
+                    </div>
+                  </div>
+                </div>
+  
+  
+        </div> -->
+
+      
 
 
     <!--================= basic-contract ============= -->
+    <div class="container">
+    <div class="row">
+      <div class="big-form-input collapse">
     <div class="basic-contract col-12">
             <h1>Basic Contract Information</h1>
 
             <div class="form-group">
-                    <div class="col-10">
+                    <div class="col-12">
                         <legend>Sold By</legend>
                     <select class="form-control" id="sold-by">
                         <option disabled selected value> -- select a person -- </option>
@@ -65,7 +216,7 @@
 
 
         <div class="form-group">
-                <div class="col-10">
+                <div class="col-12">
                     <legend>Type of Client</legend>
             <p class="form-control-static">FUSION: Sat/Sun shows PARTNER: courthouses/boroughs/FOAA/mock trial UNDERWRITER: Sports/farm show/current production</p>
                 <select class="form-control" id="type-of-client">
@@ -77,125 +228,136 @@
         </div>
         </div>
 
+
+        <div class="row group-info m-b-n-lg">
         <div class="form-inline">
             <div class="form-group">
-                    <div class="col-10">
+                    <div class="col-12">
                 <label for="client">CLIENT</label>
                 <input type="text" class="form-control" id="client" placeholder="Company Name">
             </div>
             </div>
             <div class="form-group">
-                    <div class="col-10">
+                    <div class="col-12">
                 <label for="contact-name">CONTACT NAME</label>
                 <input type="text" class="form-control" id="contact-name" placeholder="John Doe">
             </div>
         </div>
 
             <div class="form-group">
-                    <div class="col-10">
+                    <div class="col-12">
                     <label for="contact-title">TITLE</label>
                     <input type="text" class="form-control" id="contact-title" placeholder="CEO">
                 </div>
                 </div>
 
             <div class="form-group">
-                    <div class="col-10">
+                    <div class="col-12">
                     <label for="contact-phone">PHONE</label>
                     <input type="tel"  class="form-control" id="contact-phone" placeholder="1-(800)-123-4567">
                 </div>
                 </div>
 
             <div class="form-group">
-                    <div class="col-10">
+                    <div class="col-12">
                     <label for="contact-title">EMAIL</label>
                     <input type="email" class="form-control" id="contact-email" placeholder="contact@example.com">
+                    
+            </div>
             </div>
             </div>
 
         </div>
 
+        <div class="row group-info m-b-n-lg">
+
         <div class="form-inline">
                 <div class="form-group">
-                        <div class="col-10">
+                        <div class="col-12">
                     <label for="production-company">PRODUCTION CO.</label>
                     <input type="text" class="form-control" id="production-company" placeholder="External Production">
                 </div>
                 </div>
 
                 <div class="form-group">
-                        <div class="col-10">
+                        <div class="col-12">
                     <label for="production-contact-name">CONTACT NAME</label>
                     <input type="text" class="form-control" id="production-contact-name" placeholder="John Doe">
                 </div>
                 </div>
     
                 <div class="form-group">
-                        <div class="col-10">
+                        <div class="col-12">
                         <label for="production-contact-title">TITLE</label>
                         <input type="text" class="form-control" id="production-contact-title" placeholder="CEO">
                     </div>
                     </div>
     
                 <div class="form-group">
-                        <div class="col-10">
+                        <div class="col-12">
                         <label for="production-contact-phone">PHONE</label>
                         <input type="tel"  class="form-control" id="production-contact-phone" placeholder="1-(800)-123-4567">
                     </div>
                     </div>
     
                 <div class="form-group">
-                        <div class="col-10">
+                        <div class="col-12">
                         <label for="production-contact-title">EMAIL</label>
-                        <input type="email" class="form-control" id="production-contact-title" placeholder="contact@example.com">
+                        <input type="email" class="form-control" id="production-contact-email" placeholder="contact@example.com">
                 </div>
                 </div>
     
             </div>
-    <br>
+            </div>
 
-            <div class="col-10">
+            <div class="col-12">
             <div class="form-check form-check-inline">
                     <label for="copyright-license"> Valid license to copyrighted material
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="copyright-license" value=true> YES
+                            <input class="form-check-input" type="radio" name="copyright-license" id="copyright-license-yes" value="YES"> YES
                         </label>
                 </div>
                 <div class="form-check form-check-inline">
                         <label class="form-check-label">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="copyright-license" value=false> NO
+                          <input class="form-check-input" type="radio" name="copyright-license" id="copyright-license-no" value="NO"> NO
                         </label>
                      </div>
+                    </div>
+                     <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input collapse" type="radio" name="copyright-license" id="copyright-license-none" checked value="">
+                      </label>
                     </div>
                      
                     
                 <div class="form-group">
-                    <label for="example-date-input" class="col-2 col-form-label">Date Contract Signed</label>
-                    <div class="col-10">
+                    <label for="example-date-input" class="col-12 col-form-label">Date Contract Signed</label>
+                    <div class="col-12">
                         <input class="form-control" type="date" placeholder="" id="contract-sign-date">
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="example-date-input" class="col-2 col-form-label">Contract Start Date</label>
-                        <div class="col-10">
+                        <label for="example-date-input" class="col-12 col-form-label">Contract Start Date</label>
+                        <div class="col-12">
                             <input class="form-control" type="date" placeholder="" id="contract-start">
                         </div>
                         </div>
                     
                     <div class="form-group">
-                        <label for="example-date-input" class="col-2 col-form-label">Contract End Date</label>
-                        <div class="col-10">
+                        <label for="example-date-input" class="col-12 col-form-label">Contract End Date</label>
+                        <div class="col-12">
                             <input class="form-control" type="date" placeholder="" id="contract-end">
                         </div>
                         </div>
 
 
-                        <div class="form-group col-10">
+                        <div class="form-group col-12">
                                 <label for="air-dates-times">Air Dates and Times:</label>
                                 <input type="text" placeholder="First Thursday of each month, 7pm"class="form-control" id="air-dates-times">
                               </div>
 
 
-                    <div class="form-group col-10">
+                    <div class="form-group col-12">
                             <label for="comment">Additional Information:</label>
                             <textarea class="form-control" rows="5" id="additional-info"></textarea>
                             </div>
@@ -204,7 +366,7 @@
 <div class="fusion partner col-12 bg-dark collapse">
     <h1>Production/Show</h1>
 
-    <div class="form-group col-10">
+    <div class="form-group col-12">
         <label for="production-location">Location</label>
             <select class="form-control" id="production-location">
                 <option disabled selected value> -- select an option -- </option>
@@ -215,36 +377,41 @@
     </div>
 
     
-                    <div class="form-group col-10">
+                    <div class="form-group col-12">
                             <label for="show-name">Name of Show</label>
                         <input class="form-control" type="text" id="show-name" placeholder="Example Show">
                     </div>
 
                     <legend>Length of Finished Program</legend>
-                            <div class="col-10">
-                        <div class="form-check col-10">
+                            <div class="col-12">
+                                <div class="form-check form">
                                     <label class="form-check-label">
-                                      <input class="form-check-input" type="radio" name="RadioOptions" id="program-length" value="true">
+                                      <input class="form-check-input collapse" type="radio" name="program-length"  id="program-length-none" checked value="">
+                                    </label>
+                                 </div>
+                        <div class="form-check col-12">
+                                    <label class="form-check-label">
+                                      <input class="form-check-input" type="radio" name="program-length" id="program-length-30" value="30 Minutes">
                                       30 Minutes
                                     </label>
                                   </div>
 
-                                  <div class="form-check col-10">
+                                  <div class="form-check col-12">
                                         <label class="form-check-label">
-                                          <input class="form-check-input" type="radio" name="RadioOptions" id="program-length" value="false">
+                                          <input class="form-check-input" type="radio" name="program-length" id="program-length-60" value="60 Minutes">
                                           60 Minutes
                                         </label>
                                       </div>
                                       </div>
 
-                    <div class="form-group col-10">
+                    <div class="form-group col-12">
                             <label for="show-name">PCN Producer</label>
                         <input class="form-control" type="text" id="producer" placeholder="PCN Producer">
                     </div>
 
 
-                    <div class="form-group col-10">
-                            <label for="receive">Method to recieve</label>
+                    <div class="form-group col-12">
+                            <label for="receive">Method to receive</label>
                                 <select class="form-control" id="production-receive">
                                     <option disabled selected value> -- select an option -- </option>
                                     <option>DISC</option>
@@ -254,21 +421,26 @@
                                 </select>
                         </div>
 
-                        <div class="col-10">
+                        <div class="col-12">
+                            <div class="form-check form">
+                                <label class="form-check-label">
+                                  <input class="form-check-input collapse" type="radio"  name="production-highlight"  id="production-highlight-none" checked value="">
+                                </label>
+                             </div>
                             <div class="form-check form-check-inline">
                                     <label for="copyright-license">Shoot highlight or testimonial:
-                                            <input class="form-check-input" type="radio" id="production-highlight" value=true> YES
+                                            <input class="form-check-input" type="radio" name="production-highlight" id="production-highlight-yes" value="Yes"> YES
                                         </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                         <label class="form-check-label">
-                                          <input class="form-check-input" type="radio" id="production-highlight" value=false> NO
+                                          <input class="form-check-input" type="radio" name="production-highlight" id="production-highlight-no" value="No"> NO
                                         </label>
                                      </div>
                                     </div>
 
             
-                    <div class="form-group col-10">
+                    <div class="form-group col-12">
                             <label for="comment">Additional Information:</label>
                             <textarea class="form-control" rows="5" id="additional-production-info"></textarea>
                             </div>
@@ -284,20 +456,26 @@
                             <div class="form-check">
                                     <p>Air before/after Fusion program, states does not reflect views of PCN<p>
                                         <div class="col-10">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="new">
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <input class="form-check-input" type="radio" name="disclaimer-exist" id="disclaimer-exist-new" value="new">
+                                    <label class="form-check-label" for="disclaimer-exist">
                                       New
                                     </label>
                                 </div>
                                   </div>
-                                  <div class="col-10">
+                                  <div class="col-12">
                                   <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="existing">
-                                    <label class="form-check-label" for="exampleRadios2">
+                                    <input class="form-check-input" type="radio" name="disclaimer-exist" id="disclaimer-exist-existing" value="existing">
+                                    <label class="form-check-label" for="disclaimer-exist">
                                       Existing
                                     </label>
                                   </div>
+                                  <div class="form-check form">
+                                    <label class="form-check-label">
+                                      <input class="form-check-input collapse" type="radio" name="disclaimer-exist"  id="disclaimer-exist-none" checked value="">
+                                    </label>
+                                 </div>
                                 </div>
+
                                 <br>
 
                        
@@ -305,47 +483,52 @@
                             <div class="form-group col-10">
                                     <legend>Logo/Graphic Required</legend>
                                 <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="graphic-required" id="exampleRadios1" value="yes">
-                                        <label class="form-check-label" for="exampleRadios1">
+                                        <input class="form-check-input" type="radio" name="disclaimer-graphic-required" id="disclaimer-graphic-required-yes" value="yes">
+                                        <label class="form-check-label" for="disclaimer-graphic-required">
                                           Yes
                                         </label>
                                       </div>
                                       <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="graphic-required" id="exampleRadios2" value="no">
-                                        <label class="form-check-label" for="exampleRadios2">
+                                        <input class="form-check-input" type="radio" name="disclaimer-graphic-required" id="disclaimer-graphic-required-no" value="no">
+                                        <label class="form-check-label" for="disclaimer-graphic-required">
                                           No
                                         </label>
                                       </div>
                                       <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="graphic-required" id="exampleRadios3" value="existing">
-                                        <label class="form-check-label" for="exampleRadios3">
+                                        <input class="form-check-input" type="radio" name="disclaimer-graphic-required" id="disclaimer-graphic-required-existing" value="existing">
+                                        <label class="form-check-label" for="disclaimer-graphic-required">
                                           Existing
                                         </label>
                                       </div>
+                                      <div class="form-check form">
+                                        <label class="form-check-label">
+                                          <input class="form-check-input collapse" type="radio" name="disclaimer-graphic-required"  id="disclaimer-graphic-required-none" checked value="">
+                                        </label>
+                                    </div>
                                     </div>
 
 
 
                                 <div class="form-group col-10">
                                 <label for="graphic-name">Logo/Graphic File Name:</label>
-                                <input type="text" placeholder="graphic.png"class="form-control" id="graphic-name">
+                                <input type="text" placeholder="graphic.png"class="form-control" id="disclaimer-graphic-name">
                               </div>
 
                               <div class="form-group col-10">
-                                    <label for="script">Script or Special Wording:</label>
-                                    <textarea class="form-control" rows="5" id="script"></textarea>
+                                    <label for="disclaimer-script">Script or Special Wording:</label>
+                                    <textarea class="form-control" rows="5" id="disclaimer-script"></textarea>
                                     </div>
 
                                     <div class="form-group col-10">
                                         <legend>Length</legend>
                                             <label class="control-label">in seconds: </label>
-                                                <input id="runTime" type="number" class="form-control">
+                                                <input id="disclaimer-runTime" type="number" class="form-control">
                                           </div>
 
                                           <div class="form-group col-10">
                                               <legend>Name saved in server</legend>
-                                                <label for="server-name">this is the EXACT name so it can be located easily</label>
-                                                <input type="text" placeholder="SPBB"class="form-control" id="server-name">
+                                                <label for="disclaimer-server-name">this is the EXACT name so it can be located easily</label>
+                                                <input type="text" placeholder="SPBB"class="form-control" id="disclaimer-server-name">
                                               </div>
 
                                               <div class="form-group col-10">
@@ -363,7 +546,7 @@
                                                 <div class="form-check">
                                                         <p>Air before/after sponsored program, states paid in part by "Company"<p>
                                                             <div class="col-10">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="billboard-new-existing" value="new">
+                                                        <input class="form-check-input" type="radio" name="billboard-new-existing"  id="billboard-new-existing-new" value="new">
                                                         <label class="form-check-label" for="billboard-new-existing">
                                                           New
                                                         </label>
@@ -371,12 +554,17 @@
                                                       </div>
                                                       <div class="col-10">
                                                       <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="billboard-new-existing" value="existing">
+                                                        <input class="form-check-input" type="radio" name="billboard-new-existing" id="billboard-new-existing-existing" value="existing">
                                                         <label class="form-check-label" for="billboard-new-existing">
                                                           Existing
                                                         </label>
                                                       </div>
                                                     </div>
+                                                    <div class="form-check form">
+                                                      <label class="form-check-label">
+                                                        <input class="form-check-input collapse" type="radio" name="billboard-new-existing"  id="billboard-new-existing-none" checked value="">
+                                                      </label>
+                                                  </div>
                                                     <br>
                     
                                            
@@ -384,23 +572,28 @@
                                                 <div class="form-group col-10">
                                                         <legend>Logo/Graphic Required</legend>
                                                     <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="graphic-required" id="billboard-graphics" value="yes">
+                                                            <input class="form-check-input" type="radio" name="billboard-graphics" id="billboard-graphics-yes" value="yes">
                                                             <label class="form-check-label" for="billboard-graphics">
                                                               Yes
                                                             </label>
                                                           </div>
                                                           <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="graphic-required" id="billboard-graphics" value="no">
+                                                            <input class="form-check-input" type="radio" name="billboard-graphics" id="billboard-graphics-no" value="no">
                                                             <label class="form-check-label" for="billboard-graphics">
                                                               No
                                                             </label>
                                                           </div>
                                                           <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="graphic-required" id="billboard-graphics" value="existing">
+                                                            <input class="form-check-input" type="radio" name="billboard-graphics" id="billboard-graphics-existing" value="existing">
                                                             <label class="form-check-label" for="billboard-graphics">
                                                               Existing
                                                             </label>
                                                           </div>
+                                                          <div class="form-check form">
+                                                            <label class="form-check-label">
+                                                              <input class="form-check-input collapse" type="radio" name="billboard-graphics" id="billboard-graphics-none" checked value="">
+                                                            </label>
+                                                        </div>
                                                         </div>
                     
                     
@@ -506,27 +699,32 @@
                                 <div class="form-group col-10">
                                     <legend>Logo/Graphic Required</legend>
                                 <div class="form-check">
-                                        <input class="form-check-input" type="radio"  id="promo-graphic-required" value="yes">
-                                        <label class="form-check-label" for="exampleRadios1">
+                                        <input class="form-check-input" type="radio" name="promo-graphic-required" id="promo-graphic-required-yes" value="yes">
+                                        <label class="form-check-label" for="promo-graphic-required">
                                             Yes
                                         </label>
                                         </div>
                                         <div class="form-check">
-                                        <input class="form-check-input" type="radio"  id="promo-graphic-required" value="no">
-                                        <label class="form-check-label" for="exampleRadios2">
+                                        <input class="form-check-input" type="radio" name="promo-graphic-required"  id="promo-graphic-required-no" value="no">
+                                        <label class="form-check-label" for="promo-graphic-required">
                                             No
                                         </label>
                                         </div>
                                         <div class="form-check">
-                                        <input class="form-check-input" type="radio"  id="promo-graphic-required" value="existing">
-                                        <label class="form-check-label" for="exampleRadios3">
+                                        <input class="form-check-input" type="radio" name="promo-graphic-required"  id="promo-graphic-required-existing" value="existing">
+                                        <label class="form-check-label" for="promo-graphic-required">
                                             Existing
                                         </label>
                                         </div>
+                                        <div class="form-check form-inline">
+                                          <label class="form-check-label">
+                                            <input class="form-check-input collapse" type="radio" name="promo-graphic-required"  id="promo-graphic-required-none" checked value="">
+                                          </label>
+                                      </div>
                                     </div>
 
                                     <div class="form-group col-10">
-                                            <label for="receive">Method to recieve</label>
+                                            <label for="receive">Method to receive</label>
                                                 <select class="form-control" id="promo-receive">
                                                     <option disabled selected value> -- select an option -- </option>
                                                     <option>DISC</option>
@@ -538,12 +736,17 @@
 
                                         <div class="form-group col-10">
                                             <legend>Permission to use for Social Media</legend>
+                                            <div class="form-check form-check-inline">
+                                              <label class="form-check-label">
+                                                <input class="form-check-input collapse" type="radio" name="promo-social-media-permission"  id="promo-social-media-permission-none" checked value="">
+                                              </label>
+                                          </div>
                                         <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="social-media-permission" value="Yes">
+                                                <input class="form-check-input" type="radio" name="promo-social-media-permission"  id="promo-social-media-permission-yes" value="Yes">
                                                 <label class="form-check-label" for="social-media-permission">YES</label>
                                               </div>
                                               <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="social-media-permission" value="No">
+                                                <input class="form-check-input" type="radio" name="promo-social-media-permission" id="promo-social-media-permission-no" value="No">
                                                 <label class="form-check-label" for="social-media-permission">NO</label>
                                               </div>
                                               </div>
@@ -563,36 +766,34 @@
                                                   </div>
                                                   </div>
                                         
-            
-                                        
-
-                                        </div>
-
-    
-
                            <!-- ================ PAID SPOTS ===================== -->
                            
           
                                    <div class="underwriter col-12 collapse">
-                                       <h1>Paid Spots</h1>
+                                       <h1>PAID SPOTS</h1>
 
                                        <div class="form-check">
                                             <p>Client provides<p>
                                                 <div class="col-10">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="paid-spot" value="yes">
-                                            <label class="form-check-label" for="exampleRadios1">
+                                            <input class="form-check-input" type="radio" name="paid-spot" id="paid-spot-yes" value="yes">
+                                            <label class="form-check-label" for="paid-spot">
                                               Yes
                                             </label>
                                         </div>
                                           </div>
                                           <div class="col-10">
                                           <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="paid-spot" value="no">
-                                            <label class="form-check-label" for="exampleRadios2">
+                                            <input class="form-check-input" type="radio" name="paid-spot"  id="paid-spot-no" value="no">
+                                            <label class="form-check-label" for="paid-spot">
                                               No
                                             </label>
                                           </div>
                                         </div>
+                                        <div class="form-check form-inline">
+                                          <label class="form-check-label">
+                                            <input class="form-check-input collapse" type="radio" name="paid-spot"  id="paid-spot-none" checked value="">
+                                          </label>
+                                      </div>
                                         <br>
 
                                         <div class="form-group col-3">
@@ -613,11 +814,11 @@
 
                                                 <div class="form-group col-3">
                                                         <label for="number-airings">Number of Airings:</label>
-                                                        <input type="number" class="form-control" id="number-airings">
+                                                        <input type="number" class="form-control" id="paid-spot-number-airings">
                                                       </div>
 
                                                 <div class="form-group col-10">
-                                                    <label for="graphic-name">Placement</label>
+                                                    <label for="paid-spots-placement">Placement</label>
                                                     <input type="text" placeholder="only during pony pulls, Girls 4A BB, Daily" class="form-control" id="paid-spots-placement">
                                                     </div>
 
@@ -625,20 +826,25 @@
                                                     <div class="form-group col-10">
                                                             <legend>Ok to be used in duplication (SVOD/DD/Disc)</legend>
                                                         <div class="form-check form-check-inline">
-                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="paid-spot-duplication-permission" value="Yes">
+                                                                <input class="form-check-input" type="radio" name="paid-spot-duplication-permission"  id="paid-spot-duplication-permission-yes" value="Yes">
                                                                 <label class="form-check-label" for="paid-spot-duplication-permission">YES</label>
                                                               </div>
                                                               <div class="form-check form-check-inline">
-                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="paid-spot-duplication-permission" value="No">
+                                                                <input class="form-check-input" type="radio" name="paid-spot-duplication-permission" id="paid-spot-duplication-permission-no" value="No">
                                                                 <label class="form-check-label" for="paid-spot-duplication-permission">NO</label>
                                                               </div>
+                                                              <div class="form-check form-inline">
+                                                                <label class="form-check-label">
+                                                                  <input class="form-check-input collapse" type="radio" name="paid-spot-duplication-permission"  id="paid-spot-duplication-permission-none" checked value="">
+                                                                </label>
+                                                            </div>
                                                               </div>
 
 
 
 
                                                 <div class="form-group col-10">
-                                                        <label for="receive">Method to recieve</label>
+                                                        <label for="receive">Method to receive</label>
                                                             <select class="form-control" id="paid-spots-receive">
                                                                 <option disabled selected value> -- select an option -- </option>
                                                                 <option>DISC</option>
@@ -660,32 +866,38 @@
                                                     <label for="promo-ROS" class="col-2">DATE:</label>
                                                             <input type="date" id="paid-spots-approval-date" class="form-control col-6">
                                                         </div>
-                                                    </div>
-                                                    </div>
-                                                    
-                                                
-
-</div></div>
+                          </div>
+                 </div>
+      </div>      
+</div>
                            <!-- ================ WEB/OTT IDENTIFICATION ===================== -->
 
+
+ 
+                        <div class="big-form-input col-12">
                            <div class="store col-12 bg-dark">
                                 <h1>Web / OTT Identification:</h1>
 
 
-                                <div class="form-group col-10">
+                                <div class="form-group col-12">
                                         <legend>Paywall:</legend>
                                     <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="paywall-permission" value="In Front">
+                                            <input class="form-check-input" type="radio" name="paywall-permission"  id="paywall-permission-in-front" value="In Front">
                                             <label class="form-check-label" for="paywall-permission">In Front</label>
                                           </div>
                                           <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="paywall-permission" value="Behind">
+                                            <input class="form-check-input" type="radio" name="paywall-permission"  id="paywall-permission-behind" value="Behind">
                                             <label class="form-check-label" for="paywall-permission">Behind</label>
                                           </div>
+                                          <div class="form-check form-inline">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input collapse" type="radio" name="paywall-permission"  id="paywall-permission-none" checked value="">
+                                            </label>
+                                        </div>
                                           </div>
                             
 
-                                <div class="form-group col-10">
+                                <div class="form-group col-12">
                                         <label for="receive">Category</label>
                                             <select class="form-control" id="web-category">
                                                 <option disabled selected value> -- select an option -- </option>
@@ -696,55 +908,65 @@
                                     </div>
 
 
-                                    <div class="form-group col-10">
+                                    <div class="form-group col-12">
                                             <legend>SVOD Gallery:</legend>
                                         <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="svod-gallery" value="Select">
+                                                <input class="form-check-input" type="radio"  name="svod-gallery" id="web-svod-pcn-select" value="PCN Select">
                                                 <label class="form-check-label" for="paid-spot-duplication-permission">Select</label>
                                               </div>
                                               <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="svod-gallery" value="Other">
+                                                <input class="form-check-input" type="radio"  name="svod-gallery" id="web-svod-pcn-other" value="Other">
                                                 <label class="form-check-label" for="paid-spot-duplication-permission">Other</label>
                                               </div>
+                                              <div class="form-check form-inline">
+                                                <label class="form-check-label">
+                                                  <input class="form-check-input collapse" type="radio"  name="svod-gallery" id="web-svod-pcn-none" checked value="">
+                                                </label>
+                                            </div>
                                               </div>
 
 
-                                    <div class="form-group col-10">
+                                    <div class="form-group col-12">
                                             <textarea class="form-control" rows="3" id="vod-other-description" placeholder="Describe Other"></textarea>
                                             </div>
 
 
 
-                                    <div class="form-group col-10">
+                                    <div class="form-group col-12">
                                             <legend>Logo/Graphic Required</legend>
                                         <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="web-graphic-required" id="web-graphics" value="yes">
-                                                <label class="form-check-label" for="exampleRadios1">
+                                                <input class="form-check-input" type="radio" id="webott-web-graphic-yes" name="web-graphics" value="yes">
+                                                <label class="form-check-label" for="web-graphics">
                                                   Yes
                                                 </label>
                                               </div>
                                               <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="web-graphic-required" id="web-graphics" value="no">
-                                                <label class="form-check-label" for="exampleRadios2">
+                                                <input class="form-check-input" type="radio" id="webott-web-graphic-no" name="web-graphics" value="no">
+                                                <label class="form-check-label" for="web-graphics">
                                                   No
                                                 </label>
                                               </div>
                                               <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="web-graphic-required" id="web-graphics" value="existing">
-                                                <label class="form-check-label" for="exampleRadios3">
+                                                <input class="form-check-input" type="radio" id="webott-web-graphic-existing" name="web-graphics" value="existing">
+                                                <label class="form-check-label" for="web-graphics">
                                                   Existing
                                                 </label>
                                               </div>
+                                              <div class="form-check form-inline">
+                                                <label class="form-check-label">
+                                                  <input class="form-check-input collapse" type="radio" id="webott-web-graphic-none"  name="web-graphics" checked value="">
+                                                </label>
+                                            </div>
                                             </div>
 
 
-                                <div class="form-group col-10">
+                                <div class="form-group col-12">
                                         <label for="program-description">Program Description</label>
                                         <textarea class="form-control" rows="5" id="program-description"></textarea>
                                         </div>
 
 
-                                        <div class="form-group col-10">
+                                        <div class="form-group col-12">
                                                 <label for="web-buttons">Specific Buttons or another page?</label>
                                                 <textarea class="form-control" rows="3" id="web-buttons"></textarea>
                                                 </div>
@@ -756,43 +978,58 @@
                            <div class="store col-12">
                                 <h1>Store / Duplication FTP</h1>
 
-                    <div class="form-group col-10">
+                    <div class="form-group col-12">
                             <legend>Permission to Sell:</legend>
                         <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sell-permission" value="Yes">
+                                <input class="form-check-input" type="radio" id="sell-permission-yes"  name="sell-permission" value="Yes">
                                 <label class="form-check-label" for="sell-permission">Yes</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sell-permission" value="No">
+                                <input class="form-check-input" type="radio" id="sell-permission-no" name="sell-permission" value="No">
                                 <label class="form-check-label" for="sell-permission">No</label>
                               </div>
+                              <div class="form-check form-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input collapse" type="radio" id="sell-permission-none" name="sell-permission" checked value="">
+                                </label>
+                            </div>
                               </div>
 
 
-                              <div class="form-group col-10">
+                              <div class="form-group col-12">
                                 <legend>Place in PCN Store:</legend>
                             <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pcn-store-permission" value="Yes">
+                                    <input class="form-check-input" type="radio" id="pcn-store-permission-yes"  name="pcn-store-permission" value="Yes">
                                     <label class="form-check-label" for="pcn-store-permission">Yes</label>
                                   </div>
                                   <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pcn-store-permission" value="No">
+                                    <input class="form-check-input" type="radio" id="pcn-store-permission-no"   name="pcn-store-permission" value="No">
                                     <label class="form-check-label" for="pcn-store-permission">No</label>
                                   </div>
+                                  <div class="form-check form-inline">
+                                    <label class="form-check-label">
+                                      <input class="form-check-input collapse" type="radio" id="pcn-store-permission-none"  name="pcn-store-permission" checked value="">
+                                    </label>
+                                </div>
                                   </div>
 
 
 
-                                  <div class="form-group col-10">
+                                  <div class="form-group col-12">
                                     <legend>Complimentary Duplication</legend>
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="comps" value="Yes">
+                                        <input class="form-check-input" type="radio" id="comps-permission-yes"  name="comps" value="Yes">
                                         <label class="form-check-label" for="comps">Yes</label>
                                       </div>
                                       <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="comps" value="No">
+                                        <input class="form-check-input" type="radio" id="comps-permission-no"  name="comps" value="No">
                                         <label class="form-check-label" for="comps">No</label>
                                       </div>
+                                      <div class="form-check form-inline">
+                                        <label class="form-check-label">
+                                          <input class="form-check-input collapse" type="radio" id="comps-permission-none"  name="comps" checked value="">
+                                        </label>
+                                    </div>
                                       </div>
 
                                       <div class="comp-info">
@@ -806,17 +1043,22 @@
                                                 </select>
                                       </div>
 
-                                      <div class="form-group col-10">
-                                      <div class="form-check col-10">
+                                      <div class="form-group col-12">
+                                          <div class="form-check col-12 collapse">
+                                              <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="" name="ftp-instructions" id="ftp-instructions-none" checked>
+                                              </label>
+                                            </div>
+                                      <div class="form-check col-12">
                                           <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value="true" id="ftp-instructions">
+                                            <input class="form-check-input" type="checkbox" name="ftp-instructions" value="true" id="ftp-instructions-sent">
                                             FTP Instructions sent
                                           </label>
                                         </div>
                                       </div>
 
 
-                                      <div class="form-group col-10">
+                                      <div class="form-group col-12">
                                           <label for="promo-ROS">Due By</label>
                                           <div class="input-group"><input type="date" id="comp-due-date" class="form-control col-6">
                                           <div class="form-control-addon">
@@ -827,19 +1069,24 @@
                                         </div>
 
 
-                      <div class="form-group col-10">
+                      <div class="form-group col-12">
                           <legend>Graphic Design Required:</legend>
                       <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="comp-design" value="Yes">
-                              <label class="form-check-label" for="sell-permission">Yes</label>
+                              <input class="form-check-input" type="radio" id="comp-design-gfx-yes" name="comp-design" value="Yes">
+                              <label class="form-check-label" for="comp-design">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="comp-design" value="No">
-                              <label class="form-check-label" for="sell-permission">No</label>
+                              <input class="form-check-input" type="radio" id="comp-design-gfx-no" name="comp-design" value="No">
+                              <label class="form-check-label" for="comp-design">No</label>
                             </div>
+                            <div class="form-check form-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input collapse" type="radio" id="comp-design-gfx-none" name="comp-design" checked value="">
+                              </label>
+                          </div>
                             </div>
 
-                      <div class="form-group col-10">
+                      <div class="form-group col-12">
                           <label for="additional-comp">Additional Information:</label>
                           <textarea class="form-control" rows="5" id="additional-comp"></textarea>
                           </div>
@@ -851,31 +1098,41 @@
 <div class="social-media col-12 bg-dark">
     <h1>Social Media</h1>
 
-    <div class="form-group col-10">
+    <div class="form-group col-12">
         <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="social-media-permission" value="Yes">
+                <input class="form-check-input" type="radio" id="social-media-permission-yes" name="social-media-permission" value="Yes">
                 <label class="form-check-label" for="social-media-permission">Yes</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="social-media-permission" value="No">
+                <input class="form-check-input" type="radio" id="social-media-permission-no" name="social-media-permission" value="No">
                 <label class="form-check-label" for="social-media-permission">No</label>
               </div>
+              <div class="form-check form-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input collapse" type="radio" id="social-media-permission-none"  name="social-media-permission" checked value="">
+                </label>
+            </div>
               </div>
 
 
-              <div class="form-group col-10">
+              <div class="form-group col-12">
                     <legend>Full Video on Facebook:</legend>
                 <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="facebook-video-permission" value="Yes">
+                        <input class="form-check-input" type="radio" id="facebook-video-permission-yes" name="facebook-video-permission" value="Yes">
                         <label class="form-check-label" for="facebook-video-permission">Yes</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="facebook-video-permission" value="No">
+                        <input class="form-check-input" type="radio" id="facebook-video-permission-no" name="facebook-video-permission" value="No">
                         <label class="form-check-label" for="facebook-video-permission">No</label>
                       </div>
+                      <div class="form-check form-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input collapse" type="radio" id="facebook-video-permission-none"  name="facebook-video-permission" checked value="">
+                        </label>
+                    </div>
                       </div>
 
-                      <div class="form-group col-10">
+                      <div class="form-group col-12">
                             <legend>Promotion Dates</legend>
                                 <label for="social-media-start-date">Start  /  End  </label>
                                 <div class="input-group"><input type="date" id="social-media-start-date" class="form-control col-6">
@@ -887,13 +1144,13 @@
                               </div>
 
 
-                              <div class="form-group col-10">
+                              <div class="form-group col-12">
                                     <label for="social-media-frequency">Frequency:</label>
                                 <input class="form-control" type="text" id="social-media-frequency" placeholder="number of times per week">
                             </div>
 
 
-                      <div class="form-group col-10">
+                      <div class="form-group col-12">
                             <label for="additional-social-media-info">Additional Information:</label>
                             <textarea class="form-control" rows="5" id="additional-social-media-info"></textarea>
                             </div>
@@ -901,18 +1158,19 @@
                             <input type="hidden" id="id" value="">
         
                       
-                            <button class="post-submit btn btn-primary btn-lg btn-block">Save It</button>
+                            <button class="post-submit btn btn-primary btn-lg btn-block" id="submit-it">Save It</button>
                         
                           <br>
                             <span class="form-end"></span>
                           </div>
+                </div>
                     
-
-
-
-
-
+    </div>
+    </div>
+  </div>
 </div>
+
+
 
 <footer class="mt-5 p-3 text-center bg-light">
     OEC @copy;

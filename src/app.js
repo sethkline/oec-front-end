@@ -21,7 +21,7 @@ document.querySelector('#contract').addEventListener('click',enableEdit)
 
 
 
-document.getElementById('type-of-client').addEventListener('change', hideForms);
+document.getElementById('type-of-client').addEventListener('change', hideForms(selectValue));
 document.querySelector('#submit-it').addEventListener('click', testConsole); //UPDATE THIS
 document.getElementById('new-contract-btn').addEventListener('click',newContractBtn);
 document.getElementById('load-contract-btn').addEventListener('click',loadContractsBtn);
@@ -61,7 +61,7 @@ function submitPost() {
         const productionCompanyPersonTitle = document.querySelector('#production-contact-title').value;
         const productionCompanyPhone = document.querySelector('#production-contact-phone').value;
         const productionCompanyEmail = document.querySelector('#production-contact-email').value;
-        const copyright = document.querySelector('input[id="copyright-license"]:checked').value;
+        const copyright = document.querySelector('input[name="copyright-license"]:checked').value;
         const contractSignDate = document.querySelector('#contract-sign-date').value;
         const contractStartDate = document.querySelector('#contract-start').value;
         const contractEndDate = document.querySelector('#contract-end').value;
@@ -69,28 +69,28 @@ function submitPost() {
         const contractAdditionalInfo = document.querySelector('#additional-info').value;
 
         // Web OTT Indentification
-        const payWall = document.querySelector('input[id="paywall-permission"]:checked').value;
+        const payWall = document.querySelector('input[name="paywall-permission"]:checked').value;
         const webCategory = document.querySelector('#web-category').value;
-        const selectVideoOnDemand = document.querySelector('input[id="svod-gallery"]:checked').value;
+        const selectVideoOnDemand = document.querySelector('input[name="svod-gallery"]:checked').value;
         const otherVideoOnDemand = document.querySelector('#vod-other-description').value;
-        const webGraphicRequired = document.querySelector('input[id="web-graphics"]:checked').value;
+        const webGraphicRequired = document.querySelector('input[name="web-graphics"]:checked').value;
         const webProgramDescription = document.querySelector('#program-description').value;
         const webButton = document.querySelector('#web-buttons').value;
 
         // Store Duplication FTP
-        const persmissionToSell = document.querySelector('input[id="sell-permission"]:checked').value;
-        const placeInStore = document.querySelector('input[id="pcn-store-permission"]:checked').value;
-        const compSelection = document.querySelector('input[id="comps"]:checked').value;
+        const persmissionToSell = document.querySelector('input[name="sell-permission"]:checked').value;
+        const placeInStore = document.querySelector('input[name="pcn-store-permission"]:checked').value;
+        const compSelection = document.querySelector('input[name="comps"]:checked').value;
         const compFormat = document.querySelector('#comp-format').value;
-        const fTPInstructions = document.querySelector('input[id="ftp-instructions"]:checked').value;
+        const fTPInstructions = document.querySelector('input[name="ftp-instructions"]:checked').value;
         const compDueDate = document.querySelector('#comp-due-date').value;
         const compNumbersPerEpisode = document.querySelector('#comp-per-episode').value;
-        const compGraphicDesign = document.querySelector('input[id="comp-design"]:checked').value;
+        const compGraphicDesign = document.querySelector('input[name="comp-design"]:checked').value;
         const compAdditionalInfo = document.querySelector('#additional-comp').value;
 
         // Social Media
-        const socialMediaPermission = document.querySelector('input[id="social-media-permission"]:checked').value;
-        const fullFacebookVideo = document.querySelector('input[id="facebook-video-permission"]:checked').value;
+        const socialMediaPermission = document.querySelector('input[name="social-media-permission"]:checked').value;
+        const fullFacebookVideo = document.querySelector('input[name="facebook-video-permission"]:checked').value;
         const socialMediaStartDate = document.querySelector('#social-media-start-date').value;
         const socialMediaEndDate = document.querySelector('#social-media-end-date').value;
         const socialFrequency = document.querySelector('#social-media-frequency').value;
@@ -98,15 +98,15 @@ function submitPost() {
         // Production
         const productionLocation = document.querySelector('#production-location').value;
         const productionNameOfShow = document.querySelector('#show-name').value;
-        const productionLengthOfProgram = document.querySelector('#program-length').value;
+        const productionLengthOfProgram = document.querySelector('input[name="program-length"]:checked').value;
         const productionProducer = document.querySelector('#producer').value;
         const productionMethodToRecieve = document.querySelector('#production-receive').value;
-        const productionHighlight = document.querySelector('#production-highlight').value;
+        const productionHighlight = document.querySelector('input[name="production-highlight"]:checked').value;
         const productionAdditionalInfo = document.querySelector('#additional-production-info').value;
 
         // Billboards
-        const billboardNewExisting = document.querySelector('input[id="billboard-new-existing"]:checked').value;
-        const billboardGraphics = document.querySelector('input[id="billboard-graphics"]:checked').value;
+        const billboardNewExisting = document.querySelector('input[name="billboard-new-existing"]:checked').value;
+        const billboardGraphics = document.querySelector('input[name="billboard-graphics"]:checked').value;
         const billboardScript = document.querySelector('#billboard-graphic-name').value;
         const billboardLength = document.querySelector('#billboard-script').value;
         const billboardNameServer = document.querySelector('#billboard-runTime').value;
@@ -124,28 +124,28 @@ function submitPost() {
         const promotionsTimesPerProgram = document.querySelector('#number-per-program').value;
         const promotinsAirDatesStart = document.querySelector('#air-start-date').value;
         const promotionsAirDatesEnd = document.querySelector('#air-end-date').value;
-        const promotionsGraphics = document.querySelector('input[id="promo-graphic-required"]:checked').value;
+        const promotionsGraphics = document.querySelector('input[name="promo-graphic-required"]:checked').value;
         const promotionsMethodToRecieve = document.querySelector('#promo-receive').value;
-        const promotionsSocialMediaPermission = document.querySelector('#promo-social-media-permission').value;
+        const promotionsSocialMediaPermission = document.querySelector('input[name="promo-social-media-permission"]:checked').value;
         const promotionsApproval = document.querySelector('#promo-approval').value;
         const promotionsApprovalDate = document.querySelector('#promo-approval-date').value;
 
         // Paid Spots
-        const paidSpotPermission = document.querySelector('input[id="paid-spot"]:checked').value;
+        const paidSpotPermission = document.querySelector('input[name="paid-spot"]:checked').value;
         const numberOfDifferentSpots = document.querySelector('#number-spots').value;
         const totalNumberOfAirings = document.querySelector('#total-number-airings').value;
         const nameSavedInServer = document.querySelector('#paid-spot-name').value;
         const timeSavedInServer = document.querySelector('#paid-spot-time').value;
         const numberOfAiring = document.querySelector('#paid-spot-number-airings').value;
         const paidSpotPlacements = document.querySelector('#paid-spots-placement').value;
-        const paidSpotDuplicationPermission = document.querySelector('input[id="paid-spot-duplication-permission"]:checked').value;
+        const paidSpotDuplicationPermission = document.querySelector('input[name="paid-spot-duplication-permission"]:checked').value;
         const paidSpotMethodToRecieve = document.querySelector('#paid-spots-receive').value;
         const paidSpotApprovedBy = document.querySelector('#paid-spots-approval').value;
         const paidSpotApprovedDate = document.querySelector('#paid-spots-approval-date').value;
 
         // Disclaimers
-        const disclaimerExist = document.querySelector('input[id="disclaimer-exist"]:checked').value;
-        const disclaimerGraphicRequired = document.querySelector('input[id="disclaimer-graphic-required"]:checked').value;
+        const disclaimerExist = document.querySelector('input[name="disclaimer-exist"]:checked').value;
+        const disclaimerGraphicRequired = document.querySelector('input[name="disclaimer-graphic-required"]:checked').value;
         const disclaimerGraphicName = document.querySelector('#disclaimer-graphic-name').value;
         const disclaimerScript = document.querySelector('#disclaimer-script').value;
         const disclaimerRunTime = document.querySelector('#disclaimer-runTime').value;
@@ -285,7 +285,7 @@ function submitPost() {
          console.log(id)
          console.log(id)
          console.log(id)
-      http.put(`http://104.236.92.35/api/oec/${id}`, data)
+      http.put(`http://localhost:5000/api/oec/${id}`, data)
       .then(data => {
         console.log('Post updated', 'alert alert-success');
         console.log('add');
@@ -333,26 +333,29 @@ function submitPost() {
 //   }
 
 
+//Try to Clean this up later
 
-function hideForms(){
+let selectValue = document.querySelector('#type-of-client').value.toLowerCase();
+
+function hideForms(typeOfShow){
     
-    let selectValue = document.querySelector('#type-of-client').value.toLowerCase();
+    
     const fusion = document.querySelectorAll('div.fusion');
     const partner = document.querySelectorAll('div.partner');
     const underwriter = document.querySelectorAll('div.underwriter');
 
     
 
-    if (selectValue === 'fusion') {
+    if (typeOfShow === 'fusion') {
 
             hideAllDiv()
             showDiv(fusion);
     } else if
-        (selectValue === 'partner'){
+        (typeOfShow === 'partner'){
             hideAllDiv()
             showDiv(partner);
         } else if (
-            selectValue === 'underwriter'){
+            typeOfShow === 'underwriter'){
                 hideAllDiv()
                 showDiv(underwriter);
     } else { 
@@ -458,11 +461,13 @@ function deleteCard(e) {
         .then(data =>{
             console.log(data)
             console.log(data._id)
-            console.log(id)
+            console.log(data._id)
             //load show oec
             showMainForms()
             hideContracts()
-            // Fill form with data
+            // sort form to only show type of client
+            hideForms(data.typeOfClient.toLowerCase())
+              // Fill form with data
             ui.fillForm(data);
         })
         .catch(err => console.log(err));

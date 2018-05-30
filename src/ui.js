@@ -16,86 +16,86 @@ class UI {
         this.productionCompanyPersonTitleInput = document.querySelector('#production-contact-title');
         this.productionCompanyPhoneInput = document.querySelector('#production-contact-phone');
         this.productionCompanyEmailInput = document.querySelector('#production-contact-email');
-        this.copyrightInput = document.querySelector('input[id="copyright-license"]:checked');
+        this.copyrightInput = document.querySelector('input[name="copyright-license"]:checked');
         this.contractSignDateInput = document.querySelector('#contract-sign-date');
         this.contractStartDateInput = document.querySelector('#contract-start');
         this.contractEndDateInput = document.querySelector('#contract-end');
         this.airDatesTimesInput = document.querySelector('#air-dates-times');
         this.contractAdditionalInfoInput = document.querySelector('#additional-info');
 
-        this.copyrightFillInput = document.querySelector('#copyright-license');
-        this.copyrightFillNoInput = document.querySelector('input[name="copyright-no"]');
+        this.copyrightFillInput = document.querySelector('input[id="copyright-license-yes"]');
+        this.copyrightFillNoInput = document.querySelector('input[id="copyright-license-no"]');
 
         // Web OTT Indentification
-        this.payWallInput = document.querySelector('input[id="paywall-permission"]:checked');
+        this.payWallInput = document.querySelector('input[name="paywall-permission"]:checked');
         this.webCategoryInput = document.querySelector('#web-category');
-        this.selectVideoOnDemandInput = document.querySelector('input[id="svod-gallery"]:checked');
+        this.selectVideoOnDemandInput = document.querySelector('input[name="svod-gallery"]:checked');
         this.otherVideoOnDemandInput = document.querySelector('#vod-other-description');
-        this.webGraphicRequiredInput = document.querySelector('input[id="web-graphics"]:checked');
+        this.webGraphicRequiredInput = document.querySelector('input[name="web-graphics"]:checked');
         this.webProgramDescriptionInput = document.querySelector('#program-description');
         this.webButtonInput = document.querySelector('#web-buttons');
 
-        this.payWallRadioInFrontInput = document.querySelector('input[name="paywall-in-front"]');
-        this.payWallRadioBehindInput = document.querySelector('input[name="paywall-behind"]');
-        this.selectVideoOnDemandPCNSelectInput = document.querySelector('input[name="web-svod-pcn-select"]')
-        this.selectVideoOnDemandOtherInput = document.querySelector('input[name="web-svod-pcn-other"]')
-        this.webGraphicRequiredYesInput = document.querySelector('input[name="webott-web-graphic-yes"]')
-        this.webGraphicRequiredNoInput = document.querySelector('input[name="webott-web-graphic-no"]')
-        this.webGraphicRequiredExisitingInput = document.querySelector('input[name="webott-web-graphic-existing"]')
+        this.payWallRadioInFrontInput = document.querySelector('input[id="paywall-permission-in-front"]');
+        this.payWallRadioBehindInput = document.querySelector('input[id="paywall-permission-behind"]');
+        this.selectVideoOnDemandPCNSelectInput = document.querySelector('input[id="web-svod-pcn-select"]')
+        this.selectVideoOnDemandOtherInput = document.querySelector('input[id="web-svod-pcn-other"]')
+        this.webGraphicRequiredYesInput = document.querySelector('input[id="webott-web-graphic-yes"]')
+        this.webGraphicRequiredNoInput = document.querySelector('input[id="webott-web-graphic-no"]')
+        this.webGraphicRequiredExisitingInput = document.querySelector('input[id="webott-web-graphic-existing"]')
 
         // Store Duplication FTP
-        this.persmissionToSellInput = document.querySelector('input[id="sell-permission"]:checked');
-        this.placeInStoreInput = document.querySelector('input[id="pcn-store-permission"]:checked');
-        this.compSelectionInput = document.querySelector('input[id="comps"]:checked');
+        this.persmissionToSellInput = document.querySelector('input[name="sell-permission"]:checked');
+        this.placeInStoreInput = document.querySelector('input[name="pcn-store-permission"]:checked');
+        this.compSelectionInput = document.querySelector('input[name="comps"]:checked');
         this.compFormatInput = document.querySelector('#comp-format');
-        this.fTPInstructionsInput = document.querySelector('input[id="ftp-instructions"]:checked');
+        this.fTPInstructionsInput = document.querySelector('input[name="ftp-instructions"]:checked');
         this.compDueDateInput = document.querySelector('#comp-due-date');
         this.compNumbersPerEpisodeInput = document.querySelector('#comp-per-episode');
-        this.compGraphicDesignInput = document.querySelector('input[id="comp-design"]:checked');
+        this.compGraphicDesignInput = document.querySelector('input[name="comp-design"]:checked');
         this.compAdditionalInfoInput = document.querySelector('#additional-comp');
 
-        this.persmissionToSellYesInput = document.querySelector('input[name="sell-permission-yes"]')
-        this.persmissionToSellNoInput = document.querySelector('input[name="sell-permission-no"]')
-        this.placeInStoreYesInput = document.querySelector('input[name="pcn-store-permission-yes"]')
-        this.placeInStoreNoInput = document.querySelector('input[name="pcn-store-permission-no"]')
-        this.compSelectionYesInput = document.querySelector('input[name="comps-permission-yes"]')
-        this.compSelectionNoInput = document.querySelector('input[name="comps-permission-no"]')
-        this.fTPInstructionsCheckInput = document.querySelector('input[name="ftp-instructions-sent"]')
-        this.compGraphicDesignYesInput = document.querySelector('input[name="comp-design-gfx-yes"]')
-        this.compGraphicDesignNoInput = document.querySelector('input[name="comp-design-gfx-no"]')
+        this.persmissionToSellYesInput = document.querySelector('input[id="sell-permission-yes"]')
+        this.persmissionToSellNoInput = document.querySelector('input[id="sell-permission-no"]')
+        this.placeInStoreYesInput = document.querySelector('input[id="pcn-store-permission-yes"]')
+        this.placeInStoreNoInput = document.querySelector('input[id="pcn-store-permission-no"]')
+        this.compSelectionYesInput = document.querySelector('input[id="comps-permission-yes"]')
+        this.compSelectionNoInput = document.querySelector('input[id="comps-permission-no"]')
+        this.fTPInstructionsCheckInput = document.querySelector('input[id="ftp-instructions-sent"]')
+        this.compGraphicDesignYesInput = document.querySelector('input[id="comp-design-gfx-yes"]')
+        this.compGraphicDesignNoInput = document.querySelector('input[id="comp-design-gfx-no"]')
 
 
         // Social Media
-        this.socialMediaPermissionInput = document.querySelector('input[id="social-media-permission"]:checked');
-        this.fullFacebookVideoInput = document.querySelector('input[id="facebook-video-permission"]:checked');
+        this.socialMediaPermissionInput = document.querySelector('input[name="social-media-permission"]:checked');
+        this.fullFacebookVideoInput = document.querySelector('input[name="facebook-video-permission"]:checked');
         this.socialMediaStartDateInput = document.querySelector('#social-media-start-date');
         this.socialMediaEndDateInput = document.querySelector('#social-media-end-date');
         this.socialFrequencyInput = document.querySelector('#social-media-frequency');
         this.socialAdditionalInfoInput = document.querySelector('#additional-social-media-info');
 
-        this.socialMediaPermissionYesInput = document.querySelector('input[name="social-media-permission-yes"]')
-        this.socialMediaPermissionNoInput = document.querySelector('input[name="social-media-permission-no"]')
-        this.fullFacebookVideoYesInput = document.querySelector('input[name="facebook-video-permission-yes"]')
-        this.fullFacebookVideoNoInput = document.querySelector('input[name="facebook-video-permission-no"]')
+        this.socialMediaPermissionYesInput = document.querySelector('input[id="social-media-permission-yes"]')
+        this.socialMediaPermissionNoInput = document.querySelector('input[id="social-media-permission-no"]')
+        this.fullFacebookVideoYesInput = document.querySelector('input[id="facebook-video-permission-yes"]')
+        this.fullFacebookVideoNoInput = document.querySelector('input[id="facebook-video-permission-no"]')
         
         // Production
         this.productionLocationInput = document.querySelector('#production-location');
         this.productionNameOfShowInput = document.querySelector('#show-name');
-        this.productionLengthOfProgramInput = document.querySelector('#program-length');
+        this.productionLengthOfProgramInput = document.querySelector('input[name="program-length"]:checked');
         this.productionProducerInput = document.querySelector('#producer');
         this.productionMethodToRecieveInput = document.querySelector('#production-receive');
-        this.productionHighlightInput = document.querySelector('#production-highlight');
+        this.productionHighlightInput = document.querySelector('input[name="production-highlight"]:checked');
         this.productionAdditionalInfoInput = document.querySelector('#additional-production-info');
 
 
-        this.productionLengthOfProgram30Input = document.querySelector('input[name="program-length-30"]')
-        this.productionLengthOfProgram60Input = document.querySelector('input[name="program-length-60"]')
-        this.productionHighlightYesInput = document.querySelector('input[name="Production-highlight-yes"]')
-        this.productionHighlightNoInput = document.querySelector('input[name="Production-highlight-no"]')
+        this.productionLengthOfProgram30Input = document.querySelector('input[id="program-length-30"]')
+        this.productionLengthOfProgram60Input = document.querySelector('input[id="program-length-60"]')
+        this.productionHighlightYesInput = document.querySelector('input[id="production-highlight-yes"]')
+        this.productionHighlightNoInput = document.querySelector('input[id="production-highlight-no"]')
 
         // Billboards
-        this.billboardNewExistingInput = document.querySelector('input[id="billboard-new-existing"]:checked');
-        this.billboardGraphicsInput = document.querySelector('input[id="billboard-graphics"]:checked');
+        this.billboardNewExistingInput = document.querySelector('input[name="billboard-new-existing"]:checked');
+        this.billboardGraphicsInput = document.querySelector('input[name="billboard-graphics"]:checked');
         this.billboardScriptInput = document.querySelector('#billboard-graphic-name');
         this.billboardLengthInput = document.querySelector('#billboard-script');
         this.billboardNameServerInput = document.querySelector('#billboard-runTime');
@@ -105,11 +105,11 @@ class UI {
         this.billboardNumberOfBillboardsInput = document.querySelector('#billboard-number-billboards');
         this.billboardDueDateInput = document.querySelector('#billboard-due-date');
 
-        this.billboardNewExistingNewInput = document.querySelector('input[name="billboard-new-existing-new"]')
-        this.billboardNewExistingExistingInput = document.querySelector('input[name="billboard-new-existing-existing"]')
-        this.billboardGraphicsYesInput = document.querySelector('input[name="billboard-graphics-yes"]')
-        this.billboardGraphicsNoInput = document.querySelector('input[name="billboard-graphics-no"]')
-        this.billboardGraphicsExistingInput = document.querySelector('input[name="billboard-graphics-existing"]')
+        this.billboardNewExistingNewInput = document.querySelector('input[id="billboard-new-existing-new"]')
+        this.billboardNewExistingExistingInput = document.querySelector('input[id="billboard-new-existing-existing"]')
+        this.billboardGraphicsYesInput = document.querySelector('input[id="billboard-graphics-yes"]')
+        this.billboardGraphicsNoInput = document.querySelector('input[id="billboard-graphics-no"]')
+        this.billboardGraphicsExistingInput = document.querySelector('input[id="billboard-graphics-existing"]')
 
         // Promotions
         this.promotionsOrginationInput = document.querySelector('#promo-origination');
@@ -119,43 +119,54 @@ class UI {
         this.promotionsTimesPerProgramInput = document.querySelector('#number-per-program');
         this.promotinsAirDatesStartInput = document.querySelector('#air-start-date');
         this.promotionsAirDatesEndInput = document.querySelector('#air-end-date');
-        this.promotionsGraphicsInput = document.querySelector('input[id="promo-graphic-required"]:checked');
+        this.promotionsGraphicsInput = document.querySelector('input[name="promo-graphic-required"]:checked');
         this.promotionsMethodToRecieveInput = document.querySelector('#promo-receive');
-        this.promotionsSocialMediaPermissionInput = document.querySelector('#promo-social-media-permission');
+        this.promotionsSocialMediaPermissionInput = document.querySelector('input[name="promo-social-media-permission"]:checked');
         this.promotionsApprovalInput = document.querySelector('#promo-approval');
         this.promotionsApprovalDateInput = document.querySelector('#promo-approval-date');
 
-        this.promotionsGraphicsYesInput = document.querySelector('input[name="promo-graphic-required-yes"]')
-        this.promotionsGraphicsNoInput = document.querySelector('input[name="promo-graphic-required-no"]')
-        this.promotionsGraphicsExistingInput = document.querySelector('input[name="promo-graphic-required-existing"]')
-        this.billboardNewExistingNewInput = document.querySelector('input[name="promo-social-media-permission-yes"]')
-        this.billboardNewExistingNewInput = document.querySelector('input[name="promo-social-media-permission-no"]')
+        this.promotionsGraphicsYesInput = document.querySelector('input[id="promo-graphic-required-yes"]')
+        this.promotionsGraphicsNoInput = document.querySelector('input[id="promo-graphic-required-no"]')
+        this.promotionsGraphicsExistingInput = document.querySelector('input[id="promo-graphic-required-existing"]')
+        this.promotionsSocialMediaPermissionYesInput = document.querySelector('input[id="promo-social-media-permission-yes"]')
+        this.promotionsSocialMediaPermissionNoInput = document.querySelector('input[id="promo-social-media-permission-no"]')
 
 
         // Paid Spots
-        this.paidSpotPermissionInput = document.querySelector('input[id="paid-spot"]:checked');
+        this.paidSpotPermissionInput = document.querySelector('input[name="paid-spot"]:checked');
         this.numberOfDifferentSpotsInput = document.querySelector('#number-spots');
         this.totalNumberOfAiringsInput = document.querySelector('#total-number-airings');
         this.nameSavedInServerInput = document.querySelector('#paid-spot-name');
         this.timeSavedInServerInput = document.querySelector('#paid-spot-time');
         this.numberOfAiringInput = document.querySelector('#paid-spot-number-airings');
         this.paidSpotPlacementsInput = document.querySelector('#paid-spots-placement');
-        this.paidSpotDuplicationPermissionInput = document.querySelector('input[id="paid-spot-duplication-permission"]:checked');
+        this.paidSpotDuplicationPermissionInput = document.querySelector('input[name="paid-spot-duplication-permission"]:checked');
         this.paidSpotMethodToRecieveInput = document.querySelector('#paid-spots-receive');
         this.paidSpotApprovedByInput = document.querySelector('#paid-spots-approval');
         this.paidSpotApprovedDateInput = document.querySelector('#paid-spots-approval-date');
 
-        this.paidSpotPermissionYesInput = document.querySelector('input[name="paid-spot-yes"]')
-        this.paidSpotPermissionNoInput = document.querySelector('input[name="paid-spot-no"]')
+        this.paidSpotPermissionYesInput = document.querySelector('input[id="paid-spot-yes"]')
+        this.paidSpotPermissionNoInput = document.querySelector('input[id="paid-spot-no"]')
+        this.paidSpotDuplicationPermissionYesInput = document.querySelector('input[id="paid-spot-duplication-permission-yes"]')
+        this.paidSpotDuplicationPermissionNoInput = document.querySelector('input[id="paid-spot-duplication-permission-no"]')
+
+        //update paidSpotDuplicationPermissionInput
 
          // Disclaimers
-         this.disclaimerExistInput = document.querySelector('input[id="disclaimer-exist"]:checked');
-         this.disclaimerGraphicRequiredInput = document.querySelector('input[id="disclaimer-graphic-required"]:checked');
+         this.disclaimerExistInput = document.querySelector('input[name="disclaimer-exist"]:checked');
+         this.disclaimerGraphicRequiredInput = document.querySelector('input[name="disclaimer-graphic-required"]:checked');
          this.disclaimerGraphicNameInput = document.querySelector('#disclaimer-graphic-name');
          this.disclaimerScriptInput = document.querySelector('#disclaimer-script');
          this.disclaimerRunTimeInput = document.querySelector('#disclaimer-runTime');
          this.disclaimerServerNameInput = document.querySelector('#disclaimer-server-name');
          this.disclaimerDueDateInput = document.querySelector('#disclaimer-due-date');
+
+         this.disclaimerExistNewInput = document.querySelector('input[id="disclaimer-exist-new"]')
+         this.disclaimerExistExistingInput = document.querySelector('input[id="disclaimer-exist-existing"]')
+         this.disclaimerGraphicRequiredYesInput= document.querySelector('input[id="disclaimer-graphic-required-yes"]')
+         this.disclaimerGraphicRequiredNoInput= document.querySelector('input[id="disclaimer-graphic-required-no"]')
+         this.disclaimerGraphicRequiredExisitingInput= document.querySelector('input[id="disclaimer-graphic-required-existing"]')
+
  
 
         //Submit Button
@@ -198,6 +209,7 @@ class UI {
 
     // Fill form to Edit
     fillForm(data) {
+      //colorBackground(data.typeOfClient) Change Background Before fill data
       this.typeOfClientInput.value = data.typeOfClient;
       this.soldByPersonInput.value = data.soldByPerson;
       this.clientCompanyNameInput.value = data.clientCompanyName;
@@ -210,8 +222,8 @@ class UI {
       this.productionCompanyPersonTitleInput.value = data.productionCompanyPersonTitle;
       this.productionCompanyPhoneInput.value = data.productionCompanyPhone;
       this.productionCompanyEmailInput.value = data.productionCompanyEmail;
-      this.copyrightFillInput.checked = RadioButton(data.copyright, 'YES');
-      this.copyrightFillNoInput.checked = RadioButton(data.copyright, 'NO');
+      this.copyrightFillInput.checked = radioButton(data.copyright, 'YES');
+      this.copyrightFillNoInput.checked = radioButton(data.copyright, 'NO');
       this.contractSignDateInput.value = data.contractSignDate;
       this.contractStartDateInput.value = data.contractStartDate;
       this.contractEndDateInput.value = data.contractEndDate;
@@ -219,38 +231,38 @@ class UI {
       this.contractAdditionalInfoInput.value = data.contractAdditionalInfo;
 
       // Web OTT Indentification
-      this.payWallRadioInFrontInput.checked = RadioButton(data.webOTT[0].payWall, 'In Front');
-      this.payWallRadioBehindInput.checked= RadioButton(data.webOTT[0].payWall, 'Behind');
+      this.payWallRadioInFrontInput.checked = radioButton(data.webOTT[0].payWall, 'In Front');
+      this.payWallRadioBehindInput.checked= radioButton(data.webOTT[0].payWall, 'Behind');
       this.webCategoryInput.value= data.webOTT[0].webCategory;
-      this.selectVideoOnDemandPCNSelectInput.checked = RadioButton(data.webOTT[0].selectVideoOnDemand, 'PCN Select');//RADIO BUTTON
-      this.selectVideoOnDemandOtherInput.checked = RadioButton(data.webOTT[0].selectVideoOnDemand, 'Other');//RADIO BUTTON
+      this.selectVideoOnDemandPCNSelectInput.checked = radioButton(data.webOTT[0].selectVideoOnDemand, 'PCN Select');//RADIO BUTTON
+      this.selectVideoOnDemandOtherInput.checked = radioButton(data.webOTT[0].selectVideoOnDemand, 'Other');//RADIO BUTTON
       this.otherVideoOnDemandInput.value= data.webOTT[0].otherVideoOnDemand;
-      this.webGraphicRequiredYesInput.checked= RadioButton(data.webOTT[0].webGraphicRequired,'yes');//RADIO BUTTON=====
-      this.webGraphicRequiredNoInput.checked= RadioButton(data.webOTT[0].webGraphicRequired,'no');//RADIO BUTTON=====
-      this.webGraphicRequiredExisitingInput.checked = RadioButton(data.webOTT[0].webGraphicRequired,'existing');//RADIO BUTTON
+      this.webGraphicRequiredYesInput.checked= radioButton(data.webOTT[0].webGraphicRequired,'yes');//RADIO BUTTON=====
+      this.webGraphicRequiredNoInput.checked= radioButton(data.webOTT[0].webGraphicRequired,'no');//RADIO BUTTON=====
+      this.webGraphicRequiredExisitingInput.checked = radioButton(data.webOTT[0].webGraphicRequired,'existing');//RADIO BUTTON
       this.webProgramDescriptionInput.value= data.webOTT[0].webProgramDescription;
       this.webButtonInput.value= data.webOTT[0].webButton;
 
       //Store Duplication FTP
-      this.persmissionToSellYesInput.checked = RadioButton(data.duplication[0].persmissionToSell,'Yes');//RADIO BUTTON=
-      this.persmissionToSellNoInput.checked = RadioButton(data.duplication[0].persmissionToSell,'No');//RADIO BUTTON===
-      this.placeInStoreYesInput.checked = RadioButton(data.duplication[0].placeInStore,'Yes' );//RADIO BUTTON=====
-      this.placeInStoreNoInput.checked = RadioButton(data.duplication[0].placeInStore,'No' );//RADIO BUTTON=====
-      this.compSelectionYesInput.checked = RadioButton(data.duplication[0].compSelection, 'Yes');//RADIO BUTTON=====
-      this.compSelectionNoInput.checked = RadioButton(data.duplication[0].compSelection, 'No');//RADIO BUTTON=====
+      this.persmissionToSellYesInput.checked = radioButton(data.duplication[0].persmissionToSell,'Yes');//RADIO BUTTON=
+      this.persmissionToSellNoInput.checked = radioButton(data.duplication[0].persmissionToSell,'No');//RADIO BUTTON===
+      this.placeInStoreYesInput.checked = radioButton(data.duplication[0].placeInStore,'Yes' );//RADIO BUTTON=====
+      this.placeInStoreNoInput.checked = radioButton(data.duplication[0].placeInStore,'No' );//RADIO BUTTON=====
+      this.compSelectionYesInput.checked = radioButton(data.duplication[0].compSelection, 'Yes');//RADIO BUTTON=====
+      this.compSelectionNoInput.checked = radioButton(data.duplication[0].compSelection, 'No');//RADIO BUTTON=====
       this.compFormatInput.value = data.duplication[0].compFormat;
-      this.fTPInstructionsCheckInput.checked = RadioButton(data.duplication[0].fTPInstructions, 'true');//RADIO BUTTON=====CHECKBOX  THIS WILL BE UPDATED ADD NAME ftp-instructions-sent
+      this.fTPInstructionsCheckInput.checked = radioButton(data.duplication[0].fTPInstructions, 'true');//RADIO BUTTON=====CHECKBOX  THIS WILL BE UPDATED ADD NAME ftp-instructions-sent
       this.compDueDateInput.value = data.duplication[0].compDueDate;
       this.compNumbersPerEpisodeInput.value = data.duplication[0].compNumbersPerEpisode;
-      this.compGraphicDesignYesInput.checked = RadioButton(data.duplication[0].compGraphicDesign, 'Yes');//RADIO BUTTON=====
-      this.compGraphicDesignNoInput.checked = RadioButton(data.duplication[0].compGraphicDesign, 'No');//RADIO BUTTON=====
+      this.compGraphicDesignYesInput.checked = radioButton(data.duplication[0].compGraphicDesign, 'Yes');//RADIO BUTTON=====
+      this.compGraphicDesignNoInput.checked = radioButton(data.duplication[0].compGraphicDesign, 'No');//RADIO BUTTON=====
       this.compAdditionalInfoInput.value= data.duplication[0].compAdditionalInfo;
 
       // Social Media
-      this.socialMediaPermissionYesInput.checked = RadioButton(data.social[0].socialMediaPermission, 'Yes');//RADIO BUTTON=====
-      this.socialMediaPermissionNoInput.checked = RadioButton(data.social[0].socialMediaPermission, 'No');//RADIO BUTTON=====
-      this.fullFacebookVideoYesInput.checked = RadioButton(data.social[0].fullFacebookVideo, 'Yes');//RADIO BUTTON=====
-      this.fullFacebookVideoNoInput.checked = RadioButton(data.social[0].fullFacebookVideo, 'No');//RADIO BUTTON=====
+      this.socialMediaPermissionYesInput.checked = radioButton(data.social[0].socialMediaPermission, 'Yes');//RADIO BUTTON=====
+      this.socialMediaPermissionNoInput.checked = radioButton(data.social[0].socialMediaPermission, 'No');//RADIO BUTTON=====
+      this.fullFacebookVideoYesInput.checked = radioButton(data.social[0].fullFacebookVideo, 'Yes');//RADIO BUTTON=====
+      this.fullFacebookVideoNoInput.checked = radioButton(data.social[0].fullFacebookVideo, 'No');//RADIO BUTTON=====
       this.socialMediaStartDateInput.value= data.social[0].socialMediaStartDate;
       this.socialMediaEndDateInput.value= data.social[0].socialMediaEndDate;
       this.socialFrequencyInput.value= data.social[0].socialFrequency;
@@ -259,20 +271,20 @@ class UI {
       // Production
       this.productionLocationInput.value= data.production[0].productionLocation;
       this.productionNameOfShowInput.value= data.production[0].productionNameOfShow;
-      this.productionLengthOfProgram30Input.checked = RadioButton(data.production[0].productionLengthOfProgram, '30 Minutes');//RADIO BUTTON=====
-      this.productionLengthOfProgram60Input.checked = RadioButton(data.production[0].productionLengthOfProgram, '60 Minutes');//RADIO BUTTON=====
+      this.productionLengthOfProgram30Input.checked = radioButton(data.production[0].productionLengthOfProgram, '30 Minutes');//RADIO BUTTON=====
+      this.productionLengthOfProgram60Input.checked = radioButton(data.production[0].productionLengthOfProgram, '60 Minutes');//RADIO BUTTON=====
       this.productionProducerInput.value= data.production[0].productionProducer;
       this.productionMethodToRecieveInput.value= data.production[0].productionMethodToRecieve;
-      this.productionHighlightYesInput.checked = RadioButton(data.production[0].productionHighlight, 'Yes');//RADIO BUTTON=====
-      this.productionHighlightNoInput.checked = RadioButton(data.production[0].productionHighlight, 'No');//RADIO BUTTON=====
+      this.productionHighlightYesInput.checked = radioButton(data.production[0].productionHighlight, 'Yes');//RADIO BUTTON=====
+      this.productionHighlightNoInput.checked = radioButton(data.production[0].productionHighlight, 'No');//RADIO BUTTON=====
       this.productionAdditionalInfoInput.value= data.production[0].productionAdditionalInfo;
 
       //Billboards
-      this.billboardNewExistingNewInput.checked = RadioButton(data.billboards[0].billboardNewExisting, 'new');//RADIO BUTTON=====
-      this.billboardNewExistingExistingInput.checked = RadioButton(data.billboards[0].billboardNewExisting, 'existing');//RADIO BUTTON=====
-      this.billboardGraphicsYesInput.checked = RadioButton(data.billboards[0].billboardGraphics, 'yes');//RADIO BUTTON=====
-      this.billboardGraphicsNoInput.checked = RadioButton(data.billboards[0].billboardGraphics, 'no');//RADIO BUTTON=====
-      this.billboardGraphicsExistingInput.checked = RadioButton(data.billboards[0].billboardGraphics, 'existing');//RADIO BUTTON=====
+      this.billboardNewExistingNewInput.checked = radioButton(data.billboards[0].billboardNewExisting, 'new');//RADIO BUTTON=====
+      this.billboardNewExistingExistingInput.checked = radioButton(data.billboards[0].billboardNewExisting, 'existing');//RADIO BUTTON=====
+      this.billboardGraphicsYesInput.checked = radioButton(data.billboards[0].billboardGraphics, 'yes');//RADIO BUTTON=====
+      this.billboardGraphicsNoInput.checked = radioButton(data.billboards[0].billboardGraphics, 'no');//RADIO BUTTON=====
+      this.billboardGraphicsExistingInput.checked = radioButton(data.billboards[0].billboardGraphics, 'existing');//RADIO BUTTON=====
       this.billboardScriptInput.value= data.billboards[0].billboardScript;
       this.billboardLengthInput.value= data.billboards[0].billboardLength;
       this.billboardNameServerInput.value= data.billboards[0].billboardNameServer;
@@ -290,41 +302,48 @@ class UI {
       this.promotionsTimesPerProgramInput.value= data.promotions[0].promotionsTimesPerProgram;
       this.promotinsAirDatesStartInput.value= data.promotions[0].promotinsAirDatesStart;
       this.promotionsAirDatesEndInput.value= data.promotions[0].promotionsAirDatesEnd;
-      this.promotionsGraphicsYesInput.checked = RadioButton(data.promotions[0].promotionsGraphics, 'yes');//RADIO BUTTON=====
-      this.promotionsGraphicsNoInput.checked = RadioButton(data.promotions[0].promotionsGraphics, 'no');//RADIO BUTTON=====
-      this.promotionsGraphicsExistingInput.checked = RadioButton(data.promotions[0].promotionsGraphics, 'existing');//RADIO BUTTON=====
+      this.promotionsGraphicsYesInput.checked = radioButton(data.promotions[0].promotionsGraphics, 'yes');//RADIO BUTTON=====
+      this.promotionsGraphicsNoInput.checked = radioButton(data.promotions[0].promotionsGraphics, 'no');//RADIO BUTTON=====
+      this.promotionsGraphicsExistingInput.checked = radioButton(data.promotions[0].promotionsGraphics, 'existing');//RADIO BUTTON=====
       this.promotionsMethodToRecieveInput.value= data.promotions[0].promotionsMethodToRecieve;
-      this.billboardNewExistingNewInput.checked = RadioButton(data.promotions[0].promotionsSocialMediaPermission, 'Yes');//RADIO BUTTON=====
-      this.billboardNewExistingNewInput.checked = RadioButton(data.promotions[0].promotionsSocialMediaPermission, 'No');//RADIO BUTTON=====
+      this.promotionsSocialMediaPermissionYesInput.checked = radioButton(data.promotions[0].promotionsSocialMediaPermission, 'Yes');//RADIO BUTTON=====
+      this.promotionsSocialMediaPermissionNoInput.checked = radioButton(data.promotions[0].promotionsSocialMediaPermission, 'No');//RADIO BUTTON=====
       this.promotionsApprovalInput.value= data.promotions[0].promotionsApproval;
       this.promotionsApprovalDateInput.value= data.promotions[0].promotionsApprovalDate;
 
       // Paid Spots
-      this.paidSpotPermissionYesInput.checked = RadioButton(data.paidSpots[0].paidSpotPermission, 'yes');//RADIO BUTTON=====
-      this.paidSpotPermissionNoInput.checked = RadioButton(data.paidSpots[0].paidSpotPermission, 'no');//RADIO BUTTON=====
+      this.paidSpotPermissionYesInput.checked = radioButton(data.paidSpots[0].paidSpotPermission, 'yes');//RADIO BUTTON=====
+      this.paidSpotPermissionNoInput.checked = radioButton(data.paidSpots[0].paidSpotPermission, 'no');//RADIO BUTTON=====
       this.numberOfDifferentSpotsInput.value= data.paidSpots[0].numberOfDifferentSpots;
       this.totalNumberOfAiringsInput.value= data.paidSpots[0].totalNumberOfAirings;
       this.nameSavedInServerInput.value= data.paidSpots[0].nameSavedInServer;
       this.timeSavedInServerInput.value= data.paidSpots[0].timeSavedInServer;
       this.numberOfAiringInput.value= data.paidSpots[0].numberOfAiring;
       this.paidSpotPlacementsInput.value= data.paidSpots[0].paidSpotPlacements;
-      this.paidSpotDuplicationPermissionInput.value= data.paidSpots[0].paidSpotDuplicationPermission;
+      this.paidSpotDuplicationPermissionYesInput.checked= radioButton(data.paidSpots[0].paidSpotDuplicationPermission, 'yes'); //Radio BUTTON
+      this.paidSpotDuplicationPermissionNoInput.checked= radioButton(data.paidSpots[0].paidSpotDuplicationPermission, 'no');; //Radio BUTTON
       this.paidSpotMethodToRecieveInput.value= data.paidSpots[0].paidSpotMethodToRecieve;
       this.paidSpotApprovedByInput.value= data.paidSpots[0].paidSpotApprovedBy;
       this.paidSpotApprovedDateInput.value= data.paidSpots[0].paidSpotApprovedDate;
 
       // Disclaimers
-      this.disclaimerExistInput.value= data.disclaimer[0].disclaimerExist;
-      this.disclaimerGraphicRequiredInput.value= data.disclaimer[0].disclaimerGraphicRequired;
-      this.disclaimerGraphicNameInput.value= data.disclaimer[0].disclaimerGraphicName;
-      this.disclaimerScriptInput.value= data.disclaimer[0].disclaimerScript;
-      this.disclaimerRunTimeInput.value= data.disclaimer[0].disclaimerRunTime;
-      this.disclaimerServerNameInput.value= data.disclaimer[0].disclaimerServerName;
-      this.disclaimerDueDateInput.value= data.disclaimer[0].disclaimerDueDate;
+      // this.disclaimerExistNewInput.checked= radioButton(data.disclaimer[0].disclaimerExist,'new'); //Radio BUTTON======= 
+      // this.disclaimerExistExistingInput.checked= radioButton(data.disclaimer[0].disclaimerExist,'existing'); //Radio BUTTON======= 
+      // this.disclaimerGraphicRequiredYesInput.checked= radioButton(data.disclaimer[0].disclaimerGraphicRequired, 'yes'); //Radio BUTTON======= 
+      // this.disclaimerGraphicRequiredNoInput.checked= radioButton(data.disclaimer[0].disclaimerGraphicRequired, 'no'); //Radio BUTTON======= 
+      // this.disclaimerGraphicRequiredExistingInput.checked= radioButton(data.disclaimer[0].disclaimerGraphicRequired, 'existing'); //Radio BUTTON======= 
+      // this.disclaimerGraphicNameInput.value= data.disclaimer[0].disclaimerGraphicName;
+      // this.disclaimerScriptInput.value= data.disclaimer[0].disclaimerScript;
+      // this.disclaimerRunTimeInput.value= data.disclaimer[0].disclaimerRunTime;
+      // this.disclaimerServerNameInput.value= data.disclaimer[0].disclaimerServerName;
+      // this.disclaimerDueDateInput.value= data.disclaimer[0].disclaimerDueDate;
 
       this.idInput.value = data._id
+      console.log(data._id)
+      console.log('Yes')
 
-      function RadioButton(dataValue,firstValue){
+      // used to return True for Checked Radio Buttons
+      function radioButton(dataValue,firstValue){
         if (dataValue === firstValue) {return true}
         else { return false };
       }
