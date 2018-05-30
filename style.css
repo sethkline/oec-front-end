@@ -1,0 +1,33 @@
+
+    label { 
+        font-size: 1.5rem; 
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+
+    legend{
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .col-form-label{
+        font-size: 1.5rem;
+    }
+
+    .m-b-n-lg {
+        margin-bottom: 1.5rem;
+      }
+
+div#OEC-card {
+        margin-right: 1rem;
+        padding-top:0.5rem;
+        padding-right:0.5rem;
+        padding-left:0.5rem;
+        padding-bottom:0.5rem;
+}
