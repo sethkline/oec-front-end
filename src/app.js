@@ -21,11 +21,12 @@ document.querySelector('#contract').addEventListener('click',enableEdit)
 
 
 
-document.getElementById('type-of-client').addEventListener('change', hideForms(selectValue));
+document.getElementById('type-of-client').addEventListener('change', contractSort); //Shows parts of form
 document.querySelector('#submit-it').addEventListener('click', testConsole); //UPDATE THIS
 document.getElementById('new-contract-btn').addEventListener('click',newContractBtn);
 document.getElementById('load-contract-btn').addEventListener('click',loadContractsBtn);
 document.getElementById('weekend-schedule-btn').addEventListener('click',weekendScheduleBtn);
+
 
 // Hide parts of UI
 const forms = document.querySelectorAll('div.big-form-input');
@@ -272,7 +273,7 @@ function submitPost() {
 
 
 
-
+//http://localhost:5000/api/oec/
 
     if(id === '') {
         // Create Post
@@ -285,7 +286,7 @@ function submitPost() {
          console.log(id)
          console.log(id)
          console.log(id)
-      http.put(`http://localhost:5000/api/oec/${id}`, data)
+      http.put(`http://104.236.92.35/api/oec/${id}`, data)
       .then(data => {
         console.log('Post updated', 'alert alert-success');
         console.log('add');
@@ -337,14 +338,17 @@ function submitPost() {
 
 let selectValue = document.querySelector('#type-of-client').value.toLowerCase();
 
+function contractSort() {
+    const clientType = document.querySelector('#type-of-client').value.toLowerCase()
+    hideForms(clientType)
+}
+
 function hideForms(typeOfShow){
-    
-    
     const fusion = document.querySelectorAll('div.fusion');
     const partner = document.querySelectorAll('div.partner');
     const underwriter = document.querySelectorAll('div.underwriter');
 
-    
+    console.log(typeOfShow)
 
     if (typeOfShow === 'fusion') {
 
