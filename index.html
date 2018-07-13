@@ -13,7 +13,7 @@
 
 
 
-    
+
 
     <!-- ============= Choice =============== -->
 
@@ -36,9 +36,17 @@
           <a class="btn btn-warning btn-lg" id="weekend-schedule-btn" href="#" role="button">
               <i class="far fa-calendar-alt"></i>
             Weekend Schedule</a>
+
+            <a class="btn btn-primary btn-lg" id="surveyjs-btn" href="#" role="button">
+              <i class="fas fa-paste"></i>
+              Pagination OEC</a>
         </p>
       </div>
       </div>
+
+      <!-- ============ Survey JS ========= -->
+
+      <div id="surveyContainer" class="container collapse"></div>
 
 <!-- ============Load Schedule Example========= -->
       
@@ -161,7 +169,7 @@
     <div class="container">
     <div class="row">
       <div class="big-form-input collapse">
-    <div class="basic-contract col-12">
+    <div class="basic-contract col-12" id="Section-BasicInfo">
             <h1>Basic Contract Information</h1>
 
             <div class="form-group">
@@ -324,7 +332,7 @@
                             </div>
                             
  <!-- ======================= PRODUCTION SHOW ========================= -->
-<div class="fusion partner col-12 bg-dark collapse">
+<div class="fusion partner col-12 bg-dark collapse" id="Section-ProductionShow">
     <h1>Production/Show</h1>
 
     <div class="form-group col-12">
@@ -411,7 +419,7 @@
 
  <!-- =================== Disclaimer ================= -->
 
-                        <div class="fusion col-12 bg-danger collapse">
+                        <div class="fusion col-12 bg-danger collapse" id="Section-Disclaimer">
                             <h1>Disclaimer</h1>
                             
                             <div class="form-check">
@@ -501,7 +509,7 @@
 
 <!-- =================== Billboards ================= -->
 
-                                <div class="underwriter partner col-12 bg-success collapse">
+                                <div class="underwriter partner col-12 bg-success collapse" id="Section-Billboards">
                                                 <h1>Billboards</h1>
                                                 
                                                 <div class="form-check">
@@ -614,7 +622,7 @@
                            <!-- ===================  PROMOTIONS ================== -->
 
 
-                            <div class="fusion partner col-12 collapse">
+                            <div class="fusion partner col-12 collapse" id="Section-Promotions">
                                     <h1>PROMOTIONS</h1>
 
                                 <div class="form-group col-10">
@@ -730,7 +738,7 @@
                            <!-- ================ PAID SPOTS ===================== -->
                            
           
-                                   <div class="underwriter col-12 collapse">
+                                   <div class="underwriter col-12 collapse" id="Section-PaidSpots">
                                        <h1>PAID SPOTS</h1>
 
                                        <div class="form-check">
@@ -835,7 +843,7 @@
 
 
  
-                        <div class="big-form-input col-12">
+                        <div class="big-form-input col-12" id="Section-Web">
                            <div class="store col-12 bg-dark">
                                 <h1>Web / OTT Identification:</h1>
 
@@ -936,7 +944,7 @@
 
                            <!-- ==================== STORE DUPLICATION FTP ====================== -->
 
-                           <div class="store col-12">
+                           <div class="store col-12" id="Section-Store">
                                 <h1>Store / Duplication FTP</h1>
 
                     <div class="form-group col-12">
@@ -1056,7 +1064,7 @@
               </div>
 
                            <!-- ================== SOCIAL MEDIA =============== -->
-<div class="social-media col-12 bg-dark">
+<div class="social-media col-12 bg-dark" id="Section-SocialMedia">
     <h1>Social Media</h1>
 
     <div class="form-group col-12">
@@ -1130,6 +1138,12 @@
     </div>
   </div>
 </div>
+<div id="previous button">
+  <button type="button" class="btn btn-outline-secondary">Previous</button>
+</div>
+<div id="next button">
+  <button type="button" class="btn btn-outline-primary">Next</button>
+</div>
 
 
 
@@ -1138,6 +1152,33 @@
   </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://surveyjs.azureedge.net/1.0.28/survey.jquery.min.js"></script>
+<!-- <script src="./src/survey.js"></script> -->
+<!-- <script>
+  Survey.Survey.cssType = "bootstrap";
+  var showCompletedPage = false;
+
+var surveyJSON = {pages:[{name:"basicContractInfo",elements:[{type:"dropdown",name:"soldBy",title:"SOLD BY",choices:[{value:"Mitzi Jones",undefined:"Mitzi Jones"},{value:"Joel Bechtel",undefined:"Joel Bechtel"}]},{type:"dropdown",name:"typeOfClient",title:"TYPE OF CLIENT",choices:[{value:"Fusion",undefined:"Fusion"},{value:"Underwriter",undefined:"Partner"},{value:"Partner",undefined:"Underwriter"}],choicesOrder:"asc"},{type:"text",name:"Client Name",title:"CLIENT",placeHolder:"Company Name"},{type:"paneldynamic",name:"question2",title:"Client Contact Information",templateElements:[{type:"text",name:"contactName",title:"CONTACT NAME",placeHolder:"John Doe"},{type:"text",name:"Contact Title",startWithNewLine:false,title:"TITLE",placeHolder:"CEO"},{type:"text",name:"Contact Phone",title:"PHONE",inputType:"tel"},{type:"text",name:"contactEmail",startWithNewLine:false,title:"EMAIL",inputType:"email"}]},{type:"paneldynamic",name:"question1",title:"Production Company Contact Information",templateElements:[{type:"text",name:"question3",title:"CLIENT",placeHolder:"Company Name"},{type:"text",name:"contactName",title:"CONTACT NAME",placeHolder:"John Doe"},{type:"text",name:"Contact Title",startWithNewLine:false,title:"TITLE",placeHolder:"CEO"},{type:"text",name:"Contact Phone",title:"PHONE",inputType:"tel"},{type:"text",name:"contactEmail",startWithNewLine:false,title:"EMAIL",inputType:"email"}]},{type:"checkbox",name:"copyrightedMaterial",title:"Valid license to copyrighted material",choices:["YES","NO"]},{type:"text",name:"dateContractSigned",title:"DATE CONTRACT SIGNED",inputType:"date"},{type:"text",name:"contractStartDate",title:"CONTRACT START DATE",inputType:"date"},{type:"text",name:"contractEndDate",startWithNewLine:false,title:"CONTRACT END DATE",inputType:"date"},{type:"paneldynamic",name:"Air Dates and Times",templateElements:[{type:"text",name:"airDatesAndTimes",title:"AIR DATES AND TIMES",inputType:"datetime-local"}]},{type:"comment",name:"additionalInfo",title:"Additional Information"}],title:"BASIC CONTRACT INFO"},{name:"webIndentification",elements:[{type:"radiogroup",name:"paywall",title:"PAYWALL",choices:["In Front","Behind"],colCount:2},{type:"dropdown",name:"webCategory",title:"Category",choices:[{value:"politics",text:"Politics and Policy"},{value:"sports",text:"Sports"},{value:"culture",text:"History and Culture"}]},{type:"radiogroup",name:"svodGallery",title:"SVOD GALLERY:",choices:[{value:"select",text:"Select"},{value:"other",text:"Other"}],colCount:2},{type:"comment",name:"describeOther",visibleIf:"{svodGallery} = \"other\"",placeHolder:"Describe Other"},{type:"radiogroup",name:"webLogoRequired",title:"LOGO / GRAPHIC REQUIRED",choices:["Yes","No","Existing"]},{type:"comment",name:"webProgramDescription",title:"Program Description"},{type:"comment",name:"buttonsPage",title:"Specific Buttons or another page?"}],title:"WEB / OTT IDENTIFICATION"},{name:"store",elements:[{type:"radiogroup",name:"permissionToSell",title:"PERMISSION TO SELL:",choices:["YES","NO"],colCount:2},{type:"radiogroup",name:"placeInPCNStore",title:"PLACE  IN PCN STORE:",choices:["YES","NO"],colCount:2},{type:"radiogroup",name:"complimentaryDuplication",title:"COMPLIMENTARY DUPLICATION:",choices:["YES","NO"],colCount:2},{type:"dropdown",name:"compFormat",visibleIf:"{complimentaryDuplication} = \"YES\"",title:"Format of Comp",choices:["FTP","DVD"]},{type:"checkbox",name:"ftpInstructions",titleLocation:"hidden",choices:[{value:"yes",text:"FTP Instructions Sent"}]},{type:"text",name:"duplicationDueDate",title:"Due By",inputType:"datetime-local"},{type:"text",name:"duplicationNumberPerEpisode",startWithNewLine:false,title:"Number per episode:",inputType:"number"},{type:"radiogroup",name:"dubGraphicDesignRequired",title:"GRAPHIC DESIGN REQUIRED:",choices:["YES","NO"],colCount:2},{type:"comment",name:"dubAdditionalInformation",title:"ADDITIONAL INFORMATION"}],title:"STORE / DUPLICATION FTP"},{name:"socialMedia",elements:[{type:"radiogroup",name:"socialMediaPermission",titleLocation:"hidden",choices:["YES","NO"],colCount:2},{type:"text",name:"twitterHandle",visibleIf:"{socialMediaPermission} = \"YES\"",title:"Twitter Handle",placeHolder:"@something"},{type:"radiogroup",name:"fullVideoOnFacebook",visibleIf:"{socialMediaPermission} = \"YES\"",title:"FULL VIDEO ON FACEBOOK:",choices:["YES","NO"],colCount:2},{type:"html",name:"PROMOTION DATES",html:"<legend> PROMOTION DATES </legend>"},{type:"text",name:"socialMediaStartDate",visibleIf:"{socialMediaPermission} = \"YES\"",title:"Start Date",inputType:"datetime-local"},{type:"text",name:"socialMediaEndDate",visibleIf:"{socialMediaPermission} = \"YES\"",startWithNewLine:false,title:"End Date",inputType:"datetime-local"},{type:"comment",name:"socialMediaAdditionalInfo",visibleIf:"{socialMediaPermission} = \"YES\"",title:"ADDITIONAL INFORMATION"}],title:"SOCIAL MEDIA"},{name:"production",elements:[{type:"dropdown",name:"productionLocation",choices:[{value:"studio",text:"PCN Studio"},{value:"field",text:"PCN Field"},{value:"outside",text:"OUTSIDE of PCN"}]},{type:"text",name:"productionNameOfShow",title:"Name of Show",placeHolder:"Example Show"},{type:"comment",name:"productionAdditionalInfo",title:"ADDITIONAL INFORMATION"}],visibleIf:"{typeOfClient} = \"Fusion\" or ({typeOfClient} = \"Partner\")",title:"PRODUCTION/SHOW"},{name:"disclaimer",visibleIf:"{typeOfClient} = \"Fusion\"",title:"DISCLAIMER"},{name:"billboards",visibleIf:"{typeOfClient} = \"Underwriter\" or ({typeOfClient} = \"Partner\")",title:"BILLBOARDS"},{name:"paidSpots",visibleIf:"{typeOfClient} = \"Underwriter\"",title:"PAID SPOTS"},{name:"promotions",elements:[{type:"text",name:"promotionsOrigination",title:"ORIGINATION",placeHolder:"provided by client/edited by PCN"}],visibleIf:"{typeOfClient} = \"Partner\" || {typeOfClient} = \"Fusion\"",title:"PROMOTIONS"}],sendResultOnPageNext:true}
+
+// function sendDataToServer(survey) {
+//     survey.sendResult('78c54f82-6ff7-40f5-9022-31acfd3c8c5f');
+//     console.log(survey)
+//     console.log(survey.valuesHash.typeOfClient)
+// }
+
+function sendDataToServer(survey) {
+  var resultAsString = JSON.stringify(survey.data);
+  alert(resultAsString); //send Ajax request to your web server.
+}
+
+
+
+var survey = new Survey.Model(surveyJSON);
+$("#surveyContainer").Survey({
+    model: survey,
+    onComplete: sendDataToServer
+});
+</script> -->
 
     <script src="build/app.bundle.js"></script>
     

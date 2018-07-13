@@ -1,6 +1,8 @@
 const moment = require('moment');
 import { http } from './http';
 import { ui } from './ui';
+import { survey } from './survey';
+
 
 // Get clients on DOM load
 document.addEventListener('DOMContentLoaded', getClients);
@@ -18,6 +20,23 @@ document.querySelector('#contract').addEventListener('click',deleteCard);
 
 //Listen for edit
 document.querySelector('#contract').addEventListener('click',enableEdit)
+
+// SURVEY JS
+document.getElementById('surveyjs-btn').addEventListener('click',showSurveyJs);
+
+const surveyJSPart = document.querySelector('div#surveyContainer');
+
+function showSurveyJs(){
+    hideContracts()
+    hideWeekendSection()
+    hideSurveyJs()
+    hideMainForms();
+    surveyJSPart.classList.remove('collapse');
+};
+
+function hideSurveyJs(){
+    surveyJSPart.classList.add('collapse');
+};
 
 
 
@@ -43,8 +62,16 @@ function testConsole() {
 }
 
 
+// Sections
+        const sectionBasicInfo = document.querySelector('#Section-BasicInfo')
 
+        function hideSection(section){
+            section.classList.add('collapse');
+        };
 
+        // hideSection()
+
+        fusionOrder = [sectionBasicInfo, production, disclaimer,promotions,webOTT, store, socialMedia]
 
 // Submit Posts
 
@@ -378,6 +405,7 @@ function hideForms(typeOfShow){
 function newContractBtn(){
     hideContracts()
     hideWeekendSection()
+    hideSurveyJs()
     showMainForms();
 };
 
