@@ -185,13 +185,14 @@ class UI {
       contracts.forEach((contract) => {
         output +=`<div class="card mb-4" id="OEC-card">
                   <div class="card-head">
+                  <a href="#" class="delete card-link" data-id="${contract._id}"><i class="fas fa-times"></i></a>
                   <h4 class="card-title">${contract.typeOfClient}</h4>
                   <h6 class="card-subtitle mb-2 text-muted">${contract.soldByPerson}</h6>
                   <p class="card-text">${contract.clientCompanyName}</p>
                   <p class="card-text"> <span class = "badge badge-primary">START DATE</span>  ${contract.contractStartDate}</p>
                   <p class="card-text"> <span class = "badge badge-warning">END DATE</span>  ${contract.contractEndDate}</p>
                   <a href="#" class="edit card-link" data-id="${contract._id}"><i class="fas fa-pencil-alt"></i></a>
-                  <a href="#" class="delete card-link" data-id="${contract._id}"><i class="fas fa-times"></i></a>
+                  
                 </div>
               </div>
 

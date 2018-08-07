@@ -472,7 +472,7 @@ console.log(typeOfClient)
 function deleteCard(e) {
     if(e.target.parentElement.classList.contains('delete')) {
       const id = e.target.parentElement.dataset.id;
-      if(confirm('Are you sure?')) {
+      if(confirm('Are you sure You want to Delete?')) {
         http.delete(`http://104.236.92.35/api/oec/${id}`)
           .then(data => {
             // ui.showAlert('Post removed', 'alert alert-success');

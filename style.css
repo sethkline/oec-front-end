@@ -31,3 +31,7 @@ div#OEC-card {
         padding-left:0.5rem;
         padding-bottom:0.5rem;
 }
+
+a.delete.card-link{
+    float: right;
+}
