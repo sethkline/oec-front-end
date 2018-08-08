@@ -1,7 +1,7 @@
 const moment = require('moment');
 import { http } from './http';
 import { ui } from './ui';
-import { survey } from './survey';
+// import { survey } from './survey';
 
 
 // Get clients on DOM load
@@ -9,11 +9,19 @@ document.addEventListener('DOMContentLoaded', getClients);
 
 // Gets Clients from API using Get Request
 function getClients(){
-    http.get('http://104.236.92.35/api/oec')
+    http.get('http://104.236.92.35/api/oec/')
+    // http.get('http://localhost:5000/api/oec/search/FUSION')
     .then(data => ui.showClients(data))
     .catch(err => console.log(err))
-
 }
+
+//SEARCH 
+// searchClient = document.querySelector(#)
+// searchStartDate = document.querySelector(#)
+// searchEndDate = document.querySelector(#)
+// searchTypeOfClient
+
+
 
 // Listen for delete
 document.querySelector('#contract').addEventListener('click',deleteCard);
@@ -405,7 +413,7 @@ function hideForms(typeOfShow){
 function newContractBtn(){
     hideContracts()
     // hideWeekendSection()
-    hideSurveyJs()
+    // hideSurveyJs()
     showMainForms();
 };
 
