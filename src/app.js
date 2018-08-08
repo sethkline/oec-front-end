@@ -16,12 +16,27 @@ function getClients(){
 }
 
 //SEARCH 
-// searchClient = document.querySelector(#)
-// searchStartDate = document.querySelector(#)
-// searchEndDate = document.querySelector(#)
-// searchTypeOfClient
+    document.querySelector('#search-Submit').addEventListener('click', searchOEC)
+
+function searchOEC(){
+
+    const searchClientInput = document.querySelector('#search-client').value;
+    console.log(searchClientInput)
+    const searchStartDateInput = document.querySelector('#search-startDate').value;
+    const searchEndDateInput = document.querySelector('#search-endDate').value;
+    const searchTypeOfClientInput = document.querySelector('#search-typeOfClient').value;
+    const webAddress = 'http://localhost:5000/api/oec/search/' 
+    let queryString = `search?typeOfClient=${searchTypeOfClientInput}&clientCompanyName=${searchClientInput}`
+    let finalOutput = webAddress + queryString
+    http.get(finalOutput)
+        // http.get('http://localhost:5000/api/oec/search/FUSION')
+        .then(data => ui.showClients(data))
+        .catch(err => console.log(err))
+
+    console.log (finalOutput)
 
 
+}
 
 // Listen for delete
 document.querySelector('#contract').addEventListener('click',deleteCard);
