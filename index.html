@@ -33,13 +33,13 @@
           <a class="btn btn-info btn-lg" id="load-contract-btn" href="#" role="button">
               <i class="fas fa-folder-open"></i>
             Find OEC</a>
-          <a class="btn btn-warning btn-lg" id="weekend-schedule-btn" href="#" role="button">
+          <!-- <a class="btn btn-warning btn-lg" id="weekend-schedule-btn" href="#" role="button">
               <i class="far fa-calendar-alt"></i>
             Weekend Schedule</a>
 
             <a class="btn btn-primary btn-lg" id="surveyjs-btn" href="#" role="button">
               <i class="fas fa-paste"></i>
-              Pagination OEC</a>
+              Pagination OEC</a> -->
         </p>
       </div>
       </div>
@@ -59,20 +59,21 @@
                   <div class="card-header"> <legend> <i class="fas fa-search"></i> SEARCH </legend></div>
                     <div class="card-body">
                         <div class="form-group">
-                            <label class="col-form-label col-form-label-lg" for="inputLarge">Large input</label>
-                            <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="inputLarge">
+                            <label class="col-form-label col-form-label-lg" for="inputLarge">CLIENT</label>
+                            <input class="form-control form-control-lg" type="text"  id="search-client">
                           </div>
 
                           <div class="form-group">
                               <label class="col-form-label col-form-label-lg" for="inputLarge">Start Date</label>
-                              <input class="form-control form-control-lg" type="date" placeholder=".form-control-lg" id="inputLarge">
+                              <input class="form-control form-control-lg" type="date"  id="search-start-date">
                             </div>
 
                             <div class="form-group">
-                            <label class="col-form-label col-form-label-lg" for="inputLarge">Slider</label>
-                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                              <label class="col-form-label col-form-label-lg" for="inputLarge">End Date</label>
+                              <input class="form-control form-control-lg" type="date"  id="search-end-date">
                             </div>
-                       
+                            <br>
+
                         <div class="form-group">
                             <select class="custom-select">
                               <option selected="">Sort By</option>
@@ -81,6 +82,7 @@
                               <option value="3">FUSION</option>
                             </select>
                           </div>
+                          <br>
                           <div class="form-group">
                               <button type="button" class="btn btn-info btn-lg btn-block">Submit</button>
                         </div>
