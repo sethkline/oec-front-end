@@ -23,7 +23,7 @@ function searchOEC(){
     const searchClientInput = document.querySelector('#search-client').value;
     console.log(searchClientInput)
     const searchTypeOfClientInput = document.querySelector('#search-typeOfClient').value;
-    const webAddress = 'http://localhost:5000/api/oec/search/' 
+    const webAddress = 'http://104.236.92.35/api/oec/search/' 
     let queryString = `search?typeOfClient=${searchTypeOfClientInput}&clientCompanyName=${searchClientInput}`
     let finalOutput = webAddress + queryString
     http.get(finalOutput)
