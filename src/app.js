@@ -22,8 +22,6 @@ function searchOEC(){
 
     const searchClientInput = document.querySelector('#search-client').value;
     console.log(searchClientInput)
-    const searchStartDateInput = document.querySelector('#search-startDate').value;
-    const searchEndDateInput = document.querySelector('#search-endDate').value;
     const searchTypeOfClientInput = document.querySelector('#search-typeOfClient').value;
     const webAddress = 'http://localhost:5000/api/oec/search/' 
     let queryString = `search?typeOfClient=${searchTypeOfClientInput}&clientCompanyName=${searchClientInput}`
