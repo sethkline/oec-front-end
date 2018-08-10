@@ -167,6 +167,16 @@ class UI {
          this.disclaimerGraphicRequiredNoInput= document.querySelector('input[id="disclaimer-graphic-required-no"]')
          this.disclaimerGraphicRequiredExisitingInput= document.querySelector('input[id="disclaimer-graphic-required-existing"]')
 
+         // Calendar
+
+         this.calendarStartDateInput = document.querySelector('#search-start-date');
+         this.calendarStartTimeInput = document.querySelector('#search-start-time');
+         this.calendarEndDateInput = document.querySelector('#search-end-date');
+         this.calendarEndTimeInput = document.querySelector('#search-end-time');
+         this.calendarTitleInput = document.querySelector('#calendar-title');
+         this.calendarEpisodeInput = document.querySelector('#calendar-episode');
+         this.calendarDescriptionInput = document.querySelector('#calendar-description');
+
  
 
         //Submit Button
@@ -192,6 +202,7 @@ class UI {
                   <p class="card-text"> <span class = "badge badge-primary">START DATE</span>  ${contract.contractStartDate}</p>
                   <p class="card-text"> <span class = "badge badge-warning">END DATE</span>  ${contract.contractEndDate}</p>
                   <a href="#" class="edit card-link" data-id="${contract._id}"><i class="fas fa-pencil-alt"></i></a>
+                  <a href="#" class="print card-link" data-id="${contract._id}"><i class="fas fa-print"></i></a>
                   
                 </div>
               </div>

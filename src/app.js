@@ -69,6 +69,9 @@ document.getElementById('load-contract-btn').addEventListener('click',loadContra
 document.getElementById('weekend-schedule-btn').addEventListener('click', weekendScheduleBtn);
 // document.getElementById('weekend-schedule-btn').addEventListener('click',weekendScheduleBtn);
 
+//Calendar Submit button
+document.getElementById('submit-calendar').addEventListener('click', submitCalendar); 
+
 
 // Hide parts of UI
 const forms = document.querySelectorAll('div.big-form-input');
@@ -97,6 +100,58 @@ function testConsole() {
         // fusionOrder = [sectionBasicInfo, production, disclaimer,promotions,webOTT, store, socialMedia]
 
 // Submit Posts
+function submitCalendar() {
+    // Calendar
+
+    const calendarStartDate = document.querySelector('#search-start-date').value;
+    const calendarStartTime = document.querySelector('#search-start-time').value;
+    const calendarEndDate = document.querySelector('#search-end-date').value;
+    const calendarEndTime = document.querySelector('#search-end-time').value;
+    const text = document.querySelector('#calendar-title').value;
+    const episode = document.querySelector('#calendar-episode').value;
+    const description = document.querySelector('#calendar-description').value;
+    const nativeEditor = `"!nativeeditor_status" : "inserted"` 
+
+    const start_date = `${calendarStartDate} ${calendarStartTime}`//May have to make a custom function to convert this using moment
+    const end_date = `${calendarEndDate} ${calendarEndTime}`
+    const id = ''
+    const event_pid = ''
+    const event_length = ''
+    const rec_pattern = ''
+    const rec_type = ''
+    const isNew = ''
+    const evType = ''// FUSION NEED custom function
+    const runTime = ''
+    const socialApproval = ''
+    const marketingAssign = ''
+    // const !nativeeditor_status = 'inserted'
+
+    const calendarData = {
+        start_date,
+        end_date,
+        text,
+        id,
+        event_pid,
+        event_length,
+        rec_pattern,
+        rec_type,
+        episode,
+        isNew,
+        description,
+        evType,
+        runTime,
+        socialApproval,
+        marketingAssign,
+        '!nativeeditor_status' : 'inserted'
+            }
+            
+            
+// console.log(JSON.stringify(calendarData))
+            http.post('http://104.236.92.35/data/', JSON.stringify(calendarData))
+            .then(console.log(calendarData))
+            //have some spinner or message and then direct to main page
+            .catch(console.log(calendarData))
+}
 
 function submitPost() {
     //Contract Info
@@ -320,6 +375,8 @@ function submitPost() {
         }]
 
     };
+
+    
 
 
 
