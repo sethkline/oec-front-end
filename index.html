@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>OEC</title>
+
 </head>
 <body>
-
-
-
-
 
     <!-- ============= Choice =============== -->
 
@@ -33,16 +30,23 @@
           <a class="btn btn-info btn-lg" id="load-contract-btn" href="#" role="button">
               <i class="fas fa-folder-open"></i>
             Find OEC</a>
-          <!-- <a class="btn btn-warning btn-lg" id="weekend-schedule-btn" href="#" role="button">
+          <a class="btn btn-warning btn-lg" id="weekend-schedule-btn" href="#" role="button">
               <i class="far fa-calendar-alt"></i>
-            Weekend Schedule</a>
+            Schedule</a>
 
-            <a class="btn btn-primary btn-lg" id="surveyjs-btn" href="#" role="button">
-              <i class="fas fa-paste"></i>
-              Pagination OEC</a> -->
+
         </p>
       </div>
       </div>
+
+      <!-- ============= SCHEDULE ========= -->
+
+      <div class="embed-responsive embed-responsive-1by1 collapse" id="weekend-schedule">
+        <iframe class="embed-responsive-item" src="http://104.236.92.35/"></iframe>
+      </div>
+
+
+
 
       <!-- ============ Survey JS ========= -->
 
@@ -1151,12 +1155,101 @@
     </div>
   </div>
 </div>
-<!-- <div id="previous button">
-  <button type="button" class="btn btn-outline-secondary">Previous</button>
+
+<!-- ========Submit to Calendar Section ========= -->
+
+<div class="calendar-submit">
+<div class="container">
+
+  <h1><i class="far fa-calendar-alt col-1"></i>CALENDAR</h1>
+
+  <div class="row">
+      
+    
+      <div class="form-group col-lg">
+          <label class="col-form-label col-form-label-lg">Start Date</label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+              </div>
+              <input type="date" class="form-control form-control-lg" id="search-start-date">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group col-lg">
+            <label class="col-form-label col-form-label-lg">Start Time</label>
+            <div class="form-group">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                </div>
+                <input type="time" class="form-control form-control-lg" id="search-start-time">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group col-lg">
+              <label class="col-form-label col-form-label-lg">End Date</label>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                  </div>
+                  <input type="date" class="form-control form-control-lg" id="search-end-date">
+                </div>
+              </div>
+            </div>
+     
+            <div class="form-group col-lg">
+                <label class="col-form-label col-form-label-lg">End Time</label>
+                <div class="form-group">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                    </div>
+                    <input type="time" class="form-control form-control-lg" id="search-end-time">
+                  </div>
+                </div>
+              </div>
+
+
+    </div>
+   
+<div class="row m-b-n-md">
+    <div class="form-group col-lg">
+        <label for="social-media-frequency">Title:</label>
+    <input class="form-control form-control-lg" type="text" id="calendar-title" placeholder="">
 </div>
-<div id="next button">
-  <button type="button" class="btn btn-outline-primary">Next</button>
-</div> -->
+
+  <div class="form-group col-lg">
+    <label for="social-media-frequency">Episode:</label>
+<input class="form-control form-control-lg" type="text" id="calendar-episode">
+</div>
+</div>
+<div class="row">
+<div class="form-group col-lg m-b-n-lg">
+    <label for="calendar-description">Description:</label>
+    <textarea id="calendar-description" class="form-control form-control-lg" placeholder="Description"></textarea>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary btn-lg" id="btn-calendar">SUBMIT TO CALENDAR</button>
+
+
+    <!-- title
+    Episode
+    Description
+    Is new checkbox -->
+
+    
+
+
+
+</div>
+</div>
 
 
 
