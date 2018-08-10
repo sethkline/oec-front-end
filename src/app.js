@@ -4,6 +4,7 @@ import { ui } from './ui';
 // import { survey } from './survey';
 
 
+
 // Get clients on DOM load
 document.addEventListener('DOMContentLoaded', getClients);
 
@@ -65,13 +66,14 @@ document.getElementById('type-of-client').addEventListener('change', contractSor
 document.querySelector('#submit-it').addEventListener('click', testConsole); //UPDATE THIS
 document.getElementById('new-contract-btn').addEventListener('click',newContractBtn);
 document.getElementById('load-contract-btn').addEventListener('click',loadContractsBtn);
+document.getElementById('weekend-schedule-btn').addEventListener('click', weekendScheduleBtn);
 // document.getElementById('weekend-schedule-btn').addEventListener('click',weekendScheduleBtn);
 
 
 // Hide parts of UI
 const forms = document.querySelectorAll('div.big-form-input');
 const contracts = document.querySelector('div.load-contracts');
-// const weekendPart = document.querySelector('div.weekend-schedule');
+const weekendPart = document.querySelector('div#weekend-schedule');
 
 function testConsole() {
   submitPost()
@@ -425,21 +427,21 @@ function hideForms(typeOfShow){
 
 function newContractBtn(){
     hideContracts()
-    // hideWeekendSection()
+    hideWeekendSection()
     // hideSurveyJs()
     showMainForms();
 };
 
 function loadContractsBtn(){
     hideMainForms()
-    // hideWeekendSection()
+    hideWeekendSection()
     showContracts();
 };
 
 function weekendScheduleBtn(){
     hideMainForms()
     hideContracts()
-    // showWeekendSection()
+    showWeekendSection()
     console.log('Weekend Schedule');
 };
 
@@ -458,13 +460,13 @@ function hideContracts(){
     contracts.classList.add('collapse');
 };
 
-// function hideWeekendSection(){
-//     weekendPart.classList.add('collapse');
-// };
+function hideWeekendSection(){
+    weekendPart.classList.add('collapse');
+};
 
-// function showWeekendSection(){
-//     weekendPart.classList.remove('collapse');
-// };
+function showWeekendSection(){
+    weekendPart.classList.remove('collapse');
+};
 
 
 function showDiv(elementToMapOver){ 
