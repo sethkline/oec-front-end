@@ -114,43 +114,44 @@ function submitCalendar() {
 
     const start_date = `${calendarStartDate} ${calendarStartTime}`//May have to make a custom function to convert this using moment
     const end_date = `${calendarEndDate} ${calendarEndTime}`
-    const id = ''
-    const event_pid = ''
-    const event_length = ''
-    const rec_pattern = ''
-    const rec_type = ''
     const isNew = ''
     const evType = ''// FUSION NEED custom function
-    const runTime = ''
-    const socialApproval = ''
-    const marketingAssign = ''
-    // const !nativeeditor_status = 'inserted'
+
+    const nativeeditor_status = {"!nativeeditor_status" : "inserted"}
 
     const calendarData = {
         start_date,
         end_date,
         text,
-        id,
-        event_pid,
-        event_length,
-        rec_pattern,
-        rec_type,
         episode,
         isNew,
         description,
         evType,
-        runTime,
-        socialApproval,
-        marketingAssign,
-        '!nativeeditor_status' : 'inserted'
+        ...nativeeditor_status
             }
-            
-            
-// console.log(JSON.stringify(calendarData))
-            http.post('http://104.236.92.35/data/', JSON.stringify(calendarData))
-            .then(console.log(calendarData))
-            //have some spinner or message and then direct to main page
-            .catch(console.log(calendarData))
+            //convert to JSON
+            var data = JSON.stringify(calendarData)
+
+
+//USE AJAX to send to server
+    var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://104.236.92.35/data",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-cache",
+      "Postman-Token": "2df46f71-0c7a-492c-9fab-0ad8d2eb1fa9"
+    },
+    "processData": false,
+    "data": JSON.stringify(calendarData)
+  }
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+
 }
 
 function submitPost() {
@@ -590,3 +591,4 @@ function deleteCard(e) {
       e.preventDefault();
 
   }
+
