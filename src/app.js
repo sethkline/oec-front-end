@@ -43,27 +43,9 @@ document.querySelector('#contract').addEventListener('click',deleteCard);
 //Listen for edit
 document.querySelector('#contract').addEventListener('click',enableEdit)
 
-// // SURVEY JS
-// document.getElementById('surveyjs-btn').addEventListener('click',showSurveyJs);
-
-// const surveyJSPart = document.querySelector('div#surveyContainer');
-
-// function showSurveyJs(){
-//     hideContracts()
-//     hideWeekendSection()
-//     hideSurveyJs()
-//     hideMainForms();
-//     surveyJSPart.classList.remove('collapse');
-// };
-
-// function hideSurveyJs(){
-//     surveyJSPart.classList.add('collapse');
-// };
-
-
 
 document.getElementById('type-of-client').addEventListener('change', contractSort); //Shows parts of form
-document.querySelector('#submit-it').addEventListener('click', testConsole); //UPDATE THIS
+document.querySelector('#submit-it').addEventListener('click', submitButtonPush); //UPDATE THIS
 document.getElementById('new-contract-btn').addEventListener('click',newContractBtn);
 document.getElementById('load-contract-btn').addEventListener('click',loadContractsBtn);
 document.getElementById('weekend-schedule-btn').addEventListener('click', weekendScheduleBtn);
@@ -77,8 +59,9 @@ document.getElementById('submit-calendar').addEventListener('click', submitCalen
 const forms = document.querySelectorAll('div.big-form-input');
 const contracts = document.querySelector('div.load-contracts');
 const weekendPart = document.querySelector('div#weekend-schedule');
+const scheduleSubmit = document.querySelector('div.calendar-submit')
 
-function testConsole() {
+function submitButtonPush() {
   submitPost()
   ui.clearForm()
   getClients()
@@ -105,17 +88,17 @@ function submitCalendar() {
 
     const calendarStartDate = document.querySelector('#search-start-date').value;
     const calendarStartTime = document.querySelector('#search-start-time').value;
-    const calendarEndDate = document.querySelector('#search-end-date').value;
+    const calendarEndDate = document.querySelector('#search-start-date').value;
     const calendarEndTime = document.querySelector('#search-end-time').value;
     const text = document.querySelector('#calendar-title').value;
     const episode = document.querySelector('#calendar-episode').value;
     const description = document.querySelector('#calendar-description').value;
-    const nativeEditor = `"!nativeeditor_status" : "inserted"` 
+    const isNew = document.querySelector('#search-is-new').value;
+    const evType = document.querySelector('#search-category-type').value;
+    // const nativeEditor = `"!nativeeditor_status" : "inserted"` 
 
     const start_date = `${calendarStartDate} ${calendarStartTime}`//May have to make a custom function to convert this using moment
     const end_date = `${calendarEndDate} ${calendarEndTime}`
-    const isNew = ''
-    const evType = ''// FUSION NEED custom function
 
     const nativeeditor_status = {"!nativeeditor_status" : "inserted"}
 
@@ -379,15 +362,15 @@ function submitPost() {
 
     
 
-
-
 //http://localhost:5000/api/oec/
 
     if(id === '') {
         // Create Post
     http.post('http://104.236.92.35/api/oec', data)
         .then(console.log(data))
+        .then( hideMainForms())
         //have some spinner or message and then direct to main page
+        //Show Message
         .catch(console.log(data))
     } else {
          // Update Post
@@ -404,42 +387,14 @@ function submitPost() {
 //     }
     }
 
+    function createMessage(){
+        var newDiv = document.createElement("div").classList.add('alert')
+        var newContent = document.createTextNode("OEC Saved to the DATABASE")
+        newDiv.appendChild(newContent)
+    }
 
 
 }
-
-//Need to test to make sure object is being passed to JSON
-
-// Validate input
-// if(programName === '' || episodeName === '') {
-//     ui.showAlert('Please fill in all fields', 'alert alert-danger');
-//   } else {
-    // Check for ID
-
-
-
-    
-//     if(id === '') {
-//       // Create Post
-//       http.post('http://localhost:3000/oec', data)
-//     //   .then(data => {
-//     //     ui.showAlert('Post added', 'alert alert-success');
-//     //     ui.clearFields();
-//     //     getPosts();
-//     //   })
-//       .catch(err => console.log(err));
-//     } else {
-//       // Update Post
-//       http.put(`http://localhost:3000/oec/${id}`, data)
-//       .then(data => {
-//         ui.showAlert('Post updated', 'alert alert-success');
-//         ui.changeFormState('add');
-//         getPosts();
-//       })
-//       .catch(err => console.log(err));
-//     }
-
-//   }
 
 
 //Try to Clean this up later
@@ -492,8 +447,8 @@ function newContractBtn(){
 
 function loadContractsBtn(){
     hideMainForms()
-    hideWeekendSection()
-    showContracts();
+    hideSection(weekendPart)
+    showSection(contracts);
 };
 
 function weekendScheduleBtn(){
@@ -511,6 +466,15 @@ function hideMainForms(){
     hideDiv(forms)
 };
 
+/// Use this to replace a bunch of functions
+function showSection(section){
+    section.classList.remove('collapse')
+}
+
+function hideSection(section){
+    section.classList.add('collapse')
+}
+
 function showContracts(){
     contracts.classList.remove('collapse');
 };
@@ -526,6 +490,9 @@ function showWeekendSection(){
     weekendPart.classList.remove('collapse');
 };
 
+function hideCalendarInput(){
+    scheduleSubmit.classList.remove('collapse');
+}
 
 function showDiv(elementToMapOver){ 
     [].map.call(elementToMapOver, (el) => 
@@ -540,14 +507,12 @@ function hideDiv(elementToMapOver){
 
 
 
+// function submitPosts() {
+// const typeOfClient = document.querySelector('#type-of-client').value;
 
+// console.log(typeOfClient)
 
-function submitPosts() {
-const typeOfClient = document.querySelector('#type-of-client').value;
-
-console.log(typeOfClient)
-
-}
+// }
 
 // Delete OEC
 function deleteCard(e) {
