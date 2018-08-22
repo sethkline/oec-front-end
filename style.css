@@ -1,4 +1,12 @@
 
+div.jumbotron {
+     background-image: url('./contract.jpeg') no-repeat center/cover;
+     /* width: 100%;
+     height: 100vh; */
+
+}
+
+
     label { 
         font-size: 1.5rem; 
     }
