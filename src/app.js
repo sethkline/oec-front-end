@@ -70,6 +70,68 @@ function submitButtonPush() {
   loadContractsBtn();  
 }
 
+// function initializeElement(element, text) {
+//     var newElement = document
+//       .createElement(element)
+//     newElement
+//       .appendChild(
+//         document
+//         .createTextNode(text)
+//       )
+//     return newElement
+//   }
+//   createElement(
+//     'h1',
+//     'hello world'
+//   )
+
+function initializeElement(element, text) {
+    var div = document.createElement('div');
+    div.className = 'form-group';
+    var label = document.createElement('label');
+    label.className = 'col-sm-2 control-label';
+    label.innerHTML = 'Comments';
+    label.for = 'inputText';
+    var div1 = document.createElement('div');
+    div1.className = 'col-sm-10';
+    var commentText = document.createElement('textarea');
+    commentText.className = 'form-control';
+    commentText.id = 'inputText';
+    commentText.rows = '3';
+    commentText.placeholder = 'Write your comments';
+    div.appendChild(label);
+    div1.appendChild(commentText);
+    div.appendChild(div1);
+
+    document.body.appendChild(div);
+}
+    
+var div = document.createElement('div');
+div.className = 'form-group col-lg';
+var label = document.createElement('label');
+label.className = 'col-form-label col-form-label-lg';
+label.innerHTML = 'Date';
+var div1 = document.createElement('div');
+div1.className = 'form-group';
+var div2 = document.createElement('div');
+div2.className = 'input-group mb-3';
+var div3 = document.createElement('div');
+div3.className = 'input-group-prepend';
+var span = document.createElement('span');
+span.className = 'input-group-text';
+span.innerHTML = '<i class="fas fa-calendar"></i>';
+var dateInput = document.createElement('INPUT');
+dateInput.setAttribute("type", "date");
+dateInput.className = 'form-control form-control-lg';
+div.appendChild(label);
+div3.appendChild(span);
+div1.appendChild(div2)
+div2.appendChild(div3)
+div3.appendChild(dateInput)
+div.appendChild(div1)
+
+document.getElementById('calendar-social').appendChild(div)
+
 
 // Sections
         const sectionBasicInfo = document.querySelector('#Section-BasicInfo')
