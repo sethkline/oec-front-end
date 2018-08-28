@@ -105,7 +105,7 @@ function initializeElement(element, text) {
 
     document.body.appendChild(div);
 }
-    
+    //Creates Calendar input
 var div = document.createElement('div');
 div.className = 'form-group col-lg';
 var label = document.createElement('label');
@@ -129,7 +129,7 @@ div1.appendChild(div2)
 div2.appendChild(div3)
 div3.appendChild(dateInput)
 div.appendChild(div1)
-
+//appends to end of element
 document.getElementById('calendar-social').appendChild(div)
 
 
