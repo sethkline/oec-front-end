@@ -192,6 +192,8 @@ class UI {
       let output = '';
       console.log(contracts)
 
+      //Add print icon <a href="#" class="print card-link" data-id="${contract._id}"><i class="fas fa-print"></i></a>
+
       contracts.forEach((contract) => {
         output +=`<div class="card mb-4" id="OEC-card">
                   <div class="card-head">
@@ -202,7 +204,7 @@ class UI {
                   <p class="card-text"> <span class = "badge badge-primary">START DATE</span>  ${contract.contractStartDate}</p>
                   <p class="card-text"> <span class = "badge badge-warning">END DATE</span>  ${contract.contractEndDate}</p>
                   <a href="#" class="edit card-link" data-id="${contract._id}"><i class="fas fa-pencil-alt"></i></a>
-                  <a href="#" class="print card-link" data-id="${contract._id}"><i class="fas fa-print"></i></a>
+                  
                   
                 </div>
               </div>
