@@ -1,8 +1,11 @@
 const moment = require('moment');
+const jspdf = require('jspdf');
 import { http } from './http';
 import { ui } from './ui';
 // import { survey } from './survey';
 
+
+const serverAddy = 'http://104.236.92.35'
 
 
 // Get clients on DOM load
@@ -10,7 +13,7 @@ document.addEventListener('DOMContentLoaded', getClients);
 
 // Gets Clients from API using Get Request
 function getClients(){
-    http.get('http://104.236.92.35/api/oec/')
+    http.get(serverAddy + 'api/oec/')
     // http.get('http://localhost:5000/api/oec/search/FUSION')
     .then(data => ui.showClients(data))
     .catch(err => console.log(err))
@@ -24,7 +27,7 @@ function searchOEC(){
     const searchClientInput = document.querySelector('#search-client').value;
     console.log(searchClientInput)
     const searchTypeOfClientInput = document.querySelector('#search-typeOfClient').value;
-    const webAddress = 'http://104.236.92.35/api/oec/search/' 
+    const webAddress = serverAddy + 'api/oec/search/' 
     let queryString = `search?typeOfClient=${searchTypeOfClientInput}&clientCompanyName=${searchClientInput}`
     let finalOutput = webAddress + queryString
     http.get(finalOutput)
@@ -69,54 +72,6 @@ function submitButtonPush() {
   getClients()
   loadContractsBtn();  
 }
-
-
-// function initializeElement(element, text) {
-//     var div = document.createElement('div');
-//     div.className = 'form-group';
-//     var label = document.createElement('label');
-//     label.className = 'col-sm-2 control-label';
-//     label.innerHTML = 'Comments';
-//     label.for = 'inputText';
-//     var div1 = document.createElement('div');
-//     div1.className = 'col-sm-10';
-//     var commentText = document.createElement('textarea');
-//     commentText.className = 'form-control';
-//     commentText.id = 'inputText';
-//     commentText.rows = '3';
-//     commentText.placeholder = 'Write your comments';
-//     div.appendChild(label);
-//     div1.appendChild(commentText);
-//     div.appendChild(div1);
-
-//     document.body.appendChild(div);
-// }
-//     //Creates Calendar input
-// var div = document.createElement('div');
-// div.className = 'form-group col-lg';
-// var label = document.createElement('label');
-// label.className = 'col-form-label col-form-label-lg';
-// label.innerHTML = 'Date';
-// var div1 = document.createElement('div');
-// div1.className = 'form-group';
-// var div2 = document.createElement('div');
-// div2.className = 'input-group mb-3';
-// var div3 = document.createElement('div');
-// div3.className = 'input-group-prepend';
-// var span = document.createElement('span');
-// span.className = 'input-group-text';
-// span.innerHTML = '<i class="fas fa-calendar"></i>';
-// var dateInput = document.createElement('INPUT');
-// dateInput.setAttribute("type", "date");
-// dateInput.className = 'form-control form-control-lg';
-// div.appendChild(label);
-// div3.appendChild(span);
-// div1.appendChild(div2)
-// div2.appendChild(div3)
-// div3.appendChild(dateInput)
-// div.appendChild(div1)
-// //appends to end of element
-// document.getElementById('calendar-social').appendChild(div)
 
 
 // Sections
@@ -168,7 +123,7 @@ function submitCalendar() {
     var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://104.236.92.35/data",
+    "url": serverAddy + "data",
     "method": "POST",
     "headers": {
       "Content-Type": "application/json",
@@ -408,13 +363,31 @@ function submitPost() {
 
     };
 
+    constGraphicPDF = {
+        client : clientCompanyName, 
+        title : "Awesome Title", 
+        workingTitle : "Big Time Promo", 
+        code : "PR", 
+        submittedBy : soldByPerson, 
+        length : "30", 
+        dueBy : "02/23/18", 
+        startDate : "02/23/18", 
+        killDate : "02/23/18", 
+        runDuring : "Weather World", 
+        dateSubmitted : "02/23/18", 
+        assignedTo : "Seth", 
+        departmentApprov : "Seth", 
+        approvedBy : "Seth" , 
+        specialNote : "This needs to be done yesterday"
+    }
+
     
 
 //http://localhost:5000/api/oec/
 
     if(id === '') {
         // Create Post
-    http.post('http://104.236.92.35/api/oec', data)
+    http.post(serverAddy + 'api/oec', data)
         .then(console.log(data))
         .then( hideMainForms())
         //have some spinner or message and then direct to main page
@@ -425,7 +398,7 @@ function submitPost() {
          console.log(id)
          console.log(id)
          console.log(id)
-      http.put(`http://104.236.92.35/api/oec/${id}`, data)
+      http.put(serverAddy + `api/oec/${id}`, data)
       .then(data => {
         console.log('Post updated', 'alert alert-success');
         console.log('add');
@@ -567,7 +540,7 @@ function deleteCard(e) {
     if(e.target.parentElement.classList.contains('delete')) {
       const id = e.target.parentElement.dataset.id;
       if(confirm('Are you sure You want to Delete?')) {
-        http.delete(`http://104.236.92.35/api/oec/${id}`)
+        http.delete(serverAddy + `api/oec/${id}`)
           .then(data => {
             // ui.showAlert('Post removed', 'alert alert-success');
             getClients()
@@ -583,7 +556,7 @@ function deleteCard(e) {
   function enableEdit(e){
       if(e.target.parentElement.classList.contains('edit')){
         const id = e.target.parentElement.dataset.id;
-        http.get(`http://104.236.92.35/api/oec/${id}`)
+        http.get(serverAddy + `api/oec/${id}`)
         .then(data =>{
             console.log(data)
             console.log(data._id)
