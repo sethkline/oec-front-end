@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', getClients);
 
 // Gets Clients from API using Get Request
 function getClients(){
-    http.get(serverAddy + 'api/oec/')
+    http.get(serverAddy + '/api/oec/')
     // http.get('http://localhost:5000/api/oec/search/FUSION')
     .then(data => ui.showClients(data))
     .catch(err => console.log(err))
@@ -27,7 +27,7 @@ function searchOEC(){
     const searchClientInput = document.querySelector('#search-client').value;
     console.log(searchClientInput)
     const searchTypeOfClientInput = document.querySelector('#search-typeOfClient').value;
-    const webAddress = serverAddy + 'api/oec/search/' 
+    const webAddress = serverAddy + '/api/oec/search/' 
     let queryString = `search?typeOfClient=${searchTypeOfClientInput}&clientCompanyName=${searchClientInput}`
     let finalOutput = webAddress + queryString
     http.get(finalOutput)
@@ -361,7 +361,7 @@ function submitPost() {
 
     };
 
-    constGraphicPDF = {
+    const GraphicPDF = {
         client : clientCompanyName, 
         title : "Awesome Title", 
         workingTitle : "Big Time Promo", 
@@ -385,7 +385,7 @@ function submitPost() {
 
     if(id === '') {
         // Create Post
-    http.post(serverAddy + 'api/oec', data)
+    http.post(serverAddy + '/api/oec', data)
         .then(console.log(data))
         .then( hideMainForms())
         //have some spinner or message and then direct to main page
@@ -396,7 +396,7 @@ function submitPost() {
          console.log(id)
          console.log(id)
          console.log(id)
-      http.put(serverAddy + `api/oec/${id}`, data)
+      http.put(serverAddy + `/api/oec/${id}`, data)
       .then(data => {
         console.log('Post updated', 'alert alert-success');
         console.log('add');
@@ -538,7 +538,7 @@ function deleteCard(e) {
     if(e.target.parentElement.classList.contains('delete')) {
       const id = e.target.parentElement.dataset.id;
       if(confirm('Are you sure You want to Delete?')) {
-        http.delete(serverAddy + `api/oec/${id}`)
+        http.delete(serverAddy + `/api/oec/${id}`)
           .then(data => {
             // ui.showAlert('Post removed', 'alert alert-success');
             getClients()
@@ -554,7 +554,7 @@ function deleteCard(e) {
   function enableEdit(e){
       if(e.target.parentElement.classList.contains('edit')){
         const id = e.target.parentElement.dataset.id;
-        http.get(serverAddy + `api/oec/${id}`)
+        http.get(serverAddy + `/api/oec/${id}`)
         .then(data =>{
             console.log(data)
             console.log(data._id)

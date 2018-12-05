@@ -87,11 +87,10 @@ class UI {
         // this.productionHighlightInput = document.querySelector('input[name="production-highlight"]:checked');
         this.productionAdditionalInfoInput = document.querySelector('#additional-production-info');
 
-
         this.productionLengthOfProgram30Input = document.querySelector('input[id="program-length-30"]')
         this.productionLengthOfProgram60Input = document.querySelector('input[id="program-length-60"]')
-        this.productionHighlightYesInput = document.querySelector('input[id="production-highlight-yes"]')
-        this.productionHighlightNoInput = document.querySelector('input[id="production-highlight-no"]')
+        // this.productionHighlightYesInput = document.querySelector('input[id="production-highlight-yes"]')
+        // this.productionHighlightNoInput = document.querySelector('input[id="production-highlight-no"]')
 
         // Billboards
         this.billboardNewExistingInput = document.querySelector('input[name="billboard-new-existing"]:checked');
@@ -289,7 +288,7 @@ class UI {
       this.productionLengthOfProgram60Input.checked = radioButton(data.production[0].productionLengthOfProgram, '60 Minutes');//RADIO BUTTON=====
       this.productionProducerInput.value= data.production[0].productionProducer;
       this.productionMethodToRecieveInput.value= data.production[0].productionMethodToRecieve;
-      this.productionHighlightYesInput.checked = radioButton(data.production[0].productionHighlight, 'Yes');//RADIO BUTTON=====
+      // this.productionHighlightYesInput.checked = radioButton(data.production[0].productionHighlight, 'Yes');//RADIO BUTTON=====
       // this.productionHighlightNoInput.checked = radioButton(data.production[0].productionHighlight, 'No');//RADIO BUTTON=====
       this.productionAdditionalInfoInput.value= data.production[0].productionAdditionalInfo;
 
