@@ -189,12 +189,12 @@ function submitPost() {
         const socialFrequency = document.querySelector('#social-media-frequency').value;
         const socialAdditionalInfo = document.querySelector('#additional-social-media-info').value;
         // Production
-        const productionLocation = document.querySelector('#production-location').value;
+        // const productionLocation = document.querySelector('#production-location').value;
         const productionNameOfShow = document.querySelector('#show-name').value;
         const productionLengthOfProgram = document.querySelector('input[name="program-length"]:checked').value;
         const productionProducer = document.querySelector('#producer').value;
         const productionMethodToRecieve = document.querySelector('#production-receive').value;
-        const productionHighlight = document.querySelector('input[name="production-highlight"]:checked').value;
+        // const productionHighlight = document.querySelector('input[name="production-highlight"]:checked').value;
         const productionAdditionalInfo = document.querySelector('#additional-production-info').value;
 
         // Billboards
@@ -303,12 +303,10 @@ function submitPost() {
             socialAdditionalInfo
         }],
         production: [{
-            productionLocation,
             productionNameOfShow,
             productionLengthOfProgram,
             productionProducer,
             productionMethodToRecieve,
-            productionHighlight,
             productionAdditionalInfo
         }],
         billboards: [{

@@ -79,12 +79,12 @@ class UI {
         this.fullFacebookVideoNoInput = document.querySelector('input[id="facebook-video-permission-no"]')
         
         // Production
-        this.productionLocationInput = document.querySelector('#production-location');
+        // this.productionLocationInput = document.querySelector('#production-location');
         this.productionNameOfShowInput = document.querySelector('#show-name');
         this.productionLengthOfProgramInput = document.querySelector('input[name="program-length"]:checked');
         this.productionProducerInput = document.querySelector('#producer');
         this.productionMethodToRecieveInput = document.querySelector('#production-receive');
-        this.productionHighlightInput = document.querySelector('input[name="production-highlight"]:checked');
+        // this.productionHighlightInput = document.querySelector('input[name="production-highlight"]:checked');
         this.productionAdditionalInfoInput = document.querySelector('#additional-production-info');
 
 
@@ -283,14 +283,14 @@ class UI {
       this.socialAdditionalInfoInput.value= data.social[0].socialAdditionalInfo;
 
       // Production
-      this.productionLocationInput.value= data.production[0].productionLocation;
+      // this.productionLocationInput.value= data.production[0].productionLocation;
       this.productionNameOfShowInput.value= data.production[0].productionNameOfShow;
       this.productionLengthOfProgram30Input.checked = radioButton(data.production[0].productionLengthOfProgram, '30 Minutes');//RADIO BUTTON=====
       this.productionLengthOfProgram60Input.checked = radioButton(data.production[0].productionLengthOfProgram, '60 Minutes');//RADIO BUTTON=====
       this.productionProducerInput.value= data.production[0].productionProducer;
       this.productionMethodToRecieveInput.value= data.production[0].productionMethodToRecieve;
       this.productionHighlightYesInput.checked = radioButton(data.production[0].productionHighlight, 'Yes');//RADIO BUTTON=====
-      this.productionHighlightNoInput.checked = radioButton(data.production[0].productionHighlight, 'No');//RADIO BUTTON=====
+      // this.productionHighlightNoInput.checked = radioButton(data.production[0].productionHighlight, 'No');//RADIO BUTTON=====
       this.productionAdditionalInfoInput.value= data.production[0].productionAdditionalInfo;
 
       //Billboards
@@ -414,12 +414,10 @@ class UI {
       this.socialAdditionalInfoInput.value= "";
 
       // Production
-      this.productionLocationInput.value= "";
       this.productionNameOfShowInput.value= "";
       this.productionLengthOfProgramInput.value= "";
       this.productionProducerInput.value= "";
       this.productionMethodToRecieveInput.value= "";
-      this.productionHighlightInput.value= "";
       this.productionAdditionalInfoInput.value= "";
 
       //Billboards
