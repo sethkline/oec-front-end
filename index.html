@@ -177,16 +177,114 @@
     <div class="basic-contract col-12" id="Section-BasicInfo">
             <h1><i class="far fa-address-card"></i> Basic Contract Information</h1>
 
-            <div class="form-group">
+            <div class="row group-info m-b-n-lg">
+              <div class="form-inline">
+                  <div class="form-group">
+                          <div class="col-12">
+                      <label for="client">CLIENT</label>
+                      <input type="text" class="form-control" id="client" placeholder="Company Name">
+                  </div>
+                  </div>
+                  <div class="form-group">
+                          <div class="col-12">
+                      <label for="contact-name">CONTACT NAME</label>
+                      <input type="text" class="form-control" id="contact-name" placeholder="John Doe">
+                  </div>
+              </div>
+      
+                  <div class="form-group">
+                          <div class="col-12">
+                          <label for="contact-title">TITLE</label>
+                          <input type="text" class="form-control" id="contact-title" placeholder="CEO">
+                      </div>
+                      </div>
+      
+                  <div class="form-group">
+                          <div class="col-12">
+                          <label for="contact-phone">PHONE</label>
+                          <input type="tel"  class="form-control" id="contact-phone" placeholder="1-(800)-123-4567">
+                      </div>
+                      </div>
+      
+                  <div class="form-group">
+                          <div class="col-12">
+                          <label for="contact-title">EMAIL</label>
+                          <input type="email" class="form-control" id="contact-email" placeholder="contact@example.com">
+                          
+                  </div>
+                  </div>
+                  </div>
+      
+              </div>
+      
+              <div class="row group-info m-b-n-lg">
+      
+              <div class="form-inline">
+                      <div class="form-group">
+                              <div class="col-12">
+                          <label for="production-company">PRODUCTION CO.</label>
+                          <input type="text" class="form-control" id="production-company" placeholder="External Production">
+                      </div>
+                      </div>
+      
+                      <div class="form-group">
+                              <div class="col-12">
+                          <label for="production-contact-name">CONTACT NAME</label>
+                          <input type="text" class="form-control" id="production-contact-name" placeholder="John Doe">
+                      </div>
+                      </div>
+          
+                      <div class="form-group">
+                              <div class="col-12">
+                              <label for="production-contact-title">TITLE</label>
+                              <input type="text" class="form-control" id="production-contact-title" placeholder="CEO">
+                          </div>
+                          </div>
+          
+                      <div class="form-group">
+                              <div class="col-12">
+                              <label for="production-contact-phone">PHONE</label>
+                              <input type="tel"  class="form-control" id="production-contact-phone" placeholder="1-(800)-123-4567">
+                          </div>
+                          </div>
+          
+                      <div class="form-group">
+                              <div class="col-12">
+                              <label for="production-contact-title">EMAIL</label>
+                              <input type="email" class="form-control" id="production-contact-email" placeholder="contact@example.com">
+                      </div>
+                      </div>
+          
+                  </div>
+                  </div>
+      
+
+            <!-- <div class="form-group">
                     <div class="col-12">
                         <legend>Sold By</legend>
                     <select class="form-control" id="sold-by">
                         <option disabled selected value> -- select a person -- </option>
-                        <option>Joel Bechtel</option>
+                        <option>Bob McCool</option>
                         <option>Mitzi Jones</option>
+                        <option value="-">Other</option>
                     </select>
+                    <input type="text" name="other">
             </div>
             </div>
+
+            <input type="text" list="browsers" /> -->
+
+
+<div class="form-group">
+  <div class="col-12">
+      <legend>Sold By</legend>
+<input list="sold-by-list" id ="sold-by" value="" class="form-control">
+<datalist id="sold-by-list">
+    <option value="Bob McCool">Bob McCool</option>
+    <option value="Mitzi Jones">Mitzi Jones</option>
+</datalist>
+</div>
+</div>
 
 
         <div class="form-group">
@@ -203,87 +301,7 @@
         </div>
 
 
-        <div class="row group-info m-b-n-lg">
-        <div class="form-inline">
-            <div class="form-group">
-                    <div class="col-12">
-                <label for="client">CLIENT</label>
-                <input type="text" class="form-control" id="client" placeholder="Company Name">
-            </div>
-            </div>
-            <div class="form-group">
-                    <div class="col-12">
-                <label for="contact-name">CONTACT NAME</label>
-                <input type="text" class="form-control" id="contact-name" placeholder="John Doe">
-            </div>
-        </div>
-
-            <div class="form-group">
-                    <div class="col-12">
-                    <label for="contact-title">TITLE</label>
-                    <input type="text" class="form-control" id="contact-title" placeholder="CEO">
-                </div>
-                </div>
-
-            <div class="form-group">
-                    <div class="col-12">
-                    <label for="contact-phone">PHONE</label>
-                    <input type="tel"  class="form-control" id="contact-phone" placeholder="1-(800)-123-4567">
-                </div>
-                </div>
-
-            <div class="form-group">
-                    <div class="col-12">
-                    <label for="contact-title">EMAIL</label>
-                    <input type="email" class="form-control" id="contact-email" placeholder="contact@example.com">
-                    
-            </div>
-            </div>
-            </div>
-
-        </div>
-
-        <div class="row group-info m-b-n-lg">
-
-        <div class="form-inline">
-                <div class="form-group">
-                        <div class="col-12">
-                    <label for="production-company">PRODUCTION CO.</label>
-                    <input type="text" class="form-control" id="production-company" placeholder="External Production">
-                </div>
-                </div>
-
-                <div class="form-group">
-                        <div class="col-12">
-                    <label for="production-contact-name">CONTACT NAME</label>
-                    <input type="text" class="form-control" id="production-contact-name" placeholder="John Doe">
-                </div>
-                </div>
-    
-                <div class="form-group">
-                        <div class="col-12">
-                        <label for="production-contact-title">TITLE</label>
-                        <input type="text" class="form-control" id="production-contact-title" placeholder="CEO">
-                    </div>
-                    </div>
-    
-                <div class="form-group">
-                        <div class="col-12">
-                        <label for="production-contact-phone">PHONE</label>
-                        <input type="tel"  class="form-control" id="production-contact-phone" placeholder="1-(800)-123-4567">
-                    </div>
-                    </div>
-    
-                <div class="form-group">
-                        <div class="col-12">
-                        <label for="production-contact-title">EMAIL</label>
-                        <input type="email" class="form-control" id="production-contact-email" placeholder="contact@example.com">
-                </div>
-                </div>
-    
-            </div>
-            </div>
-
+        
             <div class="col-12 m-b-n-md">
             <div class="form-check form-check-inline">
                     <label for="copyright-license"><i class="fas fa-copyright"></i> Valid license to copyrighted material 
