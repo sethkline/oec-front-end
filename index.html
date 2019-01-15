@@ -65,16 +65,6 @@
                             <input class="form-control form-control-lg" type="text" placeholder="name"  id="search-client">
                           </div>
 
-                          <!-- <div class="form-group">
-                              <label class="col-form-label col-form-label-lg" id="search-startDate">Start Date</label>
-                              <input class="form-control form-control-lg" type="date"  id="search-start-date">
-                            </div>
-
-                            <div class="form-group">
-                              <label class="col-form-label col-form-label-lg" id="search-endDate">End Date</label>
-                              <input class="form-control form-control-lg" type="date"  id="search-end-date">
-                            </div>
-                            <br> -->
                             
                         <div class="form-group">
                             <label class="col-form-label col-form-label-lg">TYPE</label>
@@ -217,92 +207,41 @@
       
               </div>
       
-              <div class="row group-info m-b-n-lg">
-      
-              <div class="form-inline">
-                      <div class="form-group">
-                              <div class="col-12">
-                          <label for="production-company">PRODUCTION CO.</label>
-                          <input type="text" class="form-control" id="production-company" placeholder="External Production">
-                      </div>
-                      </div>
-      
-                      <div class="form-group">
-                              <div class="col-12">
-                          <label for="production-contact-name">CONTACT NAME</label>
-                          <input type="text" class="form-control" id="production-contact-name" placeholder="John Doe">
-                      </div>
-                      </div>
-          
-                      <div class="form-group">
-                              <div class="col-12">
-                              <label for="production-contact-title">TITLE</label>
-                              <input type="text" class="form-control" id="production-contact-title" placeholder="CEO">
-                          </div>
-                          </div>
-          
-                      <div class="form-group">
-                              <div class="col-12">
-                              <label for="production-contact-phone">PHONE</label>
-                              <input type="tel"  class="form-control" id="production-contact-phone" placeholder="1-(800)-123-4567">
-                          </div>
-                          </div>
-          
-                      <div class="form-group">
-                              <div class="col-12">
-                              <label for="production-contact-title">EMAIL</label>
-                              <input type="email" class="form-control" id="production-contact-email" placeholder="contact@example.com">
-                      </div>
-                      </div>
-          
-                  </div>
-                  </div>
       
 
-            <!-- <div class="form-group">
+                  <div class="form-group">
                     <div class="col-12">
-                        <legend>Sold By</legend>
-                    <select class="form-control" id="sold-by">
-                        <option disabled selected value> -- select a person -- </option>
-                        <option>Bob McCool</option>
-                        <option>Mitzi Jones</option>
-                        <option value="-">Other</option>
+                        <legend>Type of Client</legend>
+                <p class="form-control-static">FUSION: Sat/Sun shows PARTNER: courthouses/boroughs/FOAA/mock trial UNDERWRITER: Sports/farm show/current production</p>
+                    <select class="form-control" id="type-of-client">
+                        <option disabled selected value> -- select type of Client -- </option>
+                        <option>FUSION</option>
+                        <option>PARTNER</option>
+                        <option>UNDERWRITER</option>
                     </select>
-                    <input type="text" name="other">
             </div>
             </div>
-
-            <input type="text" list="browsers" /> -->
-
-
-<div class="form-group">
-  <div class="col-12">
-      <legend>Sold By</legend>
-<input list="sold-by-list" id ="sold-by" value="" class="form-control">
-<datalist id="sold-by-list">
-    <option value="Bob McCool">Bob McCool</option>
-    <option value="Mitzi Jones">Mitzi Jones</option>
-</datalist>
-</div>
-</div>
+      
 
 
-        <div class="form-group">
-                <div class="col-12">
-                    <legend>Type of Client</legend>
-            <p class="form-control-static">FUSION: Sat/Sun shows PARTNER: courthouses/boroughs/FOAA/mock trial UNDERWRITER: Sports/farm show/current production</p>
-                <select class="form-control" id="type-of-client">
-                    <option disabled selected value> -- select type of Client -- </option>
-                    <option>FUSION</option>
-                    <option>PARTNER</option>
-                    <option>UNDERWRITER</option>
-                </select>
-        </div>
-        </div>
+
+          <div class="form-group">
+          <div class="col-12">
+            <legend>Sold By</legend>
+          <input list="sold-by-list" id ="sold-by" value="" class="form-control">
+          <datalist id="sold-by-list">
+          <option value="Bob McCool">Bob McCool</option>
+          <option value="Mitzi Jones">Mitzi Jones</option>
+          </datalist>
+          </div>
+          </div>
+
+
+       
 
 
         
-            <div class="col-12 m-b-n-md">
+            <div class="col-12 m-b-n-lg">
             <div class="form-check form-check-inline">
                     <label for="copyright-license"><i class="fas fa-copyright"></i> Valid license to copyrighted material 
                             <input class="form-check-input" type="radio" name="copyright-license" id="copyright-license-yes" value="YES"> YES
@@ -319,8 +258,9 @@
                         <input class="form-check-input collapse" type="radio" name="copyright-license" id="copyright-license-none" checked value="">
                       </label>
                     </div>
-                     
-                    
+
+            
+                                
                 <div class="form-group">
                     <label for="example-date-input" class="col-12 col-form-label">Date Contract Signed</label>
                     <div class="col-12">
@@ -354,6 +294,47 @@
                                 <label for="air-dates-times">Air Dates and Times:</label>
                                 <input type="text" placeholder="First Thursday of each month, 7pm"class="form-control" id="air-dates-times">
                               </div>
+            
+                              <div class="row group-info m-b-n-lg">
+      
+                                <div class="form-inline">
+                                        <div class="form-group">
+                                                <div class="col-12">
+                                            <label for="production-company">PRODUCTION CO.</label>
+                                            <input type="text" class="form-control" id="production-company" placeholder="External Production">
+                                        </div>
+                                        </div>
+                        
+                                        <div class="form-group">
+                                                <div class="col-12">
+                                            <label for="production-contact-name">CONTACT NAME</label>
+                                            <input type="text" class="form-control" id="production-contact-name" placeholder="John Doe">
+                                        </div>
+                                        </div>
+                            
+                                        <div class="form-group">
+                                                <div class="col-12">
+                                                <label for="production-contact-title">TITLE</label>
+                                                <input type="text" class="form-control" id="production-contact-title" placeholder="CEO">
+                                            </div>
+                                            </div>
+                            
+                                        <div class="form-group">
+                                                <div class="col-12">
+                                                <label for="production-contact-phone">PHONE</label>
+                                                <input type="tel"  class="form-control" id="production-contact-phone" placeholder="1-(800)-123-4567">
+                                            </div>
+                                            </div>
+                            
+                                        <div class="form-group">
+                                                <div class="col-12">
+                                                <label for="production-contact-title">EMAIL</label>
+                                                <input type="email" class="form-control" id="production-contact-email" placeholder="contact@example.com">
+                                        </div>
+                                        </div>
+                            
+                                    </div>
+                                    </div>
 
 
                     <div class="form-group col-12">
@@ -378,10 +359,10 @@
 
     <!-- Only show when Other is selected -->
     <!-- https://www.sitepoint.com/community/t/form-drop-down-menus-select-other-and-make-a-textbox-appear/2789 -->
-        <div class="form-group col-12">
+        <!-- <div class="form-group col-12">
       <label for="show-name">OTHER</label>
            <input class="form-control" type="text">
-            </div>
+            </div> -->
               
 
     
@@ -410,7 +391,7 @@
                                           60 Minutes
                                         </label>
                                       </div>
-                                      </div>
+
 
                                       <div class="form-check col-12">
                                         <label class="form-check-label">
@@ -418,7 +399,7 @@
                                           Other
                                         </label>
                                       </div>
-                                      </div>
+
 
                                       <div class="form-group col-12">
                                         <label for="show-name">OTHER</label>
@@ -470,6 +451,8 @@
                             </div>
                     
                         </div>  
+
+                      </div>
 
 
  <!-- =================== Disclaimer ================= -->
