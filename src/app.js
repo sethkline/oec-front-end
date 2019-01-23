@@ -55,7 +55,7 @@ document.getElementById('weekend-schedule-btn').addEventListener('click', weeken
 // document.getElementById('weekend-schedule-btn').addEventListener('click',weekendScheduleBtn);
 
 //Calendar Submit button
-document.getElementById('submit-calendar').addEventListener('click', submitCalendar); 
+// document.getElementById('submit-calendar').addEventListener('click', submitCalendar); 
 
 
 // Hide parts of UI
@@ -149,11 +149,11 @@ function submitPost() {
         const clientPersonTitle = document.querySelector('#contact-title').value;
         const clientPhone = document.querySelector('#contact-phone').value;
         const clientEmail = document.querySelector('#contact-email').value;
-        const productionCompany = document.querySelector('#production-company').value;
-        const productionCompanyPerson = document.querySelector('#production-contact-name').value;
-        const productionCompanyPersonTitle = document.querySelector('#production-contact-title').value;
-        const productionCompanyPhone = document.querySelector('#production-contact-phone').value;
-        const productionCompanyEmail = document.querySelector('#production-contact-email').value;
+        // const productionCompany = document.querySelector('#production-company').value;
+        // const productionCompanyPerson = document.querySelector('#production-contact-name').value;
+        // const productionCompanyPersonTitle = document.querySelector('#production-contact-title').value;
+        // const productionCompanyPhone = document.querySelector('#production-contact-phone').value;
+        // const productionCompanyEmail = document.querySelector('#production-contact-email').value;
         const copyright = document.querySelector('input[name="copyright-license"]:checked').value;
         const contractSignDate = document.querySelector('#contract-sign-date').value;
         const contractStartDate = document.querySelector('#contract-start').value;
@@ -162,13 +162,13 @@ function submitPost() {
         const contractAdditionalInfo = document.querySelector('#additional-info').value;
 
         // Web OTT Indentification
-        const payWall = document.querySelector('input[name="paywall-permission"]:checked').value;
+        // const payWall = document.querySelector('input[name="paywall-permission"]:checked').value;
         const webCategory = document.querySelector('#web-category').value;
         const selectVideoOnDemand = document.querySelector('input[name="svod-gallery"]:checked').value;
-        const otherVideoOnDemand = document.querySelector('#vod-other-description').value;
-        const webGraphicRequired = document.querySelector('input[name="web-graphics"]:checked').value;
-        const webProgramDescription = document.querySelector('#program-description').value;
-        const webButton = document.querySelector('#web-buttons').value;
+        // const otherVideoOnDemand = document.querySelector('#vod-other-description').value;
+        // const webGraphicRequired = document.querySelector('input[name="web-graphics"]:checked').value;
+        // const webProgramDescription = document.querySelector('#program-description').value;
+        // const webButton = document.querySelector('#web-buttons').value;
 
         // Store Duplication FTP
         const persmissionToSell = document.querySelector('input[name="sell-permission"]:checked').value;
@@ -183,11 +183,11 @@ function submitPost() {
 
         // Social Media
         const socialMediaPermission = document.querySelector('input[name="social-media-permission"]:checked').value;
-        const fullFacebookVideo = document.querySelector('input[name="facebook-video-permission"]:checked').value;
-        const socialMediaStartDate = document.querySelector('#social-media-start-date').value;
-        const socialMediaEndDate = document.querySelector('#social-media-end-date').value;
-        const socialFrequency = document.querySelector('#social-media-frequency').value;
-        const socialAdditionalInfo = document.querySelector('#additional-social-media-info').value;
+        // const fullFacebookVideo = document.querySelector('input[name="facebook-video-permission"]:checked').value;
+        // const socialMediaStartDate = document.querySelector('#social-media-start-date').value;
+        // const socialMediaEndDate = document.querySelector('#social-media-end-date').value;
+        // const socialFrequency = document.querySelector('#social-media-frequency').value;
+        // const socialAdditionalInfo = document.querySelector('#additional-social-media-info').value;
         // Production
         // const productionLocation = document.querySelector('#production-location').value;
         const productionNameOfShow = document.querySelector('#show-name').value;
@@ -259,11 +259,11 @@ function submitPost() {
         clientPersonTitle,
         clientPhone,
         clientEmail,
-        productionCompany,
-        productionCompanyPerson,
-        productionCompanyPersonTitle,
-        productionCompanyPhone,
-        productionCompanyEmail,
+        // productionCompany,
+        // productionCompanyPerson,
+        // productionCompanyPersonTitle,
+        // productionCompanyPhone,
+        // productionCompanyEmail,
         copyright,
         contractSignDate,
         contractStartDate,
@@ -272,13 +272,13 @@ function submitPost() {
         contractAdditionalInfo,
         webOTT: [
             {
-            payWall,
+            // payWall,
             webCategory,
             selectVideoOnDemand,
-            otherVideoOnDemand,
-            webGraphicRequired,
-            webProgramDescription,
-            webButton
+            // otherVideoOnDemand,
+            // webGraphicRequired,
+            // webProgramDescription,
+            // webButton
         }
     ],
         duplication: [
@@ -296,11 +296,11 @@ function submitPost() {
     ],
         social: [{
             socialMediaPermission,
-            fullFacebookVideo,
-            socialMediaStartDate,
-            socialMediaEndDate,
-            socialFrequency,
-            socialAdditionalInfo
+            // fullFacebookVideo,
+            // socialMediaStartDate,
+            // socialMediaEndDate,
+            // socialFrequency,
+            // socialAdditionalInfo
         }],
         production: [{
             productionNameOfShow,
@@ -393,14 +393,11 @@ function submitPost() {
         .catch(console.log(data))
     } else {
          // Update Post
-         console.log(id)
-         console.log(id)
-         console.log(id)
       http.put(serverAddy + `/api/oec/${id}`, data)
       .then(data => {
         console.log('Post updated', 'alert alert-success');
         console.log('add');
-        getPosts();
+        // getPosts();
       })
       .catch(err => console.log(err));
 //     }
@@ -460,6 +457,7 @@ function hideForms(typeOfShow){
 function newContractBtn(){
     hideContracts()
     hideWeekendSection()
+    ui.clearForm()
     // hideSurveyJs()
     showMainForms();
 };

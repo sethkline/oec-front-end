@@ -41,7 +41,7 @@ class UI {
         // this.payWallRadioBehindInput = document.querySelector('input[id="paywall-permission-behind"]');
         this.selectVideoOnDemandYesInput = document.querySelector('input[id="web-svod-yes"]')
         this.selectVideoOnDemandNoInput = document.querySelector('input[id="web-svod-no"]')
-        this.selectVideoOnDemandBlankInput = document.querySelector('input[id="web-svod-pcn-none"]')
+        this.selectVideoOnDemandBlankInput = document.querySelector('input[id="web-svod-none"]')
         // this.webGraphicRequiredYesInput = document.querySelector('input[id="webott-web-graphic-yes"]')
         // this.webGraphicRequiredNoInput = document.querySelector('input[id="webott-web-graphic-no"]')
         // this.webGraphicRequiredExisitingInput = document.querySelector('input[id="webott-web-graphic-existing"]')
@@ -240,7 +240,6 @@ class UI {
     // Fill form to Edit
     fillForm(data) {
       //colorBackground(data.typeOfClient) Change Background Before fill data
-      this.idInput.value = '5bbe508f940d933df1e1d577'
       this.typeOfClientInput.value = data.typeOfClient;
       this.soldByPersonInput.value = data.soldByPerson;
       this.clientCompanyNameInput.value = data.clientCompanyName;
@@ -358,7 +357,7 @@ class UI {
       this.paidSpotApprovedDateInput.value= data.paidSpots[0].paidSpotApprovedDate;
 
 
-      // this.idInput.value = data._id
+      this.idInput.value = data._id
   
 
 
