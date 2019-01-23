@@ -1,9 +1,9 @@
 const moment = require('moment');
 
-// Constructor Don't forget to add empty ID input
+
 class UI {
-    constructor(){
-        //Contract Info
+  constructor(){
+    //Contract Info
         this.soldByPersonInput = document.querySelector('#sold-by');
         this.typeOfClientInput = document.querySelector('#type-of-client');
         this.clientCompanyNameInput = document.querySelector('#client');
@@ -11,11 +11,12 @@ class UI {
         this.clientPersonTitleInput = document.querySelector('#contact-title');
         this.clientPhoneInput = document.querySelector('#contact-phone');
         this.clientEmailInput = document.querySelector('#contact-email');
-        this.productionCompanyInput = document.querySelector('#production-company');
-        this.productionCompanyPersonInput = document.querySelector('#production-contact-name');
-        this.productionCompanyPersonTitleInput = document.querySelector('#production-contact-title');
-        this.productionCompanyPhoneInput = document.querySelector('#production-contact-phone');
-        this.productionCompanyEmailInput = document.querySelector('#production-contact-email');
+        this.productionNameOfShowInput = document.querySelector('#show-name');
+        // this.productionCompanyInput = document.querySelector('#production-company');
+        // this.productionCompanyPersonInput = document.querySelector('#production-contact-name');
+        // this.productionCompanyPersonTitleInput = document.querySelector('#production-contact-title');
+        // this.productionCompanyPhoneInput = document.querySelector('#production-contact-phone');
+        // this.productionCompanyEmailInput = document.querySelector('#production-contact-email');
         this.copyrightInput = document.querySelector('input[name="copyright-license"]:checked');
         this.contractSignDateInput = document.querySelector('#contract-sign-date');
         this.contractStartDateInput = document.querySelector('#contract-start');
@@ -25,23 +26,25 @@ class UI {
 
         this.copyrightFillInput = document.querySelector('input[id="copyright-license-yes"]');
         this.copyrightFillNoInput = document.querySelector('input[id="copyright-license-no"]');
+        this.copyrightFillBlankInput = document.querySelector('input[id="copyright-license-none"]');
 
         // Web OTT Indentification
-        this.payWallInput = document.querySelector('input[name="paywall-permission"]:checked');
-        this.webCategoryInput = document.querySelector('#web-category');
+        // this.payWallInput = document.querySelector('input[name="paywall-permission"]:checked');
         this.selectVideoOnDemandInput = document.querySelector('input[name="svod-gallery"]:checked');
-        this.otherVideoOnDemandInput = document.querySelector('#vod-other-description');
-        this.webGraphicRequiredInput = document.querySelector('input[name="web-graphics"]:checked');
-        this.webProgramDescriptionInput = document.querySelector('#program-description');
-        this.webButtonInput = document.querySelector('#web-buttons');
+        this.webCategoryInput = document.querySelector('#web-category');
+        // this.otherVideoOnDemandInput = document.querySelector('#vod-other-description');
+        // this.webGraphicRequiredInput = document.querySelector('input[name="web-graphics"]:checked');
+        // this.webProgramDescriptionInput = document.querySelector('#program-description');
+        // this.webButtonInput = document.querySelector('#web-buttons');
 
-        this.payWallRadioInFrontInput = document.querySelector('input[id="paywall-permission-in-front"]');
-        this.payWallRadioBehindInput = document.querySelector('input[id="paywall-permission-behind"]');
-        this.selectVideoOnDemandPCNSelectInput = document.querySelector('input[id="web-svod-pcn-select"]')
-        this.selectVideoOnDemandOtherInput = document.querySelector('input[id="web-svod-pcn-other"]')
-        this.webGraphicRequiredYesInput = document.querySelector('input[id="webott-web-graphic-yes"]')
-        this.webGraphicRequiredNoInput = document.querySelector('input[id="webott-web-graphic-no"]')
-        this.webGraphicRequiredExisitingInput = document.querySelector('input[id="webott-web-graphic-existing"]')
+        // this.payWallRadioInFrontInput = document.querySelector('input[id="paywall-permission-in-front"]');
+        // this.payWallRadioBehindInput = document.querySelector('input[id="paywall-permission-behind"]');
+        this.selectVideoOnDemandYesInput = document.querySelector('input[id="web-svod-yes"]')
+        this.selectVideoOnDemandNoInput = document.querySelector('input[id="web-svod-no"]')
+        this.selectVideoOnDemandBlankInput = document.querySelector('input[id="web-svod-pcn-none"]')
+        // this.webGraphicRequiredYesInput = document.querySelector('input[id="webott-web-graphic-yes"]')
+        // this.webGraphicRequiredNoInput = document.querySelector('input[id="webott-web-graphic-no"]')
+        // this.webGraphicRequiredExisitingInput = document.querySelector('input[id="webott-web-graphic-existing"]')
 
         // Store Duplication FTP
         this.persmissionToSellInput = document.querySelector('input[name="sell-permission"]:checked');
@@ -56,31 +59,36 @@ class UI {
 
         this.persmissionToSellYesInput = document.querySelector('input[id="sell-permission-yes"]')
         this.persmissionToSellNoInput = document.querySelector('input[id="sell-permission-no"]')
+        this.persmissionToSellBlankInput = document.querySelector('input[id="sell-permission-none"]')
         this.placeInStoreYesInput = document.querySelector('input[id="pcn-store-permission-yes"]')
         this.placeInStoreNoInput = document.querySelector('input[id="pcn-store-permission-no"]')
+        this.placeInStoreBlankInput = document.querySelector('input[id="pcn-store-permission-none"]')
         this.compSelectionYesInput = document.querySelector('input[id="comps-permission-yes"]')
         this.compSelectionNoInput = document.querySelector('input[id="comps-permission-no"]')
+        this.compSelectionBlankInput = document.querySelector('input[id="comps-permission-none"]')
         this.fTPInstructionsCheckInput = document.querySelector('input[id="ftp-instructions-sent"]')
+        this.fTPInstructionsBlankInput = document.querySelector('input[id="ftp-instructions-none"]')
         this.compGraphicDesignYesInput = document.querySelector('input[id="comp-design-gfx-yes"]')
         this.compGraphicDesignNoInput = document.querySelector('input[id="comp-design-gfx-no"]')
+        this.compGraphicDesignBlankInput = document.querySelector('input[id="comp-design-gfx-none"]')
 
 
         // Social Media
         this.socialMediaPermissionInput = document.querySelector('input[name="social-media-permission"]:checked');
-        this.fullFacebookVideoInput = document.querySelector('input[name="facebook-video-permission"]:checked');
-        this.socialMediaStartDateInput = document.querySelector('#social-media-start-date');
-        this.socialMediaEndDateInput = document.querySelector('#social-media-end-date');
-        this.socialFrequencyInput = document.querySelector('#social-media-frequency');
-        this.socialAdditionalInfoInput = document.querySelector('#additional-social-media-info');
+        // this.fullFacebookVideoInput = document.querySelector('input[name="facebook-video-permission"]:checked');
+        // this.socialMediaStartDateInput = document.querySelector('#social-media-start-date');
+        // this.socialMediaEndDateInput = document.querySelector('#social-media-end-date');
+        // this.socialFrequencyInput = document.querySelector('#social-media-frequency');
+        // this.socialAdditionalInfoInput = document.querySelector('#additional-social-media-info');
 
         this.socialMediaPermissionYesInput = document.querySelector('input[id="social-media-permission-yes"]')
         this.socialMediaPermissionNoInput = document.querySelector('input[id="social-media-permission-no"]')
-        this.fullFacebookVideoYesInput = document.querySelector('input[id="facebook-video-permission-yes"]')
-        this.fullFacebookVideoNoInput = document.querySelector('input[id="facebook-video-permission-no"]')
+        this.socialMediaPermissionBlankInput = document.querySelector('input[id="social-media-permission-none"]')
+        // this.fullFacebookVideoYesInput = document.querySelector('input[id="facebook-video-permission-yes"]')
+        // this.fullFacebookVideoNoInput = document.querySelector('input[id="facebook-video-permission-no"]')
         
         // Production
         // this.productionLocationInput = document.querySelector('#production-location');
-        this.productionNameOfShowInput = document.querySelector('#show-name');
         this.productionLengthOfProgramInput = document.querySelector('input[name="program-length"]:checked');
         this.productionProducerInput = document.querySelector('#producer');
         this.productionMethodToRecieveInput = document.querySelector('#production-receive');
@@ -89,6 +97,7 @@ class UI {
 
         this.productionLengthOfProgram30Input = document.querySelector('input[id="program-length-30"]')
         this.productionLengthOfProgram60Input = document.querySelector('input[id="program-length-60"]')
+        this.productionLengthOfProgramBlankInput = document.querySelector('input[id="program-length-none"]')
         // this.productionHighlightYesInput = document.querySelector('input[id="production-highlight-yes"]')
         // this.productionHighlightNoInput = document.querySelector('input[id="production-highlight-no"]')
 
@@ -106,9 +115,11 @@ class UI {
 
         this.billboardNewExistingNewInput = document.querySelector('input[id="billboard-new-existing-new"]')
         this.billboardNewExistingExistingInput = document.querySelector('input[id="billboard-new-existing-existing"]')
+        this.billboardNewExistingBlankInput = document.querySelector('input[id="billboard-new-existing-none"]')
         this.billboardGraphicsYesInput = document.querySelector('input[id="billboard-graphics-yes"]')
         this.billboardGraphicsNoInput = document.querySelector('input[id="billboard-graphics-no"]')
         this.billboardGraphicsExistingInput = document.querySelector('input[id="billboard-graphics-existing"]')
+        this.billboardGraphicsBlankInput = document.querySelector('input[id="billboard-graphics-none"]')
 
         // Promotions
         this.promotionsOrginationInput = document.querySelector('#promo-origination');
@@ -127,8 +138,10 @@ class UI {
         this.promotionsGraphicsYesInput = document.querySelector('input[id="promo-graphic-required-yes"]')
         this.promotionsGraphicsNoInput = document.querySelector('input[id="promo-graphic-required-no"]')
         this.promotionsGraphicsExistingInput = document.querySelector('input[id="promo-graphic-required-existing"]')
+        this.promotionsGraphicsBlankInput = document.querySelector('input[id="promo-graphic-required-none"]')
         this.promotionsSocialMediaPermissionYesInput = document.querySelector('input[id="promo-social-media-permission-yes"]')
         this.promotionsSocialMediaPermissionNoInput = document.querySelector('input[id="promo-social-media-permission-no"]')
+        this.promotionsSocialMediaPermissionBlankInput = document.querySelector('input[id="promo-social-media-permission-none"]')
 
 
         // Paid Spots
@@ -146,8 +159,10 @@ class UI {
 
         this.paidSpotPermissionYesInput = document.querySelector('input[id="paid-spot-yes"]')
         this.paidSpotPermissionNoInput = document.querySelector('input[id="paid-spot-no"]')
+        this.paidSpotPermissionBlankInput = document.querySelector('input[id="paid-spot-none"]')
         this.paidSpotDuplicationPermissionYesInput = document.querySelector('input[id="paid-spot-duplication-permission-yes"]')
         this.paidSpotDuplicationPermissionNoInput = document.querySelector('input[id="paid-spot-duplication-permission-no"]')
+        this.paidSpotDuplicationPermissionBlankInput = document.querySelector('input[id="paid-spot-duplication-permission-none"]')
 
         //update paidSpotDuplicationPermissionInput
 
@@ -162,9 +177,11 @@ class UI {
 
          this.disclaimerExistNewInput = document.querySelector('input[id="disclaimer-exist-new"]')
          this.disclaimerExistExistingInput = document.querySelector('input[id="disclaimer-exist-existing"]')
+         this.disclaimerExistBlankInput = document.querySelector('input[id="disclaimer-exist-none"]')
          this.disclaimerGraphicRequiredYesInput= document.querySelector('input[id="disclaimer-graphic-required-yes"]')
          this.disclaimerGraphicRequiredNoInput= document.querySelector('input[id="disclaimer-graphic-required-no"]')
          this.disclaimerGraphicRequiredExisitingInput= document.querySelector('input[id="disclaimer-graphic-required-existing"]')
+         this.disclaimerGraphicRequiredBlankInput= document.querySelector('input[id="disclaimer-graphic-required-none"]')
 
          // Calendar
 
@@ -189,40 +206,41 @@ class UI {
 
     showClients(contracts){
       let output = '';
-      console.log(contracts)
 
-      //Add print icon <a href="#" class="print card-link" data-id="${contract._id}"><i class="fas fa-print"></i></a>
 
       contracts.forEach((contract) => {
         output +=`<div class="card mb-4" id="OEC-card">
-                  <div class="card-head">
-                  <a href="#" class="delete card-link" data-id="${contract._id}"><i class="fas fa-times"></i></a>
-                  <h4 class="card-title">${contract.typeOfClient}</h4>
-                  <h6 class="card-subtitle mb-2 text-muted">${contract.soldByPerson}</h6>
-                  <p class="card-text">${contract.clientCompanyName}</p>
-                  <p class="card-text"> <span class = "badge badge-primary">START DATE</span>  ${contract.contractStartDate}</p>
-                  <p class="card-text"> <span class = "badge badge-warning">END DATE</span>  ${contract.contractEndDate}</p>
+                  <div class="card-header">
+                  <a href="#" class="delete card-link" data-id="${contract._id}"><span class="text-muted">Delete</span> <i class="fas fa-times"></i></a>
+                  
+                  <h2 class="card-title"><span class="badge badge-info">CLIENT</span> ${contract.clientCompanyName} </h2>
+                  <h4 class="card-title"><span class="badge badge-success">SHOW</span> ${contract.production[0].productionNameOfShow}</h4>
+                  <h6 class="card-subtitle mb-2 text-muted d-flex"><div class="d-inline-flex"><i class="fas fa-tag"> </i>${contract.typeOfClient} </div>
+                  <div class="d-inline-flex ml-4"><i class="fas fa-user"> </i>${contract.soldByPerson}</div>
+                  </h6>
+                  
+                  
+                  
+                  <p class="card-text"> <span class = "badge badge-primary">START DATE</span>  ${contract.contractStartDate}
+                  <span class = "badge badge-warning">END DATE</span>  ${contract.contractEndDate}
+                  </p>
                   <a href="#" class="edit card-link" data-id="${contract._id}"><i class="fas fa-pencil-alt"></i></a>
+                  <span class="text-muted">Edit</span>
                   
+                  </div>
                   
-                </div>
               </div>
-
 
         `
       })
       this.contract.innerHTML = output;
     }
-
-    //Clear Fields
-    clearFields() {
-      console.log('clear fields update this')
-    }
-
-
+    
+    
     // Fill form to Edit
     fillForm(data) {
       //colorBackground(data.typeOfClient) Change Background Before fill data
+      this.idInput.value = '5bbe508f940d933df1e1d577'
       this.typeOfClientInput.value = data.typeOfClient;
       this.soldByPersonInput.value = data.soldByPerson;
       this.clientCompanyNameInput.value = data.clientCompanyName;
@@ -230,11 +248,12 @@ class UI {
       this.clientPersonTitleInput.value = data.clientPersonTitle;
       this.clientPhoneInput.value = data.clientPhone;
       this.clientEmailInput.value = data.clientEmail;
-      this.productionCompanyInput.value = data.productionCompany;
-      this.productionCompanyPersonInput.value = data.productionCompanyPerson;
-      this.productionCompanyPersonTitleInput.value = data.productionCompanyPersonTitle;
-      this.productionCompanyPhoneInput.value = data.productionCompanyPhone;
-      this.productionCompanyEmailInput.value = data.productionCompanyEmail;
+      this.productionNameOfShowInput.value= data.production[0].productionNameOfShow;//update this in future
+      // this.productionCompanyInput.value = data.productionCompany;
+      // this.productionCompanyPersonInput.value = data.productionCompanyPerson;
+      // this.productionCompanyPersonTitleInput.value = data.productionCompanyPersonTitle;
+      // this.productionCompanyPhoneInput.value = data.productionCompanyPhone;
+      // this.productionCompanyEmailInput.value = data.productionCompanyEmail;
       this.copyrightFillInput.checked = radioButton(data.copyright, 'YES');
       this.copyrightFillNoInput.checked = radioButton(data.copyright, 'NO');
       this.contractSignDateInput.value = data.contractSignDate;
@@ -244,17 +263,17 @@ class UI {
       this.contractAdditionalInfoInput.value = data.contractAdditionalInfo;
 
       // Web OTT Indentification
-      this.payWallRadioInFrontInput.checked = radioButton(data.webOTT[0].payWall, 'In Front');
-      this.payWallRadioBehindInput.checked= radioButton(data.webOTT[0].payWall, 'Behind');
+      // this.payWallRadioInFrontInput.checked = radioButton(data.webOTT[0].payWall, 'In Front');
+      // this.payWallRadioBehindInput.checked= radioButton(data.webOTT[0].payWall, 'Behind');
+      this.selectVideoOnDemandYesInput.checked = radioButton(data.webOTT[0].selectVideoOnDemand, 'Yes');//RADIO BUTTON
+      this.selectVideoOnDemandNoInput.checked = radioButton(data.webOTT[0].selectVideoOnDemand, 'No');//RADIO BUTTON
       this.webCategoryInput.value= data.webOTT[0].webCategory;
-      this.selectVideoOnDemandPCNSelectInput.checked = radioButton(data.webOTT[0].selectVideoOnDemand, 'PCN Select');//RADIO BUTTON
-      this.selectVideoOnDemandOtherInput.checked = radioButton(data.webOTT[0].selectVideoOnDemand, 'Other');//RADIO BUTTON
-      this.otherVideoOnDemandInput.value= data.webOTT[0].otherVideoOnDemand;
-      this.webGraphicRequiredYesInput.checked= radioButton(data.webOTT[0].webGraphicRequired,'yes');//RADIO BUTTON=====
-      this.webGraphicRequiredNoInput.checked= radioButton(data.webOTT[0].webGraphicRequired,'no');//RADIO BUTTON=====
-      this.webGraphicRequiredExisitingInput.checked = radioButton(data.webOTT[0].webGraphicRequired,'existing');//RADIO BUTTON
-      this.webProgramDescriptionInput.value= data.webOTT[0].webProgramDescription;
-      this.webButtonInput.value= data.webOTT[0].webButton;
+      // this.otherVideoOnDemandInput.value= data.webOTT[0].otherVideoOnDemand;
+      // this.webGraphicRequiredYesInput.checked= radioButton(data.webOTT[0].webGraphicRequired,'yes');//RADIO BUTTON=====
+      // this.webGraphicRequiredNoInput.checked= radioButton(data.webOTT[0].webGraphicRequired,'no');//RADIO BUTTON=====
+      // this.webGraphicRequiredExisitingInput.checked = radioButton(data.webOTT[0].webGraphicRequired,'existing');//RADIO BUTTON
+      // this.webProgramDescriptionInput.value= data.webOTT[0].webProgramDescription;
+      // this.webButtonInput.value= data.webOTT[0].webButton;
 
       //Store Duplication FTP
       this.persmissionToSellYesInput.checked = radioButton(data.duplication[0].persmissionToSell,'Yes');//RADIO BUTTON=
@@ -274,16 +293,15 @@ class UI {
       // Social Media
       this.socialMediaPermissionYesInput.checked = radioButton(data.social[0].socialMediaPermission, 'Yes');//RADIO BUTTON=====
       this.socialMediaPermissionNoInput.checked = radioButton(data.social[0].socialMediaPermission, 'No');//RADIO BUTTON=====
-      this.fullFacebookVideoYesInput.checked = radioButton(data.social[0].fullFacebookVideo, 'Yes');//RADIO BUTTON=====
-      this.fullFacebookVideoNoInput.checked = radioButton(data.social[0].fullFacebookVideo, 'No');//RADIO BUTTON=====
-      this.socialMediaStartDateInput.value= data.social[0].socialMediaStartDate;
-      this.socialMediaEndDateInput.value= data.social[0].socialMediaEndDate;
-      this.socialFrequencyInput.value= data.social[0].socialFrequency;
-      this.socialAdditionalInfoInput.value= data.social[0].socialAdditionalInfo;
+      // this.fullFacebookVideoYesInput.checked = radioButton(data.social[0].fullFacebookVideo, 'Yes');//RADIO BUTTON=====
+      // this.fullFacebookVideoNoInput.checked = radioButton(data.social[0].fullFacebookVideo, 'No');//RADIO BUTTON=====
+      // this.socialMediaStartDateInput.value= data.social[0].socialMediaStartDate;
+      // this.socialMediaEndDateInput.value= data.social[0].socialMediaEndDate;
+      // this.socialFrequencyInput.value= data.social[0].socialFrequency;
+      // this.socialAdditionalInfoInput.value= data.social[0].socialAdditionalInfo;
 
       // Production
       // this.productionLocationInput.value= data.production[0].productionLocation;
-      this.productionNameOfShowInput.value= data.production[0].productionNameOfShow;
       this.productionLengthOfProgram30Input.checked = radioButton(data.production[0].productionLengthOfProgram, '30 Minutes');//RADIO BUTTON=====
       this.productionLengthOfProgram60Input.checked = radioButton(data.production[0].productionLengthOfProgram, '60 Minutes');//RADIO BUTTON=====
       this.productionProducerInput.value= data.production[0].productionProducer;
@@ -339,21 +357,10 @@ class UI {
       this.paidSpotApprovedByInput.value= data.paidSpots[0].paidSpotApprovedBy;
       this.paidSpotApprovedDateInput.value= data.paidSpots[0].paidSpotApprovedDate;
 
-      // Disclaimers
-      // this.disclaimerExistNewInput.checked= radioButton(data.disclaimer[0].disclaimerExist,'new'); //Radio BUTTON======= 
-      // this.disclaimerExistExistingInput.checked= radioButton(data.disclaimer[0].disclaimerExist,'existing'); //Radio BUTTON======= 
-      // this.disclaimerGraphicRequiredYesInput.checked= radioButton(data.disclaimer[0].disclaimerGraphicRequired, 'yes'); //Radio BUTTON======= 
-      // this.disclaimerGraphicRequiredNoInput.checked= radioButton(data.disclaimer[0].disclaimerGraphicRequired, 'no'); //Radio BUTTON======= 
-      // this.disclaimerGraphicRequiredExistingInput.checked= radioButton(data.disclaimer[0].disclaimerGraphicRequired, 'existing'); //Radio BUTTON======= 
-      // this.disclaimerGraphicNameInput.value= data.disclaimer[0].disclaimerGraphicName;
-      // this.disclaimerScriptInput.value= data.disclaimer[0].disclaimerScript;
-      // this.disclaimerRunTimeInput.value= data.disclaimer[0].disclaimerRunTime;
-      // this.disclaimerServerNameInput.value= data.disclaimer[0].disclaimerServerName;
-      // this.disclaimerDueDateInput.value= data.disclaimer[0].disclaimerDueDate;
 
-      this.idInput.value = data._id
-      console.log(data._id)
-      console.log('Yes')
+      // this.idInput.value = data._id
+  
+
 
       // used to return True for Checked Radio Buttons
       function radioButton(dataValue,firstValue){
@@ -366,18 +373,20 @@ class UI {
 
     clearForm() {
       this.typeOfClientInput.value = "";
+      this.productionNameOfShowInput.value= "";
       this.soldByPersonInput.value = "";
-      this.clientCompanyNameInput.value = "";
       this.clientPersonNameInput.value = "";
+      this.clientCompanyNameInput.value = "";
       this.clientPersonTitleInput.value = "";
       this.clientPhoneInput.value = "";
       this.clientEmailInput.value = "";
-      this.productionCompanyInput.value = "";
-      this.productionCompanyPersonInput.value = "";
-      this.productionCompanyPersonTitleInput.value = "";
-      this.productionCompanyPhoneInput.value = "";
-      this.productionCompanyEmailInput.value = "";
-      this.copyrightInput.value = "";
+      // this.productionCompanyInput.value = "";
+      // this.productionCompanyPersonInput.value = "";
+      // this.productionCompanyPersonTitleInput.value = "";
+      // this.productionCompanyPhoneInput.value = "";
+      // this.productionCompanyEmailInput.value = "";
+
+      this.copyrightFillBlankInput.checked = true;
       this.contractSignDateInput.value = "";
       this.contractStartDateInput.value = "";
       this.contractEndDateInput.value = "";
@@ -385,43 +394,42 @@ class UI {
       this.contractAdditionalInfoInput.value = "";
 
       // Web OTT Indentification
-      this.payWallInput.value= "";
+      // this.payWallInput.value= "";
       this.webCategoryInput.value= "";
-      this.selectVideoOnDemandInput.value= "";
-      this.otherVideoOnDemandInput.value= "";
-      this.webGraphicRequiredInput.value= "";
-      this.webProgramDescriptionInput.value= "";
-      this.webButtonInput.value= "";
+      this.selectVideoOnDemandBlankInput.checked = true;
+      // this.otherVideoOnDemandInput.value= "";
+      // this.webGraphicRequiredInput.value= "";
+      // this.webProgramDescriptionInput.value= "";
+      // this.webButtonInput.value= "";
 
       //Store Duplication FTP
-      this.persmissionToSellInput.value= "";
-      this.placeInStoreInput.value= "";
-      this.compSelectionInput.value= "";
+      this.persmissionToSellBlankInput.checked= true;
+      this.placeInStoreBlankInput.checked= true;
+      this.compSelectionBlankInput.checked= true;
       this.compFormatInput.value= "";
-      this.fTPInstructionsInput.value= "";
+      this.fTPInstructionsBlankInput.checked= true;
       this.compDueDateInput.value= "";
       this.compNumbersPerEpisodeInput.value= "";
-      this.compGraphicDesignInput.value= "";
+      this.compGraphicDesignBlankInput.checked= true;
       this.compAdditionalInfoInput.value= "";
 
       // Social Media
-      this.socialMediaPermissionInput.value= "";
-      this.fullFacebookVideoInput.value= "";
-      this.socialMediaStartDateInput.value= "";
-      this.socialMediaEndDateInput.value= "";
-      this.socialFrequencyInput.value= "";
-      this.socialAdditionalInfoInput.value= "";
+      this.socialMediaPermissionBlankInput.checked= true;
+      // this.fullFacebookVideoInput.value= "";
+      // this.socialMediaStartDateInput.value= "";
+      // this.socialMediaEndDateInput.value= "";
+      // this.socialFrequencyInput.value= "";
+      // this.socialAdditionalInfoInput.value= "";
 
       // Production
-      this.productionNameOfShowInput.value= "";
-      this.productionLengthOfProgramInput.value= "";
+      this.productionLengthOfProgramBlankInput.checked= true;
       this.productionProducerInput.value= "";
       this.productionMethodToRecieveInput.value= "";
       this.productionAdditionalInfoInput.value= "";
 
       //Billboards
-      this.billboardNewExistingInput.value= "";
-      this.billboardGraphicsInput.value= "";
+      this.billboardNewExistingBlankInput.checked= true;
+      this.billboardGraphicsBlankInput.checked= true;
       this.billboardScriptInput.value= "";
       this.billboardLengthInput.value= "";
       this.billboardNameServerInput.value= "";
@@ -439,21 +447,21 @@ class UI {
       this.promotionsTimesPerProgramInput.value= "";
       this.promotinsAirDatesStartInput.value= "";
       this.promotionsAirDatesEndInput.value= "";
-      this.promotionsGraphicsInput.value= "";
+      this.promotionsGraphicsBlankInput.checked= true;
       this.promotionsMethodToRecieveInput.value= "";
-      this.promotionsSocialMediaPermissionInput.value= "";
+      this.promotionsSocialMediaPermissionBlankInput.checked= true;
       this.promotionsApprovalInput.value= "";
       this.promotionsApprovalDateInput.value= "";
 
       // Paid Spots
-      this.paidSpotPermissionInput.value= "";
+      this.paidSpotPermissionBlankInput.checked= true;
       this.numberOfDifferentSpotsInput.value= "";
       this.totalNumberOfAiringsInput.value= "";
       this.nameSavedInServerInput.value= "";
       this.timeSavedInServerInput.value= "";
       this.numberOfAiringInput.value= "";
       this.paidSpotPlacementsInput.value= "";
-      this.paidSpotDuplicationPermissionInput.value= "";
+      this.paidSpotDuplicationPermissionBlankInput.checked= true;
       this.paidSpotMethodToRecieveInput.value= "";
       this.paidSpotApprovedByInput.value= "";
       this.paidSpotApprovedDateInput.value= "";
@@ -469,153 +477,6 @@ class UI {
     }
     
 
-}
-
-
-
-class BI {
-  constructor() {
-    this.post = document.querySelector('#posts'); //references empty div that is used to build each post
-    this.programNameInput = document.querySelector('#programName');
-    this.episodeNameInput = document.querySelector('#episodeName');
-    this.descriptionInput = document.querySelector('#description');
-    this.typeOfClientInput = document.querySelector('#typeOfClient');
-    this.startTimeInput = document.querySelector('#startTime');
-    this.endTimeInput = document.querySelector('#endTime');
-    this.runTimeInput = document.querySelector('#runTime');
-    this.marketingAssignInput = document.querySelector('#marketingAssign');
-    this.socialApprovalDateInput = document.querySelector('#socialApprovalDate');
-    this.idInput = document.querySelector('#id');
-    this.postSubmit = document.querySelector('.post-submit');
-    this.forState = 'add';
-  }
-
-  // Show all posts
-  showPosts(posts) {
-    let output = '';
-
-    posts.forEach((post) => {
-      output +=`
-        <div class="card mb-3 ">
-          <div class="card-body ${colorBackground(post.typeOfClient)}">
-            <h5 class="card-title text-white"><span>${post.typeOfClient.toUpperCase()}</span></h5>
-            <h4 class="card-title text-white"><strong><span id="postStartTime"><strong>${convertTime(post.startTime)}</strong></span> - <span><strong>${convertTime(post.endTime)}</strong></span></strong></h4>
-            <h3 class="card-title text-white"><strong><span id="postProgramName"><strong>${post.programName}</strong></span> - <strong><span id="postEpisodeName">${post.episodeName}</span></strong></strong></h3>
-            <h4 class="card-title text-white"><span>${post.runTime}</span> Run Time</h4>
-            <p class="card-text text-white">${post.description}</p>
-            <p class="card-text text-white">Assigned to <span><em>${post.marketingAssign}</span> - <span>${post.socialApprovalDate}</span></em></p>
-            <a href="#" class="edit card-link text-white" data-id="${post.id}">
-              <i class="fa fa-pencil"></i>
-            </a>
-
-            <a href="#" class="delete card-link" data-id="${post.id}">
-            <i class="fa fa-remove"></i>
-          </a>
-          </div>
-        </div>
-      `;
-    });
-
-    this.post.innerHTML = output;
-  }
-
-  // Show alert message
-  showAlert(message, className) {
-    this.clearAlert();
-
-    // Create div
-    const div = document.createElement('div');
-    // Add classes
-    div.className = className;
-    // Add text
-    div.appendChild(document.createTextNode(message));
-    // Get parent
-    const container = document.querySelector('.postsContainer');
-    // Get posts
-    const posts = document.querySelector('#posts');
-  
-    // Insert alert div
-    container.insertBefore(div, posts);
-
-    // Timeout
-    setTimeout(() => {
-      this.clearAlert();
-    }, 3000);
-  }
-
-  // Clear alert message
-  clearAlert() {
-    const currentAlert = document.querySelector('.alert');
-
-    if(currentAlert) {
-      currentAlert.remove();
-    }
-  }
-
-  // Clear all fields
-  clearFields() {
-    this.programNameInput.value = '';
-    this.episodeNameInput.value = '';
-    this.descriptionInput.value = '';
-    this.typeOfClientInput.value = '';
-    this.startTimeInput.value = '';
-    this.endTimeInput.value = '';
-    this.runTimeInput.value = '';
-    this.marketingAssignInput.value = '';
-    this.socialApprovalDateInput.value = '';
-  }
-
-  // Fill form to edit
-  fillForm(data) {
-    this.programNameInput.value = data.programName;
-    this.episodeNameInput.value = data.episodeName;
-    this.descriptionInput.value = data.description;
-    this.typeOfClientInput.value = data.typeOfClient;
-    this.startTimeInput.value = data.startTime;
-    this.endTimeInput.value = data.endTime;
-    this.runTimeInput.value = data.runTime;
-    this.marketingAssignInput.value = data.marketingAssign;
-    this.socialApprovalDateInput.value = data.socialApprovalDate;
-    this.idInput.value = data.id;
-    this.changeFormState('edit');
-  }
-
-  // Clear ID hidden value
-  clearIdInput() {
-    this.idInput.value = '';
-  }
-
-  // Change the form state
-  changeFormState(type) {
-    if(type === 'edit') {
-      this.postSubmit.textContent = 'Update Post';
-      this.postSubmit.className = 'post-submit btn btn-warning btn-block';
-
-      // Create cancel button
-      const button = document.createElement('button');
-      button.className = 'post-cancel btn btn-light btn-block';
-      button.appendChild(document.createTextNode('Cancel Edit'));
-
-      // Get parent
-      const cardForm = document.querySelector('.card-form');
-      console.log(cardForm.insertBefore(button, formEnd))
-      // Get element to insert before
-      const formEnd = document.querySelector('.form-end');
-      // Insert cancel button
-      cardForm.insertBefore(button, formEnd);
-    } else {
-      this.postSubmit.textContent = 'Post It';
-      this.postSubmit.className = 'post-submit btn btn-primary btn-block';
-      // Remove cancel btn if it is there
-      if(document.querySelector('.post-cancel')) {
-        document.querySelector('.post-cancel').remove();
-      }
-      // Clear ID from hidden field
-      this.clearIdInput();
-      // Clear text
-      this.clearFields();
-    }
-  }
 }
 
 // Changes background color based on variable
