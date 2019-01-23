@@ -25,7 +25,7 @@ function getClients(){
 function searchOEC(){
 
     const searchClientInput = document.querySelector('#search-client').value;
-    console.log(searchClientInput)
+    // console.log(searchClientInput)
     const searchTypeOfClientInput = document.querySelector('#search-typeOfClient').value;
     const webAddress = serverAddy + '/api/oec/search/' 
     let queryString = `search?typeOfClient=${searchTypeOfClientInput}&clientCompanyName=${searchClientInput}`
@@ -35,7 +35,7 @@ function searchOEC(){
         .then(data => ui.showClients(data))
         .catch(err => console.log(err))
 
-    console.log (finalOutput)
+    // console.log (finalOutput)
 
 
 }
@@ -427,7 +427,6 @@ function hideForms(typeOfShow){
     const partner = document.querySelectorAll('div.partner');
     const underwriter = document.querySelectorAll('div.underwriter');
 
-    console.log(typeOfShow)
 
     if (typeOfShow === 'fusion') {
 
@@ -458,6 +457,7 @@ function newContractBtn(){
     hideContracts()
     hideWeekendSection()
     ui.clearForm()
+    hideForms()
     // hideSurveyJs()
     showMainForms();
 };
@@ -554,9 +554,9 @@ function deleteCard(e) {
         const id = e.target.parentElement.dataset.id;
         http.get(serverAddy + `/api/oec/${id}`)
         .then(data =>{
-            console.log(data)
-            console.log(data._id)
-            console.log(data._id)
+            // console.log(data)
+            // console.log(data._id)
+            // console.log(data._id)
             //load show oec
             showMainForms()
             hideContracts()
